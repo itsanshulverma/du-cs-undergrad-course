@@ -66,8 +66,8 @@ void helper_powerset(int *set, int n, int set_i, int *power_set, int powerset_i)
     }
     //Exclude
     helper_powerset(set, n, set_i + 1, power_set, powerset_i);
-    //Include
     power_set[powerset_i] = set[set_i];
+    //Include
     helper_powerset(set, n, set_i + 1, power_set, powerset_i + 1);
 }
 void powerset(int *arr, int n)

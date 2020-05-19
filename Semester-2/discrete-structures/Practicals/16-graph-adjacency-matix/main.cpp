@@ -21,7 +21,9 @@ int main()
 {
     int v, e, x; //v= no of vertices , e= no of adjacent vertices, x= adjacent vertex
     int count = 0;
-    cout << "Enter the total number of vertices : ";
+    cout << endl
+         << endl
+         << "Enter the total number of vertices : ";
     cin >> v;
 
     for (int i = 1; i <= v; i++)

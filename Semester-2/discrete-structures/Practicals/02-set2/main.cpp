@@ -14,7 +14,7 @@ public:
     bool subset_of(Set);
     Set union_with(Set);
     Set intersection_with(Set);
-    Set complement();
+    Set complement(Set);
     Set difference(Set);
     Set difference_sym(Set);
     void cartesian_prod(Set);
@@ -105,9 +105,14 @@ Set Set::intersection_with(Set set)
     }
     return temp;
 }
-Set Set::complement()
+Set Set::complement(Set uni_set)
 {
     Set temp;
+    for (int i = 0; i < uni_set.size; i++)
+    {
+        if (!has(uni_set.elements[i]))
+            temp.addElement(uni_set.elements[i]);
+    }
     return temp;
 }
 Set Set::difference(Set set)
@@ -183,6 +188,18 @@ int main()
          << endl
          << "--> Set A intersection Set B : ";
     setA.intersection_with(setB).print();
+
+    cout << endl
+         << endl
+         << "--> Let Universal Set be ";
+    Set universalSet = setA.union_with(setB);
+    universalSet.print();
+    cout << endl
+         << "--> Complement of Set A (A') : ";
+    setA.complement(universalSet).print();
+    cout << endl
+         << "--> Complement of Set B (B') : ";
+    setB.complement(universalSet).print();
 
     cout << endl
          << endl

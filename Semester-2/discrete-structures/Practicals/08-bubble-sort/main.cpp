@@ -1,36 +1,9 @@
 #include <iostream>
 using namespace std;
 
-float elements[50] = {0};
-
-float swap(float ar[], int a, int b)
+void display(int ar[], int v)
 {
-    float temp = ar[a];
-    ar[a] = ar[b];
-    ar[b] = temp;
-
-    return *ar;
-}
-
-float bubbleSort(float ar[], int v)
-{
-    for (int i = 0; i < (v - 1); i++)
-    {
-        for (int j = 0; j < (v - i - 1); j++)
-        {
-            if (ar[j] > ar[j + 1])
-            {
-                swap(ar, j, j + 1);
-            }
-        }
-    }
-
-    return *ar;
-}
-
-void display(float ar[], int v)
-{
-    cout << "[ ";
+    cout << " - [ ";
     for (int i = 0; i < v; i++)
     {
         cout << ar[i] << " ";
@@ -38,31 +11,72 @@ void display(float ar[], int v)
     cout << "]";
 }
 
+int swap(int *ar, int a, int b)
+{
+    int temp = ar[a];
+    ar[a] = ar[b];
+    ar[b] = temp;
+
+    return *ar;
+}
+
+int bubbleSort(int *ar, int v)
+{
+    int totalCount = 0, count;
+    for (int i = 0; i < (v - 1); i++)
+    {
+        count = 0;
+        for (int j = 0; j < (v - i - 1); j++)
+        {
+            if (ar[j] > ar[j + 1])
+            {
+                ++count;
+                swap(ar, j, j + 1);
+            }
+            else
+                ++count;
+        }
+        totalCount += count;
+        display(ar, v);
+        cout << " -> " << (count) << " comparisons" << endl;
+    }
+    return totalCount;
+}
+
 int main()
 {
-    int v;
-    float e;
-
-    cout << "Enter the total number of elements : ";
-    cin >> v;
-
-    cout << "Enter the elements(integers/floats) : ";
-    for (int i = 0; i < v; i++)
-    {
-        cin >> e;
-        elements[i] = e;
-    }
-
-    display(elements, v);
+    int *arr;
+    int size, comparisons;
 
     cout << endl
          << endl
-         << "Sorting the array using Bubble Sort Algorithm...." << endl
-         << endl;
-    bubbleSort(elements, v);
+         << "Enter the size of array : ";
+    cin >> size;
 
-    cout << "Sorted. Here is the resulting array : " << endl;
-    display(elements, v);
+    cout << endl
+         << "Enter the elements of the array : ";
+    for (int i = 0; i < size; i++)
+    {
+        cin >> arr[i];
+    }
+    cout << endl;
+
+    display(arr, size);
+
+    cout << endl
+         << endl
+         << " - Sorting the array using Bubble Sort Algorithm...." << endl
+         << endl;
+    comparisons = bubbleSort(arr, size);
+
+    cout << endl
+         << "--> Sorted. Here is the resulting array";
+    display(arr, size);
+    cout << endl
+         << endl
+         << "--> Total no. of comparisons : " << comparisons;
+    cout << endl
+         << endl;
 
     return 0;
 }

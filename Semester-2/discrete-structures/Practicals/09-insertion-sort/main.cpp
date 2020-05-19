@@ -1,28 +1,9 @@
 #include <iostream>
 using namespace std;
 
-float elements[50] = {0};
-
-float insertionSort(float ar[], int v)
+void display(int ar[], int v)
 {
-    for (int i = 0; i < (v - 1); i++)
-    {
-        float temp = ar[i];
-        int j = i - 1;
-        while (j >= 0 && temp < ar[j])
-        {
-            ar[j + 1] = ar[j];
-            j = j - 1;
-        }
-        ar[j + 1] = temp;
-    }
-
-    return *ar;
-}
-
-void display(float ar[], int v)
-{
-    cout << "[ ";
+    cout << " - [ ";
     for (int i = 0; i < v; i++)
     {
         cout << ar[i] << " ";
@@ -30,31 +11,63 @@ void display(float ar[], int v)
     cout << "]";
 }
 
-int main()
+int insertionSort(int *ar, int v)
 {
-    int v;
-    float e;
-
-    cout << "Enter the total number of elements : ";
-    cin >> v;
-
-    cout << "Enter the elements(integers/floats) : ";
-    for (int i = 0; i < v; i++)
+    int i, j, key, totalCount = 0, count = 0;
+    for (i = 1; i < v; i++)
     {
-        cin >> e;
-        elements[i] = e;
+        key = ar[i];
+        j = i - 1;
+        count = 0;
+        while (j >= 0 && key < ar[j])
+        {
+            ++count;
+            ar[j + 1] = ar[j];
+            j = j - 1;
+        }
+        totalCount += count;
+        display(ar, v);
+        cout << " -> " << (count) << " comparisons" << endl;
+        ar[j + 1] = key;
     }
 
-    insertionSort(elements, v);
+    return totalCount;
+}
+
+int main()
+{
+    int *arr;
+    int size, comparisons;
 
     cout << endl
          << endl
-         << "Sorting the array using Insertion Sort Algorithm...." << endl
-         << endl;
-    insertionSort(elements, v);
+         << "Enter the size of array : ";
+    cin >> size;
 
-    cout << "Sorted. Here is the resulting array : " << endl;
-    display(elements, v);
+    cout << endl
+         << "Enter the elements of the array : ";
+    for (int i = 0; i < size; i++)
+    {
+        cin >> arr[i];
+    }
+    cout << endl;
+
+    display(arr, size);
+
+    cout << endl
+         << endl
+         << " - Sorting the array using Insertion Sort Algorithm...." << endl
+         << endl;
+    comparisons = insertionSort(arr, size);
+
+    cout << endl
+         << "--> Sorted. Here is the resulting array";
+    display(arr, size);
+    cout << endl
+         << endl
+         << "--> Total no. of comparisons : " << comparisons;
+    cout << endl
+         << endl;
 
     return 0;
 }
