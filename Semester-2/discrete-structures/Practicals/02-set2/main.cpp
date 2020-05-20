@@ -30,9 +30,7 @@ Set::Set()
 void Set::input()
 {
     int itrCount;
-    cout << endl
-         << endl
-         << "Enter the size of set : ";
+    cout << "\nEnter the size of set : ";
     cin >> itrCount;
     cout << "Enter the elements of set : ";
     for (int i = 0; i < itrCount; i++)
@@ -172,26 +170,18 @@ int main()
     setB.print();
 
     if (setA.subset_of(setB))
-        cout << endl
-             << endl
-             << "--> Set A is a subset of Set B." << endl;
+        cout << "\n\n--> Set A is a subset of Set B.\n";
     else
-        cout << endl
-             << endl
-             << "--> Set A is not a subset of Set B." << endl;
+        cout << "\n\n--> Set A is not a subset of Set B.\n";
 
     cout << endl
          << "--> Set A union Set B : ";
     setA.union_with(setB).print();
 
-    cout << endl
-         << endl
-         << "--> Set A intersection Set B : ";
+    cout << "\n\n--> Set A intersection Set B : ";
     setA.intersection_with(setB).print();
 
-    cout << endl
-         << endl
-         << "--> Let Universal Set be ";
+    cout << "\n\n--> Let Universal Set be ";
     Set universalSet = setA.union_with(setB);
     universalSet.print();
     cout << endl
@@ -201,19 +191,13 @@ int main()
          << "--> Complement of Set B (B') : ";
     setB.complement(universalSet).print();
 
-    cout << endl
-         << endl
-         << "--> Set A difference Set B : ";
+    cout << "\n\n--> Set A difference Set B : ";
     setA.difference(setB).print();
 
-    cout << endl
-         << endl
-         << "--> Set A symmetric difference Set B : ";
+    cout << "\n\n--> Set A symmetric difference Set B : ";
     setA.difference_sym(setB).print();
 
-    cout << endl
-         << endl
-         << "--> Cartesian product of Set A and Set B : ";
+    cout << "\n\n--> Cartesian product of Set A and Set B : ";
     setA.cartesian_prod(setB);
 
     return 0;
