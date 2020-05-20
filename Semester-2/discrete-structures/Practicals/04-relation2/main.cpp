@@ -9,10 +9,10 @@ public:
 
     void input();
     void print_matrix();
-    void isReflexive();
-    void isSymmetric();
-    void isAntisymmetric();
-    void isTransitive();
+    bool isReflexive();
+    bool isSymmetric();
+    bool isAntisymmetric();
+    bool isTransitive();
 };
 void Relation::input()
 {
@@ -50,7 +50,7 @@ void Relation::print_matrix()
     }
 }
 
-void Relation::isReflexive()
+bool Relation::isReflexive()
 {
     int flag = 0;
     for (int i = 0; i < matrix_size; i++)
@@ -64,12 +64,9 @@ void Relation::isReflexive()
         }
     }
 
-    if (flag == 0)
-        cout << "--> Given relation is not reflexive\n";
-    else
-        cout << "--> Given relation is reflexive\n";
+    return flag;
 }
-void Relation::isSymmetric()
+bool Relation::isSymmetric()
 {
     int flag = 0;
     for (int i = 0; i < matrix_size; i++)
@@ -83,12 +80,9 @@ void Relation::isSymmetric()
                 flag = 0;
                 break;
             }
-    if (flag == 0)
-        cout << "--> Given relation is not symmetric\n";
-    else
-        cout << "--> Given relation is symmetric\n";
+    return flag;
 }
-void Relation::isAntisymmetric()
+bool Relation::isAntisymmetric()
 {
     int flag = 0;
     for (int i = 0; i < matrix_size; i++)
@@ -102,12 +96,9 @@ void Relation::isAntisymmetric()
                 flag = 0;
                 break;
             }
-    if (flag == 0)
-        cout << "--> Given relation is antisymmetric\n";
-    else
-        cout << "--> Given relation is not antisymmetric\n";
+    return !flag;
 }
-void Relation::isTransitive()
+bool Relation::isTransitive()
 {
     int flag = 1;
     for (int i = 0; i < matrix_size; i++)
@@ -126,10 +117,7 @@ void Relation::isTransitive()
             }
         }
     }
-    if (flag == 0)
-        cout << "--> Given relation is not transitive\n";
-    else
-        cout << "--> Given relation is transitive\n";
+    return flag;
 }
 
 int main()
@@ -138,12 +126,12 @@ int main()
     rel.input();
     rel.print_matrix();
 
-    cout << endl
-         << endl;
-    rel.isReflexive();
-    rel.isSymmetric();
-    rel.isTransitive();
-    rel.isAntisymmetric();
+    if (rel.isReflexive() && rel.isSymmetric() && rel.isTransitive())
+        cout << "\n\n--> The given relation is equivalence relation.\n";
+    else if (rel.isReflexive() && rel.isAntisymmetric() && rel.isTransitive())
+        cout << "\n\n--> The given relation is a partially ordered relation(poset).\n";
+    else
+        cout << "\n\n--> The given relation is neither a equivalence relation nor a poset.\n";
 
     return 0;
 }

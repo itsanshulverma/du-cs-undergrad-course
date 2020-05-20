@@ -1,24 +1,11 @@
 #include <iostream>
 using namespace std;
 
-//Adjacency Matrix
-int adjMatrix[10][10] = {0};
-
-void displayMatrix(int v)
-{
-    for (int i = 0; i < v; i++)
-    {
-        cout << endl
-             << "\t";
-        for (int j = 0; j < v; j++)
-        {
-            cout << adjMatrix[i][j] << " ";
-        }
-    }
-}
+#define N 50
 
 int main()
 {
+    int adjMatrix[N][N] = {0};
     int v, e, x; //v= no of vertices , e= no of adjacent vertices, x= adjacent vertex
     int count = 0;
     cout << endl
@@ -39,7 +26,15 @@ int main()
         }
     }
 
-    displayMatrix(v);
+    for (int i = 0; i < v; i++)
+    {
+        cout << endl
+             << "\t";
+        for (int j = 0; j < v; j++)
+        {
+            cout << adjMatrix[i][j] << " ";
+        }
+    }
 
     if (count == ((v * v) - v))
     {

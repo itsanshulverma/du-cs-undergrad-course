@@ -1,56 +1,76 @@
 #include <iostream>
 using namespace std;
+
+#define N 25
+
 int main()
 {
-    int v, i, j, p = 0, sum = 0, flag = 0, c = 0;
-    cout << "\nEnter number of vertices in the graph : ";
+    int **matrix, *deg, *vertices;
+    int v, n, sum = 0, flag = 1, count = 0;
+    cout << "\nEnter the dimension of matrix : ";
     cin >> v;
-    int arr[v][v], arr1[v];
-    for (i = 0; i < v; i++)
+
+    matrix = new int *[v];
+    deg = new int[v];
+
+    for (int i = 0; i < v; i++)
     {
-        for (j = 0; j < v; j++)
+        matrix[i] = new int[v];
+        cout << "Enter the elements in row " << i + 1 << " : ";
+        for (int j = 0; j < v; j++)
         {
-            cout << "--> How many edge from " << (char)(97 + i) << " to " << (char)(97 + j) << " : ";
-            cin >> arr[i][j];
+            cin >> matrix[i][j];
         }
     }
+
     cout << "\n--> Adjacency Matrix \n ";
     for (int m = 0; m < v; m++)
     {
-        cout << endl
-             << "    ";
+        cout << "\n    ";
         for (int n = 0; n < v; n++)
-            cout << arr[m][n] << " ";
+            cout << matrix[m][n] << " ";
     }
-    for (i = 0; i < v; i++)
+
+    for (int i = 0; i < v; i++)
     {
         sum = 0;
-        for (j = 0; j < v; j++)
+        for (int j = 0; j < v; j++)
         {
-            sum += arr[i][j];
+            sum += matrix[i][j];
         }
-        arr1[i] = sum;
+        deg[i] = sum;
     }
-    cout << endl;
-    for (i = 0; i < v; i++)
+
+    cout << "\n\nEnter the no of vertices followed by the vertices to be checked : ";
+    cin >> n;
+    vertices = new int[n];
+
+    for (int i = 0; i < n; i++)
     {
-        cout << "\n--> Degree of " << (char)(97 + i) << " -- " << arr1[i];
+        cin >> vertices[i];
     }
-    for (i = 0; i < v; i++)
+
+    for (int i = 0; i < n; i++)
     {
-        if ((arr1[i] % 2) != 0)
+        cout << "\n--> Degree of Vertex " << vertices[i] << " : " << deg[vertices[i] - 1];
+    }
+
+    for (int i = 0; i < n; i++)
+    {
+        if ((deg[vertices[i] - 1] % 2) != 0)
         {
-            cout << "\n\n--> There is no euler circuit";
-            flag = 1;
-            c++;
+            flag = 0;
+            count++;
         }
     }
-    if (flag == 0)
-        cout << "\n\n--> There is euler circuit";
-    if (c == 2)
-        cout << "\n--> There is a euler path";
+    if (flag == 1)
+        cout << "\n\n--> There is an euler circuit.";
     else
-        cout << "\n--> There is no euler path";
+        cout << "\n\n--> There is no euler circuit.";
+    if (count == 2 || flag == 1)
+        cout << "\n\n--> There is an euler path.";
+    else
+        cout << "\n\n--> There is no euler path.";
     cout << endl;
     return 0;
 }
