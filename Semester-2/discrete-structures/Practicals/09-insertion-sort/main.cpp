@@ -11,6 +11,15 @@ void display(int ar[], int v)
     cout << "]";
 }
 
+int swap(int *ar, int a, int b)
+{
+    int temp = ar[a];
+    ar[a] = ar[b];
+    ar[b] = temp;
+
+    return *ar;
+}
+
 int insertionSort(int *ar, int v)
 {
     int i, j, key, totalCount = 0, count = 0;
@@ -22,7 +31,7 @@ int insertionSort(int *ar, int v)
         while (j >= 0 && key < ar[j])
         {
             ++count;
-            ar[j + 1] = ar[j];
+            swap(ar, j, j + 1);
             j = j - 1;
         }
         totalCount += count;

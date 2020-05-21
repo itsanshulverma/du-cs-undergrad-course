@@ -1,8 +1,6 @@
 #include <iostream>
 using namespace std;
 
-#define N 25
-
 int main()
 {
     int **matrix, *deg, *vertices;
