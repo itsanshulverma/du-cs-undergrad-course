@@ -5,9 +5,7 @@ public class FilteredDisplay {
         if (args.length != 1)
             System.err.println("\nCorrect Usage : java FilteredDisplay <filename.txt>");
         else {
-            try {
-                FileReader fr = new FileReader(args[0]);
-                BufferedReader br = new BufferedReader(fr);
+            try (BufferedReader br = new BufferedReader(new FileReader(args[0]))) {
                 String line;
                 System.out.println("\nReading " + args[0] + "...\n");
                 while ((line = br.readLine()) != null) {
@@ -15,7 +13,8 @@ public class FilteredDisplay {
                         System.out.println(line);
                     }
                 }
-            } catch (Exception e) {
+                br.close();
+            } catch (final Exception e) {
                 System.err.println(e.getMessage());
             }
         }
