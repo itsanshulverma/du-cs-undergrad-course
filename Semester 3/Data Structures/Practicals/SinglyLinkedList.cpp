@@ -12,7 +12,7 @@ class SinglyLinkedList
 		int data;
 		struct node* next;
 	};
-	struct node *head, *temp, *tail;
+	struct node *head, *ptr, *temp, *tail;
 	public:
 	SinglyLinkedList()
 	{
@@ -20,6 +20,8 @@ class SinglyLinkedList
 	}
 	void create();
 	void insert_at_end();
+	void insert_at_begin();
+	void insert_at_loc();
 	void display();
 };
 void SinglyLinkedList::create()
@@ -73,6 +75,32 @@ void SinglyLinkedList::insert_at_end()
 	tail = temp;
 	cout<<"Inserted!"<<endl;
 }
+void SinglyLinkedList::insert_at_begin()
+{
+	temp = new node;
+	cout<<"\nEnter the node data you want to insert at beginning : ";
+	cin>>temp->data;
+	temp->next = head;
+	head = temp;
+	cout<<"Inserted!"<<endl;
+}
+void SinglyLinkedList::insert_at_loc()
+{
+	temp = new node;
+	int loc, i;
+	cout<<"\nEnter the location for new node : ";
+	cin>>loc;
+	cout<<"Enter the node data : ";
+	cin>>temp->data;
+	ptr = head->next;
+	while(i<loc-1)
+	{
+		ptr = ptr->next;
+	}
+	temp->next = ptr->next;
+	ptr->next = temp;
+	cout<<"Inserted!"<<endl;
+}
 
 int main()
 {
@@ -81,7 +109,7 @@ int main()
 	SinglyLinkedList list;
 	do
 	{
-		cout<<"\n1. Create\n2. Insert at end\n3. Display\n4. Exit"<<endl;
+		cout<<"\n1. Create\n2. Insert at Beginning\n3. Insert at End\n4. Insert at Location\n5. Display\n6. Exit"<<endl;
 		cout<<"Enter your choice : ";
 		cin>>choice;
 		switch(choice)
@@ -90,12 +118,18 @@ int main()
 				list.create();
 				break;
 			case 2:
-				list.insert_at_end();
+				list.insert_at_begin();
 				break;
 			case 3:
-				list.display();
+				list.insert_at_end();
 				break;
 			case 4:
+				list.insert_at_loc();
+				break;
+			case 5:
+				list.display();
+				break;
+			case 6:
 				exit(0);
 		}
 		cout<<"\nWant to operate more? (y/n) ";
