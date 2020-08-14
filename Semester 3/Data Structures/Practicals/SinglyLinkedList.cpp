@@ -30,6 +30,9 @@ class SinglyLinkedList
 		}
 	}
 	void create();
+	void count();
+	void search();
+	void reverse();
 	void insert_at_end();
 	void insert_at_begin();
 	void insert_at_loc();
@@ -146,7 +149,54 @@ void SinglyLinkedList::delete_at_loc()
 	temp = ptr->next;
 	ptr->next = ptr->next->next;
 	delete temp;
-	cout<<"Deleted from location : "<<loc<<"!"<<endl;
+	cout<<"\nDeleted from location : "<<loc<<"!"<<endl;
+}
+void SinglyLinkedList::count()
+{
+	int count=0;
+	ptr=head;
+	while(ptr != NULL)
+	{
+		ptr = ptr->next;
+		++count;
+	}
+	cout<<"\nThere are "<<count<<" nodes in the list."<<endl;
+}
+void SinglyLinkedList::search()
+{
+	int n, count=0, flag=0;
+	cout<<"\nEnter the node data to be searched : ";
+	cin>>n;
+	ptr = head;
+	while(ptr != NULL)
+	{
+		++count;
+		if(ptr->data == n)
+		{
+			flag=1;
+			break;
+		}
+		ptr = ptr->next;
+	}
+	if(flag=1)
+		cout<<"Data found at location "<<count<<" in the list."<<endl;
+	else
+		cout<<"Data not found in the list.";
+}
+void SinglyLinkedList::reverse()
+{
+	 ptr=head->next;
+	 head->next = NULL;
+	 tail = head;
+	 while(ptr!= NULL)
+	 {
+	 	temp = ptr;
+	 	ptr=ptr->next;
+	 	temp->next = head;
+		 head = temp;
+	 }
+	 cout<<"\nReversed!"<<endl;
+	 display();
 }
 
 int main()
@@ -156,7 +206,7 @@ int main()
 	SinglyLinkedList list;
 	do
 	{
-		cout<<"\n1. Create\n2. Insert at Beginning\n3. Insert at End\n4. Insert at Location\n5. Delete at Beginning\n6. Delete at End\n7. Delete at Location\n8. Display\n9. Exit"<<endl;
+		cout<<"\n1. Create\n2. Insert at Beginning\n3. Insert at End\n4. Insert at Location\n5. Delete at Beginning\n6. Delete at End\n7. Delete at Location\n8. Count the nodes\n9. Search\n10. Reverse the list\n11. Display\n12. Exit"<<endl;
 		cout<<"Enter your choice : ";
 		cin>>choice;
 		switch(choice)
@@ -183,9 +233,18 @@ int main()
 				list.delete_at_loc();
 				break;
 			case 8:
-				list.display();
+				list.count();
 				break;
 			case 9:
+				list.search();
+				break;
+			case 10:
+				list.reverse();
+				break;
+			case 11:
+				list.display();
+				break;
+			case 12:
 				exit(0);
 		}
 		cout<<"\nWant to operate more? (y/n) ";
