@@ -12,16 +12,30 @@ class SinglyLinkedList
 		int data;
 		struct node* next;
 	};
-	struct node *head, *ptr, *temp, *tail;
+	struct node *head, *temp, *ptr, *tail;
 	public:
 	SinglyLinkedList()
 	{
 		head=NULL;
 	}
+	~SinglyLinkedList()
+	{
+		cout<<"\nDeallocating memory...\n";
+		ptr = head;
+		while(ptr != NULL)
+		{
+			temp = ptr->next;
+			delete ptr;
+			ptr = temp;
+		}
+	}
 	void create();
 	void insert_at_end();
 	void insert_at_begin();
 	void insert_at_loc();
+	void delete_at_end();
+	void delete_at_begin();
+	void delete_at_loc();
 	void display();
 };
 void SinglyLinkedList::create()
@@ -56,7 +70,6 @@ void SinglyLinkedList::display()
 	cout<<"\n\t";
 	if(head==NULL)
 		cout<<"Linked List is empty.";
-	struct node *ptr;
 	ptr = head;
 	while(ptr != NULL)
 	{
@@ -87,19 +100,53 @@ void SinglyLinkedList::insert_at_begin()
 void SinglyLinkedList::insert_at_loc()
 {
 	temp = new node;
-	int loc, i;
+	int loc;
 	cout<<"\nEnter the location for new node : ";
 	cin>>loc;
 	cout<<"Enter the node data : ";
 	cin>>temp->data;
-	ptr = head->next;
-	while(i<loc-1)
+	ptr = head;
+	for(int i=1; i<loc-1; i++)
 	{
 		ptr = ptr->next;
 	}
 	temp->next = ptr->next;
 	ptr->next = temp;
 	cout<<"Inserted!"<<endl;
+}
+void SinglyLinkedList::delete_at_end()
+{
+	ptr = head;
+	while(ptr->next->next != NULL)
+	{
+		ptr = ptr->next;
+	}
+	delete ptr->next;
+	ptr->next = NULL;
+	tail = ptr;
+	cout<<"\nDeleted one node from end!"<<endl;
+}
+void SinglyLinkedList::delete_at_begin()
+{
+	temp = head;
+	head = head->next;
+	delete temp;
+	cout<<"\nDeleted one node from beginning!"<<endl;
+}
+void SinglyLinkedList::delete_at_loc()
+{
+	int loc;
+	cout<<"\nEnter the location of node to delete : ";
+	cin>>loc;
+	ptr = head;
+	for(int i=1; i<loc-1; i++)
+	{
+		ptr = ptr->next;
+	}
+	temp = ptr->next;
+	ptr->next = ptr->next->next;
+	delete temp;
+	cout<<"Deleted from location : "<<loc<<"!"<<endl;
 }
 
 int main()
@@ -109,7 +156,7 @@ int main()
 	SinglyLinkedList list;
 	do
 	{
-		cout<<"\n1. Create\n2. Insert at Beginning\n3. Insert at End\n4. Insert at Location\n5. Display\n6. Exit"<<endl;
+		cout<<"\n1. Create\n2. Insert at Beginning\n3. Insert at End\n4. Insert at Location\n5. Delete at Beginning\n6. Delete at End\n7. Delete at Location\n8. Display\n9. Exit"<<endl;
 		cout<<"Enter your choice : ";
 		cin>>choice;
 		switch(choice)
@@ -127,9 +174,18 @@ int main()
 				list.insert_at_loc();
 				break;
 			case 5:
-				list.display();
+				list.delete_at_begin();
 				break;
 			case 6:
+				list.delete_at_end();
+				break;
+			case 7:
+				list.delete_at_loc();
+				break;
+			case 8:
+				list.display();
+				break;
+			case 9:
 				exit(0);
 		}
 		cout<<"\nWant to operate more? (y/n) ";
