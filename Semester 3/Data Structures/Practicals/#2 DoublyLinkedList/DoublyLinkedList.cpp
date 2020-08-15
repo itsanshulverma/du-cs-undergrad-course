@@ -107,13 +107,13 @@ void DoublyLinkedList::display()
 void DoublyLinkedList::insert_at_end()
 {
 	temp = new node;
-	cout << "\nEnter the node data you want to insert at end : ";
+	cout << "\nEnter the node data to be inserted : ";
 	cin >> temp->data;
 	temp->prev = tail;
 	temp->next = NULL;
 	tail->next = temp;
 	tail = temp;
-	cout << "Inserted!" << endl;
+	cout << "Inserted at end!" << endl;
 }
 
 /***************************************************
@@ -122,12 +122,12 @@ void DoublyLinkedList::insert_at_end()
 void DoublyLinkedList::insert_at_begin()
 {
 	temp = new node;
-	cout << "\nEnter the node data you want to insert at beginning : ";
+	cout << "\nEnter the node data to be inserted : ";
 	cin >> temp->data;
 	temp->next = head;
 	head->prev = temp;
 	head = temp;
-	cout << "Inserted!" << endl;
+	cout << "Inserted at beginning!" << endl;
 }
 
 /***************************************************
@@ -139,18 +139,25 @@ void DoublyLinkedList::insert_at_loc()
 	int loc;
 	cout << "\nEnter the location for new node : ";
 	cin >> loc;
-	cout << "Enter the node data : ";
-	cin >> temp->data;
 	ptr = head;
 	for (int i = 1; i < loc - 1; i++)
 	{
 		ptr = ptr->next;
 	}
-	temp->next = ptr->next;
-	temp->prev = ptr;
-	ptr->next->prev = temp;
-	ptr->next = temp;
-	cout << "Inserted!" << endl;
+	if(ptr==head)
+		insert_at_begin();
+	else if(ptr==tail)
+		insert_at_end();
+	else
+	{
+		cout << "Enter the node data to be inserted : ";
+		cin >> temp->data;
+		temp->next = ptr->next;
+		temp->prev = ptr;
+		ptr->next->prev = temp;
+		ptr->next = temp;
+		cout << "Inserted at location "<<loc<<"!" << endl;
+	}
 }
 
 /*******************************************
@@ -191,10 +198,17 @@ void DoublyLinkedList::delete_at_loc()
 		ptr = ptr->next;
 	}
 	temp = ptr->next;
-	ptr->next = temp->next;
-	temp->next->prev = ptr;
-	delete temp;
-	cout << "\nDeleted the node at location : " << loc << "!" << endl;
+	if(ptr == head)
+		delete_at_begin();
+	else if(temp == tail)
+		delete_at_end();
+	else
+	{
+		ptr->next = temp->next;
+		temp->next->prev = ptr;
+		delete temp;
+		cout << "\nDeleted the node at location " << loc << "!" << endl;
+	}
 }
 
 /******************************************
