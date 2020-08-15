@@ -165,11 +165,19 @@ void DoublyLinkedList::insert_at_loc()
 ********************************************/
 void DoublyLinkedList::delete_at_end()
 {
-	temp = tail->prev;
-	delete temp->next;
-	temp->next = NULL;
-	tail = temp;
-	cout << "\nDeleted one node from end!" << endl;
+	if(head==tail)
+	{
+		delete tail;
+		head = NULL;
+	}
+	else
+	{
+		temp = tail->prev;
+		delete temp->next;
+		temp->next = NULL;
+		tail = temp;
+		cout << "\nDeleted one node from end!" << endl;
+	}
 }
 
 /**************************************************
@@ -177,11 +185,19 @@ void DoublyLinkedList::delete_at_end()
 ***************************************************/
 void DoublyLinkedList::delete_at_begin()
 {
-	temp = head;
-	head = head->next;
-	head->prev = NULL;
-	delete temp;
-	cout << "\nDeleted one node from beginning!" << endl;
+	if(head==tail)
+	{
+		delete tail;
+		head = NULL;
+	}
+	else
+	{
+		temp = head;
+		head = head->next;
+		head->prev = NULL;
+		delete temp;
+		cout << "\nDeleted one node from beginning!" << endl;
+	}
 }
 
 /***************************************************
