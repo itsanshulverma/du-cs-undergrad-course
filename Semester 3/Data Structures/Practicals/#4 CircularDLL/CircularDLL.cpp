@@ -43,7 +43,6 @@ class CircularDLL
 	bool is_empty();
 	void count();
 	void search();
-	void reverse();
 	void insert_at_end();
 	void insert_at_begin();
 	void insert_at_loc();
@@ -314,32 +313,6 @@ void CircularDLL::search()
 }
 
 /******************************************
-	Reverse Function
-*******************************************/
-void CircularDLL::reverse()
-{
-	if (!is_empty() && (tail->next != tail))
-	{
-		struct node *temp1 = new node;
-		temp1 = tail->next;
-		ptr = temp1->next;
-		tail->next = NULL;
-		tail = temp1;
-		while (ptr != NULL)
-		{
-			temp = ptr;
-			ptr = ptr->next;
-			temp->prev = temp1;
-			temp->next = temp1;
-			temp1->prev = temp;
-			temp1 = temp;
-		}
-		tail->next = temp1;
-	}
-	cout << "\nReversed!" << endl;
-}
-
-/******************************************
 	Main Function
 *******************************************/
 int main()
@@ -349,7 +322,7 @@ int main()
 	CircularDLL list;
 	do
 	{
-		cout << "\n1. Create\n2. Insert at Beginning\n3. Insert at End\n4. Insert at Location\n5. Delete at Beginning\n6. Delete at End\n7. Delete at Location\n8. Count the nodes\n9. Search\n10. Reverse the list\n11. Display\n12. Exit" << endl;
+		cout << "\n1. Create\n2. Insert at Beginning\n3. Insert at End\n4. Insert at Location\n5. Delete at Beginning\n6. Delete at End\n7. Delete at Location\n8. Count the nodes\n9. Search\n10. Display\n11. Exit" << endl;
 		cout << "Enter your choice : ";
 		cin >> choice;
 		switch (choice)
@@ -389,13 +362,9 @@ int main()
 			list.search();
 			break;
 		case 10:
-			list.reverse();
 			list.display();
 			break;
 		case 11:
-			list.display();
-			break;
-		case 12:
 			exit(0);
 		}
 		cout << "\nWant to operate more? (y/n) ";
