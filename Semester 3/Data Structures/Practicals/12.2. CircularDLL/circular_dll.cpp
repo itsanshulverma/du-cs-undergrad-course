@@ -105,6 +105,7 @@ void CircularDLL<X>::insert_at_end()
 	{
 		temp->next = tail->next;
 		temp->prev = tail;
+		tail->next->prev = temp;
 		tail->next = temp;
 		tail = temp;
 	}
