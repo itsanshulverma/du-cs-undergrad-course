@@ -268,6 +268,8 @@ void SinglyLinkedList<X>::delete_by_data()
 		cin >> data;
 		if (head->data == data)
 			delete_at_begin();
+		else if(tail->data == data)
+			delete_at_end();
 		else
 		{
 			ptr = head;
@@ -276,24 +278,16 @@ void SinglyLinkedList<X>::delete_by_data()
 				if (ptr->data == data)
 				{
 					contains = true;
-					if (ptr == tail)
-					{
-						delete ptr;
-						temp->next = NULL;
-						tail = temp;
-					}
-					else
-					{
-						temp->next = ptr->next;
-						delete ptr;
-						break;
-					}
+					temp->next = ptr->next;
+					delete ptr;
+					break;
 				}
 				temp = ptr;
 				ptr = ptr->next;
 			}
 			if (!contains)
 				cout << "List doesn't have this node already!";
+			cout << "Deleted!";
 		}
 	}
 }
