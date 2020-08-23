@@ -1,6 +1,14 @@
+/*
+	By Anshul Verma
+	19/78065
+*/
+
 #include <iostream>
 using namespace std;
 
+/******************************************
+	OrderedLinkedList Class
+*******************************************/
 class OLL
 {
 	struct node
@@ -11,10 +19,14 @@ class OLL
 	struct node *head, *ptr, *temp, *tail;
 
   public:
+  
+	//Constructor
 	OLL()
 	{
 		head = NULL;
 	}
+	
+	//Destructor
 	~OLL()
 	{
 		ptr = head;
@@ -26,6 +38,9 @@ class OLL
 		}
 	}
 
+	/******************************************
+		isempty function
+	*******************************************/
 	bool is_empty()
 	{
 		if (head == NULL)
@@ -34,6 +49,9 @@ class OLL
 			return false;
 	}
 
+	/******************************************
+		Insert function
+	*******************************************/
 	void insert_node(int data)
 	{
 		temp = new node;
@@ -73,6 +91,10 @@ class OLL
 			}
 		}
 	}
+	
+	/******************************************
+		Delete function
+	*******************************************/
 	void delete_node(int data)
 	{
 		bool contains;
@@ -123,6 +145,10 @@ class OLL
 			}
 		}
 	}
+	
+	/******************************************
+		Merge function
+	*******************************************/
 	OLL merge(OLL &list)
 	{
 		OLL list1;
@@ -135,6 +161,10 @@ class OLL
 		}
 		return list1;
 	}
+	
+	/******************************************
+		Print function
+	*******************************************/
 	void print_list()
 	{
 		cout << "\n\t";
@@ -152,6 +182,9 @@ class OLL
 	}
 };
 
+/********************************************************
+	Demonstration-related functions
+*********************************************************/
 void create_list(OLL &list)
 {
 	char ch1;
@@ -185,6 +218,9 @@ void del(OLL &list)
 	} while (ch1 == 'y');
 }
 
+/******************************************
+	Main function
+*******************************************/
 int main()
 {
 	OLL list;

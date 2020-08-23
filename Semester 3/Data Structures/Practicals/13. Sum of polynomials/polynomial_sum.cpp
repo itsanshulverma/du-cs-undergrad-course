@@ -1,6 +1,14 @@
+/*
+	By Anshul Verma
+	19/78065
+*/
+
 #include <iostream>
 using namespace std;
 
+/******************************************
+	Polynomial Class (OLL)
+*******************************************/
 class Polynomial {
 	struct term {
 		int coeff, pow;
@@ -9,10 +17,14 @@ class Polynomial {
 	struct term *head, *ptr, *temp, *tail;
 	
 	public:
+	
+	//Constructor
 	Polynomial()
 	{
 		head = NULL;
 	}
+	
+	//Destructor
 	~Polynomial()
 	{
 		ptr = head;
@@ -24,6 +36,9 @@ class Polynomial {
 		}
 	}
 
+	/******************************************
+		Insert Function
+	*******************************************/
 	void insert(int n1, int n2)
 	{
 		temp = new term;
@@ -69,6 +84,9 @@ class Polynomial {
 		}
 	}
 
+	/******************************************
+		Print polynomial Function
+	*******************************************/
 	void print()
 	{
 		if (head == NULL)
@@ -86,6 +104,9 @@ class Polynomial {
 		}
 	}
 
+	/***********************************************
+		'+' overloaded sum Functon
+	************************************************/
 	Polynomial operator+(Polynomial &p)
 	{
 		Polynomial poly;
@@ -100,6 +121,9 @@ class Polynomial {
 	}
 };
 
+/**********************************************************
+ 	Demonstration-related functions
+****************************************""""""""************/
 void create_poly(Polynomial &poly)
 {
 	int coeff, pow;
@@ -117,6 +141,9 @@ void create_poly(Polynomial &poly)
 	} while (ch == 'y');
 }
 
+/******************************************
+	Main Function
+*******************************************/
 int main()
 {
 	Polynomial poly1, poly2, poly3;
