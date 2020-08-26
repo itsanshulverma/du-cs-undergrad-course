@@ -14,21 +14,12 @@ void tostack(string &n, Stack<int> &s)
 void add(Stack<int> &s1, Stack<int> &s2, Stack<int> &sum)
 {
 	int n1, n2, carry = 0;
-	int itr = s1.count;
-	if (s2.count > itr)
-		itr = s2.count;
+	int itr = (s2.count > s1.count) ? s2.count : s1.count;
 	for (int i = 0; i < itr; i++)
 	{
-		if (s1.isempty())
-			n1 = 0;
-		else
-			n1 = s1.pop();
+		n1 = s1.isempty() ? 0 : s1.pop();
+		n2 = s2.isempty() ? 0 : s2.pop();
 
-		if (s2.isempty())
-			n2 = 0;
-		else
-			n2 = s2.pop();
-			
 		sum.push((n1 + n2 + carry) % 10);
 		carry = (n1 + n2 + carry) / 10;
 	}
