@@ -3,6 +3,7 @@
 */
 
 #include <iostream>
+#include "stack_ll.h"
 using namespace std;
 
 template <typename T>
@@ -42,7 +43,29 @@ class BST
             else
                 temp->left = newNode;
         }
-        cout << "Node Inserted!" << endl;
+        cout << "Node<" << n << "> Inserted!" << endl;
+    }
+
+    void search(T n)
+    {
+        node *temp, *ptr = root;
+        if (root == nullptr) cout << "Tree Empty!";
+        else
+        { 
+            int count = 0;
+            while (ptr != nullptr)
+            {
+                if (n == ptr->data)
+                {
+                    cout << "\nNode found at level: " << count;
+                    return;
+                }
+                else if (n > ptr->data) ptr = ptr->right;
+                else ptr = ptr->left;
+                ++count;
+            }
+            cout << "\nNode not found in tree!";
+        }
     }
 
     void recursive_inorder(node *ptr)
@@ -75,9 +98,53 @@ class BST
             cout << ptr->data << " ";
         }
     }
+
     node* get_root()
     {
         return this->root;
+    }
+
+    void iterative_inorder()
+    {
+        Stack<node*> stack;
+        node *ptr = root;
+        while (ptr != nullptr || !stack.isempty())
+        {
+            if (ptr != nullptr)
+            {
+                stack.push(ptr);
+                ptr = ptr->left;
+            }
+            else
+            {
+                ptr = stack.pop();
+                cout << ptr->data << " ";
+                ptr = ptr->right;
+            }
+        }
+    }
+    void iterative_preorder()
+    {
+        Stack<node*> stack;
+        node *ptr = root;
+        while (ptr != nullptr || !stack.isempty())
+        {
+            if (ptr != nullptr)
+            {
+                cout << ptr->data << " ";
+                stack.push(ptr);
+                ptr = ptr->left;
+            }
+            else
+            {
+                ptr = stack.pop();
+                ptr = ptr->right;
+            }
+        }
+    }
+    void iterative_postorder()
+    {
+        
     }
 };
 
@@ -92,10 +159,11 @@ int main()
     bst.insert(48);
     bst.insert(32);
     cout << "Inorder: ";
-    bst.recursive_inorder(bst.get_root()); //10 18 25 30 32 43 48
+    bst.iterative_inorder(); //10 18 25 30 32 43 48
     cout << endl << "Preorder: ";
-    bst.recursive_preorder(bst.get_root()); //30 18 10 25 43 32 48
-    cout << endl << "Postorder: ";
-    bst.recursive_postorder(bst.get_root()); //10 25 18 32 48 43 30
+    bst.iterative_preorder(); //30 18 10 25 43 32 48
+    //cout << endl << "Postorder: ";
+    //bst.iterative_postorder(); //10 25 18 32 48 43 
+    bst.search(32);
     return 0;
 }
