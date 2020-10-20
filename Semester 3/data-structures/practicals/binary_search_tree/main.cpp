@@ -144,7 +144,24 @@ class BST
     }
     void iterative_postorder()
     {
-        
+        Stack<node*> stack;
+        node *ptr = root;
+        node *temp = root;
+        while(ptr != nullptr)
+        {
+        	for(; ptr->left != nullptr; ptr=ptr->left)
+        		stack.push(ptr);
+        	while(ptr != nullptr && (ptr->right == nullptr || ptr->right == temp))
+        	{
+        		temp = ptr;
+        		cout << ptr->data << " ";
+        		if(stack.isempty())
+        			return;
+        		ptr = stack.pop();
+        	}
+        	stack.push(ptr);
+        	ptr = ptr->right;
+        }
     }
 };
 
@@ -162,8 +179,8 @@ int main()
     bst.iterative_inorder(); //10 18 25 30 32 43 48
     cout << endl << "Preorder: ";
     bst.iterative_preorder(); //30 18 10 25 43 32 48
-    //cout << endl << "Postorder: ";
-    //bst.iterative_postorder(); //10 25 18 32 48 43 
+    cout << endl << "Postorder: ";
+    bst.iterative_postorder(); //10 25 18 32 48 43 
     bst.search(32);
     return 0;
 }
