@@ -7,6 +7,9 @@
 #include "queue.h"
 using namespace std;
 
+/*
+	Binary Search Tree Class
+*/
 template <typename T>
 class BST
 {
@@ -32,6 +35,9 @@ class BST
 		nonLeafs = 0;
 	}
 
+	/*
+		Insert
+	*/
 	void insert(T n)
 	{
 		node *newNode = new node(n);
@@ -56,6 +62,9 @@ class BST
 		cout << "Node<" << n << "> Inserted!";
 	}
 
+	/*
+		Search
+	*/
 	void search(T n)
 	{
 		node *temp, *ptr = root;
@@ -81,6 +90,9 @@ class BST
 		}
 	}
 
+	/*
+		Recursive DFS Traversal
+	*/
 	void recursive_inorder(node *ptr)
 	{
 		if (ptr == nullptr)
@@ -114,12 +126,14 @@ class BST
 			cout << ptr->data << " ";
 		}
 	}
-
 	node *get_root()
 	{
 		return this->root;
 	}
 
+	/*
+		Iterative DFS Traversals
+	*/
 	void iterative_inorder()
 	{
 		Stack<node *> stack;
@@ -180,6 +194,9 @@ class BST
 		}
 	}
 
+	/*
+		Calculating height of tree
+	*/
 	int height()
 	{
 		return height_helper(root);
@@ -200,6 +217,9 @@ class BST
 		return -1;
 	}
 
+	/*
+		Breadth-First Traversal
+	*/
 	void BFS()
 	{
 		Queue<node *> q;
@@ -219,6 +239,9 @@ class BST
 		}
 	}
 
+	/*
+		BFS Mirror Image
+	*/
 	void printMirrorImage()
 	{
 		Queue<node *> q;
@@ -237,7 +260,10 @@ class BST
 			}
 		}
 	}
-
+	
+	/*
+		Counting Nodes
+	*/
 	void count(node *temp)
 	{
 		if (temp != nullptr)
@@ -258,6 +284,9 @@ class BST
 		cout << "\nTotal no. of nodes: " << this->leafs + this->nonLeafs;
 	}
 
+	/*
+		Delete by Copying
+	*/
 	void del_copy(T el)
 	{
 		node *prev;
@@ -311,6 +340,9 @@ class BST
 		delete tmp;
 	}
 
+	/*
+		Delete by Merging
+	*/
 	void del_merge(T el)
 	{
 		node *prev;
@@ -363,6 +395,9 @@ class BST
 		}
 	}
 
+	/*
+		Search for an element in BST and change its value to y then reorder BST accordingly
+	*/
 	void search_change()
 	{
 		int key, newKey;
@@ -400,6 +435,9 @@ class BST
 	}
 };
 
+/*
+	Main Function
+*/
 int main()
 {
 	BST<int> bst;
@@ -422,7 +460,7 @@ int main()
 		cout << "\n2. Seach a node";
 		cout << "\n3. Recursive Depth-First Traversals";
 		cout << "\n4. Iterative Depth-First Traversals";
-		cout << "\n5. Breadth First Traversals";
+		cout << "\n5. Breadth First Traversal";
 		cout << "\n6. Mirror Image (BFS)";
 		cout << "\n7. Count nodes";
 		cout << "\n8. Search a node, change its value, update the BST";
