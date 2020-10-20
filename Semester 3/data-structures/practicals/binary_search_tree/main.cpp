@@ -163,6 +163,26 @@ class BST
         	ptr = ptr->right;
         }
     }
+    
+    int height()
+    {
+    	return height_helper(root);
+    }
+    int height_helper(node *temp)
+    {
+    	int hleft = 0;
+    	int hright = 0;
+    	if(temp != nullptr)
+    	{
+    		hleft = height_helper(temp->left);
+    		hright = height_helper(temp->right);
+    		if(hleft > hright)
+    			return hleft + 1;
+    		else
+    			return hright + 1;
+    	}
+    	return -1;
+    }
 };
 
 int main()
@@ -182,5 +202,6 @@ int main()
     cout << endl << "Postorder: ";
     bst.iterative_postorder(); //10 25 18 32 48 43 
     bst.search(32);
+    cout << endl << "Height: " << bst.height();
     return 0;
 }
