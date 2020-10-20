@@ -4,6 +4,7 @@
 
 #include <iostream>
 #include "stack_ll.h"
+#include "queue.h"
 using namespace std;
 
 template <typename T>
@@ -183,6 +184,25 @@ class BST
     	}
     	return -1;
     }
+    
+    void BFS()
+    {
+    	Queue<node*> q;
+    	node *ptr = root;
+    	if(ptr != nullptr)
+    	{
+    		q.enqueue(ptr);
+    		while(!q.isempty())
+    		{
+    			ptr = q.dequeue();
+    			cout << ptr->data << " ";
+    			if(ptr->left != nullptr)
+    				q.enqueue(ptr->left);
+    			if(ptr->right != nullptr)
+    				q.enqueue(ptr->right);
+    		}
+    	}
+    }
 };
 
 int main()
@@ -201,6 +221,8 @@ int main()
     bst.iterative_preorder(); //30 18 10 25 43 32 48
     cout << endl << "Postorder: ";
     bst.iterative_postorder(); //10 25 18 32 48 43 
+    cout << endl << "BFS: ";
+    bst.BFS();
     bst.search(32);
     cout << endl << "Height: " << bst.height();
     return 0;
