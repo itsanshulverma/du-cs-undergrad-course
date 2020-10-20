@@ -1,0 +1,8 @@
+Enter size of array: 5
+Enter the elements: 14 16 15 4 27
+Enter an index to apply max heapify: 2
+
+Applying max heapify at 2...
+Resultant array: 14 27 15 4 16
+
+[Program finished]

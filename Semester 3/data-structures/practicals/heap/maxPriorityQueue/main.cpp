@@ -76,7 +76,6 @@ class MaxPriorityQueue
 	*/
 	void increaseKey(int i)
 	{
-		int oldkey = arr[i];
 		arr[i]++;
 		shiftUp(i);
 	}
@@ -160,7 +159,8 @@ int main()
 			mpq.printQueue();
 			break;
 		case 5:
-			cout << "\nQueue: " << mpq.printQueue();
+			cout << "\nQueue: ";
+			mpq.printQueue();
 			break;
 		default:
 			cout << "\nInvalid Choice!";

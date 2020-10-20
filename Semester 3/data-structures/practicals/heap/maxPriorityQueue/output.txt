@@ -1,0 +1,118 @@
+Max Priority Queue Implementation
+
+---------- Menu ----------
+1. Insert
+2. Increase key
+3. Get Maximum
+4. Extract Maximum
+5. Print Queue
+
+Enter your choice: 1
+
+Enter a key to insert: 10
+
+Resultant queue: 10
+
+Want to continue? (Y/N): y
+
+---------- Menu ----------
+1. Insert
+2. Increase key
+3. Get Maximum
+4. Extract Maximum
+5. Print Queue
+
+Enter your choice: 1
+
+Enter a key to insert: 20
+
+Resultant queue: 20 10
+
+Want to continue? (Y/N): y
+
+---------- Menu ----------
+1. Insert
+2. Increase key
+3. Get Maximum
+4. Extract Maximum
+5. Print Queue
+
+Enter your choice: 1
+
+Enter a key to insert: 15
+
+Resultant queue: 20 10 15
+
+Want to continue? (Y/N): y
+
+---------- Menu ----------
+1. Insert
+2. Increase key
+3. Get Maximum
+4. Extract Maximum
+5. Print Queue
+
+Enter your choice: 1
+
+Enter a key to insert: 14
+
+Resultant queue: 20 14 15 10
+
+Want to continue? (Y/N): y
+
+---------- Menu ----------
+1. Insert
+2. Increase key
+3. Get Maximum
+4. Extract Maximum
+5. Print Queue
+
+Enter your choice: 2
+
+Enter index of key to be increased: 2
+
+Resultant queue: 20 15 15 10
+
+Want to continue? (Y/N): y
+
+---------- Menu ----------
+1. Insert
+2. Increase key
+3. Get Maximum
+4. Extract Maximum
+5. Print Queue
+
+Enter your choice: 3
+
+Maximum key: 20
+
+Want to continue? (Y/N): y
+
+---------- Menu ----------
+1. Insert
+2. Increase key
+3. Get Maximum
+4. Extract Maximum
+5. Print Queue
+
+Enter your choice: 4
+
+Maximum key: 20
+Resultant queue: 15 10 15
+
+Want to continue? (Y/N): y
+
+---------- Menu ----------
+1. Insert
+2. Increase key
+3. Get Maximum
+4. Extract Maximum
+5. Print Queue
+
+Enter your choice: 5
+
+Queue: 15 10 15
+
+Want to continue? (Y/N): n
+
+[Program finished]
