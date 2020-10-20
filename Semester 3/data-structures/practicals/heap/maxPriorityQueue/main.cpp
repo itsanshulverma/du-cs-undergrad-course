@@ -72,12 +72,16 @@ class MaxPriorityQueue
 	}
 	
 	/*
-		Increasing the key at given index by 1 then shifting up accordingly
+		Increasing the key by replacing key at i by newkey then shifting up/down accordingly
 	*/
-	void increaseKey(int i)
+	void increaseKey(int i, int newp)
 	{
-		arr[i]++;
-		shiftUp(i);
+		int oldp = arr[i];
+		arr[i] = newp;
+		if (newp > oldp)
+			shiftUp(i);
+		else
+			shiftDown(i);
 	}
 	
 	/*
@@ -120,7 +124,7 @@ int main()
 	MaxPriorityQueue mpq;
 	cout << "\nMax Priority Queue Implementation\n";
 
-	int choice, temp;
+	int choice, temp, temp1;
 	char ch = 'y';
 	do
 	{
@@ -146,7 +150,9 @@ int main()
 		case 2:
 			cout << "\nEnter index of key to be increased: ";
 			cin >> temp;
-			mpq.increaseKey(temp);
+			cout << "Enter the new key: ";
+			cin >> temp1;
+			mpq.increaseKey(temp, temp1);
 			cout << "\nResultant queue: ";
 			mpq.printQueue();
 			break;

@@ -70,8 +70,9 @@ Want to continue? (Y/N): y
 Enter your choice: 2
 
 Enter index of key to be increased: 2
+Enter the new key: 25
 
-Resultant queue: 20 15 15 10
+Resultant queue: 25 20 15 10
 
 Want to continue? (Y/N): y
 
@@ -84,7 +85,7 @@ Want to continue? (Y/N): y
 
 Enter your choice: 3
 
-Maximum key: 20
+Maximum key: 25
 
 Want to continue? (Y/N): y
 
@@ -97,8 +98,8 @@ Want to continue? (Y/N): y
 
 Enter your choice: 4
 
-Maximum key: 20
-Resultant queue: 15 10 15
+Maximum key: 25
+Resultant queue: 20 10 15
 
 Want to continue? (Y/N): y
 
@@ -111,7 +112,7 @@ Want to continue? (Y/N): y
 
 Enter your choice: 5
 
-Queue: 15 10 15
+Queue: 20 10 15
 
 Want to continue? (Y/N): n
 
