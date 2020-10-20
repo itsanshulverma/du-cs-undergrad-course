@@ -257,6 +257,111 @@ class BST
 		cout << "\nNo. of non-leaf nodes: " << this->nonLeafs;
 		cout << "\nTotal no. of nodes: " << this->leafs + this->nonLeafs;
 	}
+
+	void del_copy(T el)
+	{
+		node *prev;
+		node *ptr = root;
+		while (ptr != nullptr)
+		{
+			if (ptr->data == el)
+				break;
+			prev = ptr;
+			if (ptr->data < el)
+				ptr = ptr->right;
+			else
+				ptr = ptr->left;
+		}
+		if (ptr != nullptr && ptr->data == el)
+		{
+			if (ptr == root)
+				delc(root);
+			else if (prev->left == ptr)
+				delc(prev->left);
+			else
+				delc(prev->right);
+		}
+		else if (root != 0)
+			cout << "\n\tKey " << el << " is not in the tree!";
+		else
+			cout << "\n\tTree is Empty!";
+	}
+	void delc(node *&temp)
+	{
+		node *prev, *tmp = temp;
+		if (temp->right == NULL)
+			temp = temp->left;
+		else if (temp->left == NULL)
+			temp = temp->right;
+		else
+		{
+			tmp = temp->left;
+			prev = temp;
+			while (tmp->right != NULL)
+			{
+				prev = tmp;
+				tmp = tmp->right;
+			}
+			temp->data = tmp->data;
+			if (prev == temp)
+				prev->left = tmp->left;
+			else
+				prev->right = tmp->left;
+		}
+		delete tmp;
+	}
+
+	void del_merge(T el)
+	{
+		node *prev;
+		node *ptr = root;
+		while (ptr != nullptr)
+		{
+			if (ptr->data == el)
+				break;
+			prev = ptr;
+			if (ptr->data < el)
+				ptr = ptr->right;
+			else
+				ptr = ptr->left;
+		}
+		if (ptr != nullptr && ptr->data == el)
+		{
+			if (ptr == root)
+				delm(root);
+			else if (prev->left == ptr)
+				delm(prev->left);
+			else
+				delm(prev->right);
+		}
+		else if (root != 0)
+			cout << "\n\tKey " << el << " is not in the tree!";
+		else
+			cout << "\n\tTree is Empty!";
+	}
+	void delm(node *&temp)
+	{
+		node *tmp = temp;
+		if (temp != NULL)
+		{
+			if (temp->right == NULL)
+				temp = temp->left;
+			else if (temp->left == NULL)
+				temp = temp->right;
+			else
+			{
+				tmp = temp->left;
+				while (tmp->right != NULL)
+				{
+					tmp = tmp->right;
+				}
+				tmp->right = temp->right;
+				tmp = temp;
+				temp = temp->left;
+			}
+			delete tmp;
+		}
+	}
 };
 
 int main()
@@ -287,5 +392,7 @@ int main()
 		 << "Mirror Image: ";
 	bst.printMirrorImage();
 	bst.printCount();
+	bst.del_merge(30);
+	bst.iterative_inorder(); 
 	return 0;
 }
