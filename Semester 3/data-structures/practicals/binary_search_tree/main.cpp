@@ -362,6 +362,41 @@ class BST
 			delete tmp;
 		}
 	}
+
+	void search_change()
+	{
+		int key, newKey;
+		cout << "\nEnter the key to be searched: ";
+		cin >> key;
+		cout << "Enter the new key: ";
+		cin >> newKey;
+		node *ptr = root;
+		if (ptr == nullptr)
+			cout << "Tree Empty!";
+		else
+		{
+			int flag = 0;
+			while (ptr != nullptr)
+			{
+				if (key == ptr->data)
+				{
+					flag = 1;
+					break;
+				}
+				else if (key > ptr->data)
+					ptr = ptr->right;
+				else
+					ptr = ptr->left;
+			}
+			if (flag == 0)
+				cout << "\nNode not found in tree!";
+			else
+			{
+				del_copy(key);
+				insert(newKey);
+			}
+		}
+	}
 };
 
 int main()
@@ -393,6 +428,8 @@ int main()
 	bst.printMirrorImage();
 	bst.printCount();
 	bst.del_merge(30);
-	bst.iterative_inorder(); 
+	bst.iterative_inorder();
+	bst.search_change();
+	bst.iterative_inorder();
 	return 0;
 }
