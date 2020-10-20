@@ -53,7 +53,7 @@ class BST
 			else
 				temp->left = newNode;
 		}
-		cout << "Node<" << n << "> Inserted!" << endl;
+		cout << "Node<" << n << "> Inserted!";
 	}
 
 	void search(T n)
@@ -63,12 +63,12 @@ class BST
 			cout << "Tree Empty!";
 		else
 		{
-			int count = 0;
+			int count = 1;
 			while (ptr != nullptr)
 			{
 				if (n == ptr->data)
 				{
-					cout << "\nNode found at level: " << count;
+					cout << "Node found at level: " << count;
 					return;
 				}
 				else if (n > ptr->data)
@@ -77,7 +77,7 @@ class BST
 					ptr = ptr->left;
 				++count;
 			}
-			cout << "\nNode not found in tree!";
+			cout << "Node not found in tree!";
 		}
 	}
 
@@ -282,7 +282,7 @@ class BST
 				delc(prev->right);
 		}
 		else if (root != 0)
-			cout << "\n\tKey " << el << " is not in the tree!";
+			cout << "\nNode not found in the tree!";
 		else
 			cout << "\n\tTree is Empty!";
 	}
@@ -335,7 +335,7 @@ class BST
 				delm(prev->right);
 		}
 		else if (root != 0)
-			cout << "\n\tKey " << el << " is not in the tree!";
+			cout << "\nNode not found in the tree";
 		else
 			cout << "\n\tTree is Empty!";
 	}
@@ -368,13 +368,14 @@ class BST
 		int key, newKey;
 		cout << "\nEnter the key to be searched: ";
 		cin >> key;
-		cout << "Enter the new key: ";
-		cin >> newKey;
 		node *ptr = root;
 		if (ptr == nullptr)
 			cout << "Tree Empty!";
 		else
 		{
+			cout << "Enter the new key: ";
+			cin >> newKey;
+			
 			int flag = 0;
 			while (ptr != nullptr)
 			{
@@ -389,7 +390,7 @@ class BST
 					ptr = ptr->left;
 			}
 			if (flag == 0)
-				cout << "\nNode not found in tree!";
+				cout << "Node not found in tree!";
 			else
 			{
 				del_copy(key);
@@ -402,34 +403,96 @@ class BST
 int main()
 {
 	BST<int> bst;
-	bst.insert(30);
-	bst.insert(18);
-	bst.insert(43);
-	bst.insert(10);
-	bst.insert(25);
-	bst.insert(48);
-	bst.insert(32);
-	cout << "Inorder: ";
-	bst.iterative_inorder(); //10 18 25 30 32 43 48
-	cout << endl
-		 << "Preorder: ";
-	bst.iterative_preorder(); //30 18 10 25 43 32 48
-	cout << endl
-		 << "Postorder: ";
-	bst.iterative_postorder(); //10 25 18 32 48 43
-	bst.search(32);
-	cout << endl
-		 << "Height: " << bst.height();
-	cout << endl
-		 << "BFS: ";
-	bst.BFS();
-	cout << endl
-		 << "Mirror Image: ";
-	bst.printMirrorImage();
-	bst.printCount();
-	bst.del_merge(30);
-	bst.iterative_inorder();
-	bst.search_change();
-	bst.iterative_inorder();
+	//bst.insert(30);
+	//bst.insert(18);
+	//bst.insert(43);
+	//bst.insert(10);
+	//bst.insert(25);
+	//bst.insert(48);
+	//bst.insert(32);
+
+	cout << "\nBinary Search Tree Implementation\n";
+
+	int choice, temp;
+	char ch = 'y';
+	do
+	{
+		cout << "\n---------- Menu ----------";
+		cout << "\n1. Insert";
+		cout << "\n2. Seach a node";
+		cout << "\n3. Recursive Depth-First Traversals";
+		cout << "\n4. Iterative Depth-First Traversals";
+		cout << "\n5. Breadth First Traversals";
+		cout << "\n6. Mirror Image (BFS)";
+		cout << "\n7. Count nodes";
+		cout << "\n8. Search a node, change its value, update the BST";
+		cout << "\n9. Height of the tree";
+		cout << "\n10. Delete by merging";
+		cout << "\n11. Delete by copying";
+
+		cout << "\n\nEnter your choice: ";
+		cin >> choice;
+
+		switch (choice)
+		{
+		case 1:
+			cout << "Enter a node: ";
+			cin >> temp;
+			bst.insert(temp);
+			break;
+		case 2:
+			cout << "\nEnter a node to be searched: ";
+			cin >> temp;
+			bst.search(temp);
+			break;
+		case 3:
+			cout << "\nRecursive Inorder: ";
+			bst.recursive_inorder(bst.get_root());
+			cout << "\nRecursive Preorder: ";
+			bst.recursive_preorder(bst.get_root());
+			cout << "\nRecursive Postorder: ";
+			bst.recursive_postorder(bst.get_root());
+			break;
+		case 4:
+			cout << "\nIterative Inorder: ";
+			bst.iterative_inorder();
+			cout << "\nIterative Preorder: ";
+			bst.iterative_preorder();
+			cout << "\nIterative Postorder: ";
+			bst.iterative_postorder();
+			break;
+		case 5:
+			cout << "\nBreadth First Traversal: ";
+			bst.BFS();
+			break;
+		case 6:
+			cout << "\nBFS Mirror Image: ";
+			bst.printMirrorImage();
+			break;
+		case 7:
+			bst.printCount();
+			break;
+		case 8:
+			bst.search_change();
+			break;
+		case 9:
+			cout << "\nHeight of tree: " << bst.height();
+			break;
+		case 10:
+			cout << "\nEnter the node value you want to delete: ";
+			cin >> temp;
+			bst.del_merge(temp);
+			break;
+		case 11:
+			cout << "\nEnter the node value you want to delete: ";
+			cin >> temp;
+			bst.del_copy(temp);
+			break;
+		default:
+			cout << "\nInvalid Choice!";
+		}
+		cout << "\n\nWant to continue? (Y/N): ";
+		cin >> ch;
+	} while (ch == 'y' || ch == 'Y');
 	return 0;
 }
