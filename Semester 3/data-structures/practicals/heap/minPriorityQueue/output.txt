@@ -1,0 +1,119 @@
+Min Priority Queue Implementation
+
+---------- Menu ----------
+1. Insert
+2. Decrease key
+3. Get Minimum
+4. Extract Minimum
+5. Print Queue
+
+Enter your choice: 1
+
+Enter a key to insert: 10
+
+Resultant queue: 10
+
+Want to continue? (Y/N): y
+
+---------- Menu ----------
+1. Insert
+2. Decrease key
+3. Get Minimum
+4. Extract Minimum
+5. Print Queue
+
+Enter your choice: 1
+
+Enter a key to insert: 20
+
+Resultant queue: 10 20
+
+Want to continue? (Y/N): y
+
+---------- Menu ----------
+1. Insert
+2. Decrease key
+3. Get Minimum
+4. Extract Minimum
+5. Print Queue
+
+Enter your choice: 1
+
+Enter a key to insert: 15
+
+Resultant queue: 10 20 15
+
+Want to continue? (Y/N): y
+
+---------- Menu ----------
+1. Insert
+2. Decrease key
+3. Get Minimum
+4. Extract Minimum
+5. Print Queue
+
+Enter your choice: 1
+
+Enter a key to insert: 14
+
+Resultant queue: 10 14 15 20
+
+Want to continue? (Y/N): y
+
+---------- Menu ----------
+1. Insert
+2. Decrease key
+3. Get Minimum
+4. Extract Minimum
+5. Print Queue
+
+Enter your choice: 2
+
+Enter index of key to be decreased: 4
+Enter the new key: 11
+
+Resultant queue: 10 11 15 14
+
+Want to continue? (Y/N): y
+
+---------- Menu ----------
+1. Insert
+2. Decrease key
+3. Get Minimum
+4. Extract Minimum
+5. Print Queue
+
+Enter your choice: 3
+
+Minimum key: 10
+
+Want to continue? (Y/N): y
+
+---------- Menu ----------
+1. Insert
+2. Decrease key
+3. Get Minimum
+4. Extract Minimum
+5. Print Queue
+
+Enter your choice: 4
+
+Minimum key: 10
+Resultant queue: 11 14 15
+
+Want to continue? (Y/N): y
+
+---------- Menu ----------
+1. Insert
+2. Decrease key
+3. Get Minimum
+4. Extract Minimum
+5. Print Queue
+
+Enter your choice: 5
+
+Queue: 11 14 15
+
+Want to continue? (Y/N): n
+
+[Program finished]
