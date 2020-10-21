@@ -1,0 +1,10 @@
+Heap Sort Implementation
+--------------------------
+
+Enter size of array: 5
+Enter the elements: 25 22 19 37 35
+
+Applying heap sort...
+Sorted array: 19 22 25 35 37
+
+[Program finished]
