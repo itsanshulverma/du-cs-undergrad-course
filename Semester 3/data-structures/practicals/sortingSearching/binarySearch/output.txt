@@ -1,0 +1,16 @@
+
+Enter the size of array: 10
+Enter the elements of sorted array: 18 20 27 34 39 40 56 78 91 112
+Enter an element to be searched: 39
+
+Element found at index 4!
+
+[Program finished]
+
+Enter the size of array: 10
+Enter the elements of sorted array: 18 20 27 34 39 40 56 78 91 112
+Enter an element to be searched: 51
+
+Result: -1 i.e. Element not found!
+
+[Program finished]

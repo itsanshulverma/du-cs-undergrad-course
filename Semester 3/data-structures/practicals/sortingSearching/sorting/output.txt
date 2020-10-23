@@ -1,0 +1,51 @@
+
+Enter the size of array: 10
+Enter the elements of array: 56 34 27 78 91 20 18 111 39 40
+
+Unsorted Array: 56 34 27 78 91 20 18 111 39 40
+
+Select a sorting algorithm
+-----------------------
+1. Bubble Sort
+2. Insertion Sort
+3. Selection Sort
+Your choice: 1
+
+Applying bubble sort...
+Sorted Array: 18 20 27 34 39 40 56 78 91 111
+
+[Program finished]
+
+Enter the size of array: 10
+Enter the elements of array: 56 34 27 78 91 20 18 111 39 40
+
+Unsorted Array: 56 34 27 78 91 20 18 111 39 40
+
+Select a sorting algorithm
+-----------------------
+1. Bubble Sort
+2. Insertion Sort
+3. Selection Sort
+Your choice: 2
+
+Applying insertion sort...
+Sorted Array: 18 20 27 34 39 40 56 78 91 111
+
+[Program finished]
+
+Enter the size of array: 10
+Enter the elements of array: 56 34 27 78 91 20 18 111 39 40
+
+Unsorted Array: 56 34 27 78 91 20 18 111 39 40
+
+Select a sorting algorithm
+-----------------------
+1. Bubble Sort
+2. Insertion Sort
+3. Selection Sort
+Your choice: 3
+
+Applying selection sort...
+Sorted Array: 18 20 27 34 39 40 56 78 91 111
+
+[Program finished]
