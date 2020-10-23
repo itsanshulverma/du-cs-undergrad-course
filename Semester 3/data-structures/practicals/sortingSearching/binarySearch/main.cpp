@@ -24,6 +24,21 @@ int binarySearch(int arr[], int N, int ele)
 	return -1;
 }
 
+/* Binary Search: Recursive
+int binarySearch(int arr[], int N, int ele, int low, int high)
+{
+	if (low <= high)
+	{
+		int mid = low + (high - low) / 2;
+		if (arr[mid] == ele)
+			return mid;
+		if (arr[mid] > ele)
+			binarySearch(arr, N, ele, low, mid - 1);
+		binarySearch(arr, N, ele, mid + 1, high);
+	}
+	return -1;
+} */
+
 // Main function
 int main()
 {
