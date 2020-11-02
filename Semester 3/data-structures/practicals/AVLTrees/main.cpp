@@ -150,6 +150,73 @@ class AVL
 		updateBalance(newNode);
     }
 
+	/*
+		Delete by Copying
+	*/
+	void del_copy(T el)
+	{
+		Node *prev;
+		Node *ptr = root;
+		while (ptr != nullptr)
+		{
+			if (ptr->data == el)
+				break;
+			prev = ptr;
+			if (ptr->data < el)
+				ptr = ptr->right;
+			else
+				ptr = ptr->left;
+		}
+		if (ptr != nullptr && ptr->data == el)
+		{
+			if (ptr == root)
+				delc(root);
+			else if (prev->left == ptr)
+				delc(prev->left);
+			else
+				delc(prev->right);
+		}
+		else if (root != 0)
+			cout << "\nNode not found in the tree!";
+		else
+			cout << "\n\tTree is Empty!";
+
+		Node* node = ptr->parent;
+		
+		// if (node->bfactor > 1)
+		// {
+		// 	if(node->left->bfactor >= 0)
+		// 	{
+		// 		rightRotate(root);
+		// 	}
+		// }
+
+		updateBalance(prev);
+	}
+	void delc(Node *&temp)
+	{
+		Node *prev, *tmp = temp;
+		if (temp->right == NULL)
+			temp = temp->left;
+		else if (temp->left == NULL)
+			temp = temp->right;
+		else
+		{
+			tmp = temp->left;
+			prev = temp;
+			while (tmp->right != NULL)
+			{
+				prev = tmp;
+				tmp = tmp->right;
+			}
+			temp->data = tmp->data;
+			if (prev == temp)
+				prev->left = tmp->left;
+			else
+				prev->right = tmp->left;
+		}
+		delete tmp;
+	}
 
     /*
         Print Tree function borrowed from (https://www.programiz.com/dsa/avl-tree)
