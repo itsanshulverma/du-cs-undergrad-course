@@ -12,6 +12,10 @@ class SymmetricMatrix
 		this->size = x;
 		arr = new int[size];
 	}
+	~SymmetricMatrix()
+	{
+		delete[] arr;
+	}
 
 	/* To store an element 'n' at index (x, y): (input as 1-indexing) */
 	void store(int x, int y, int n)
