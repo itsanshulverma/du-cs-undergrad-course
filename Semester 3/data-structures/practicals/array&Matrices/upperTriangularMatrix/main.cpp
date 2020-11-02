@@ -73,7 +73,7 @@ int main()
 		exit(1);
 	}
 
-	UpperTriagMatrix low(x);
+	UpperTriagMatrix upp(x);
 	cout << "Enter the elements (by row): ";
 	for (int i = 1; i <= x; ++i)
 	{
@@ -81,13 +81,13 @@ int main()
     for (int j = i; j <= x; ++j)
     {
       cin >> n;
-		  low.store(i, j, n);
+		  upp.store(i, j, n);
     }
 	}
 
 	/* Show matrix */
 	cout << "\nResultant Matrix:\n";
-	low.show();
+	upp.show();
 
 	/* Retrieve elements */
 	char ch;
@@ -96,7 +96,7 @@ int main()
 	while (ch == 'Y' || ch == 'y'){
 		cout << "\nEnter the index of element to be retrieved: ";
 		cin >> x >> y;
-		cout << "--> " << low.retrieve(x, y) << endl;
+		cout << "--> " << upp.retrieve(x, y) << endl;
 
 		cout << "More? (y/n): ";
 		cin >> ch;
