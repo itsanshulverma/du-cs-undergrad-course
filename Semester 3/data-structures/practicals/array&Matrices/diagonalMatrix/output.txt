@@ -1,0 +1,17 @@
+
+Enter the no. of rows and columns: 5 5
+Enter the diagonal elements: 1 2 3 4 5   
+
+Resultant Matrix:
+
+        1  0  0  0  0
+        0  2  0  0  0
+        0  0  3  0  0
+        0  0  0  4  0
+        0  0  0  0  5
+
+Enter the index of element to be retrieved: 4 4
+--> 4
+
+Enter the index of element to be retrieved: 5 6
+--> Err: Index out of bound.

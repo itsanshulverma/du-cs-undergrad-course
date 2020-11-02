@@ -1,0 +1,23 @@
+
+Enter the no. of rows and columns: 4 4
+Enter upper triangular elements (by row): 1 2 3 4 5 6 7 8 9 10
+
+Resultant Matrix:
+
+        1  2  3  4
+        2  5  6  7
+        3  6  8  9
+        4  7  9  10
+
+Retrive individual elements? (y/n): y
+
+Enter the index of element to be retrieved: 3 4
+--> 9
+More? (y/n): y
+
+Enter the index of element to be retrieved: 2 3
+--> 6
+More? (y/n): y
+
+Enter the index of element to be retrieved: 5 3
+--> Err: Index out of bound.

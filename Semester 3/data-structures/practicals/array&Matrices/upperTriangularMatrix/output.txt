@@ -1,0 +1,22 @@
+
+Enter the no. of rows and columns: 4 4
+Enter the elements (by row): 1 2 3 4 5 6 7 8 9 10
+
+Resultant Matrix:
+
+        1  2  3  4
+        0  5  6  7
+        0  0  8  9
+        0  0  0  10
+
+Retrive individual elements? (y/n): y
+
+Enter the index of element to be retrieved: 3 1
+--> 0
+More? (y/n): y
+
+Enter the index of element to be retrieved: 3 4
+--> 9
+More? (y/n): n
+
+
