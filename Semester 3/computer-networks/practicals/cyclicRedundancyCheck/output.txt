@@ -1,0 +1,17 @@
+
+Enter the frame: 11010111011
+Enter the generator: 1101
+
+Remainder: 111
+Transmitted frame: 11010111011111
+
+Want to add errors ? (Y/N): y
+
+Enter the index of bit to add the error: 4
+
+Transmitted frame with error: 11000111011111
+
+Applying Cyclic Redundancy Check....
+
+Error detected!
+Remainder: 101
