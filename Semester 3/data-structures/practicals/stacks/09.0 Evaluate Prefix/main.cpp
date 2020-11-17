@@ -14,11 +14,11 @@ int reverse(int n)
 	return res;
 }
 
-int evalPostfix(string &n)
+int evalPrefix(string &n)
 {
 	Stack<int> s, temp;
 	int a;
-	for (int i = 0; i < n.length(); ++i)
+	for (int i = n.length()-1; i >= 0; --i)
 	{
 		if (n[i] >= '0' && n[i] <= '9')
 		{
@@ -29,7 +29,7 @@ int evalPostfix(string &n)
 			a = 0;
 			while (!temp.isempty())
 				a = (a * 10) + temp.pop();
-			if(a != 0) s.push(reverse(a));
+			if(a != 0) s.push(a);
 			switch(n[i])
 			{
 				case '+':
@@ -56,7 +56,7 @@ int evalPostfix(string &n)
 int main()
 {
 	string exp;
-	cout << "\nEnter the postfix exp  : ";
+	cout << "\nEnter the prefix exp  : ";
 	getline(cin, exp);
-	cout << "\n\t\tResult : " << evalPostfix(exp) << endl;
+	cout << "\n\t\tResult : " << evalPrefix(exp) << endl;
 }

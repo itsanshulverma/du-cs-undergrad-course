@@ -1,0 +1,8 @@
+
+Enter the postfix exp  : 28 2 5 **
+
+                Result : 280
+
+Enter the postfix exp  : 22 136 12+ *
+
+                Result : 3256

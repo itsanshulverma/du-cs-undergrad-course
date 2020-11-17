@@ -1,0 +1,8 @@
+
+Enter the prefix exp  : ** 2 5 28
+
+                Result : 280
+
+Enter the prefix exp  : * +12 136 22
+
+                Result : 3256
