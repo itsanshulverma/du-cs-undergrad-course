@@ -46,6 +46,7 @@ class DoublyLinkedList
 	void delete_at_loc();
 	void delete_by_data();
 	void display();
+	DoublyLinkedList<X> operator+(DoublyLinkedList<X> &list);
 };
 
 /******************************************
@@ -366,17 +367,31 @@ void DoublyLinkedList<X>::reverse()
 }
 
 /******************************************
+	'+' overloaded Function
+*******************************************/
+template <typename X>
+DoublyLinkedList<X> DoublyLinkedList<X>::operator+(DoublyLinkedList<X> &list)
+{
+	tail->next = list.head;
+	list.head->prev = tail;
+	tail = list.tail;
+	cout << "\nConcatenated list:\n";
+	display();
+	return *this;
+}
+
+/******************************************
 	Main Function
 *******************************************/
 int main()
 {
 	int choice, choice1;
 	char ch, ch1;
-	DoublyLinkedList<int> list;
+	DoublyLinkedList<int> list, new_list;
 	cout << "\nDoubly Linked list demonstration: \n";
 	do
 	{
-		cout << "\n1. Insert node\n2. Delete node\n3. Count the nodes\n4. Search\n5. Reverse the list\n6. Display\n7. Exit" << endl;
+		cout << "\n1. Insert node\n2. Delete node\n3. Count the nodes\n4. Search\n5. Reverse the list\n6. Display\n7. Concatenate with another list\n8. Exit" << endl;
 		cout << "Enter your choice : ";
 		cin >> choice;
 		switch (choice)
@@ -449,6 +464,17 @@ int main()
 			list.display();
 			break;
 		case 7:
+			cout << "\nCreating (new) list to be concatenated...\n";
+			do
+			{
+				new_list.insert_at_end();
+				cout << "\nWant to enter more nodes? (y/n) ";
+				cin >> ch1;
+			} while (ch1 == 'y');
+			new_list.display();
+			list + new_list;
+			break;
+		case 8:
 			exit(0);
 			break;
 		default:

@@ -1,0 +1,138 @@
+
+Circular Singly Linked list demonstration: 
+
+1. Insert node
+2. Delete node
+3. Count the nodes
+4. Search
+5. Reverse the list
+6. Display
+7. Concatenate with another list
+8. Exit
+Enter your choice : 1
+
+1. Insert at beginning
+2. Insert at end
+3. Insert at location
+Enter your choice: 1
+
+Enter the node data : 20
+Inserted!
+Want to insert more nodes? (y/n): y
+
+1. Insert at beginning
+2. Insert at end
+3. Insert at location
+Enter your choice: 2
+
+Enter the node data : 70
+Inserted!
+Want to insert more nodes? (y/n): y
+
+1. Insert at beginning
+2. Insert at end
+3. Insert at location
+Enter your choice: 1
+
+Enter the node data : 65
+Inserted!
+Want to insert more nodes? (y/n): y
+
+1. Insert at beginning
+2. Insert at end
+3. Insert at location
+Enter your choice: 3
+
+Enter the location for new node : 2
+Enter the node data : 46
+Inserted!
+Want to insert more nodes? (y/n): n
+
+        -->65-->46-->20-->70-->...
+
+Want to operate more? (y/n) y
+
+1. Insert node
+2. Delete node
+3. Count the nodes
+4. Search
+5. Reverse the list
+6. Display
+7. Concatenate with another list
+8. Exit
+Enter your choice : 4
+
+Enter the node data to be searched : 65
+Data found at location 1 in the list.
+
+Want to operate more? (y/n) y
+
+1. Insert node
+2. Delete node
+3. Count the nodes
+4. Search
+5. Reverse the list
+6. Display
+7. Concatenate with another list
+8. Exit
+Enter your choice : 2
+
+1. Delete at beginning
+2. Delete at end
+3. Delete at location
+4. Delete by node data
+Enter your choice: 1
+Deleted one node from beginning!
+Want to delete more nodes? (y/n): y
+
+1. Delete at beginning
+2. Delete at end
+3. Delete at location
+4. Delete by node data
+Enter your choice: 2
+Deleted one node from end!
+Want to delete more nodes? (y/n): y
+
+1. Delete at beginning
+2. Delete at end
+3. Delete at location
+4. Delete by node data
+Enter your choice: 4
+Enter the node data to be deleted: 20
+Deleted one node from end!
+Want to delete more nodes? (y/n): n
+
+        -->46-->...
+
+Want to operate more? (y/n) y
+
+1. Insert node
+2. Delete node
+3. Count the nodes
+4. Search
+5. Reverse the list
+6. Display
+7. Concatenate with another list
+8. Exit
+Enter your choice : 7
+
+Creating (new) list to be concatenated...
+
+Enter the node data : 28
+Inserted!
+
+Want to enter more nodes? (y/n) y
+
+Enter the node data : 76
+Inserted!
+
+Want to enter more nodes? (y/n) n
+
+        -->28-->76-->...
+76
+46
+Concatenated list:
+
+        -->46-->28-->76-->...
+
+Want to operate more? (y/n) n

@@ -369,6 +369,8 @@ SinglyLinkedList<X> SinglyLinkedList<X>::operator+(SinglyLinkedList<X> &list)
 {
 	tail->next = list.head;
 	tail = list.tail;
+	cout << "\nConcatenated list:\n";
+	display();
 	return *this;
 }
 
@@ -464,9 +466,7 @@ int main()
 				cin >> ch1;
 			} while (ch1 == 'y');
 			new_list.display();
-			list = list + new_list;
-			cout << "\nConcatenated list:\n";
-			list.display();
+			list + new_list;
 			break;
 		case 8:
 			exit(0);

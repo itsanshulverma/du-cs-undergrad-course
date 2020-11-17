@@ -1,0 +1,201 @@
+
+Singly Linked list demonstration: 
+
+1. Insert node
+2. Delete node
+3. Count the nodes
+4. Search
+5. Reverse the list
+6. Display
+7. Concatenate with another list
+8. Exit
+Enter your choice : 1
+
+1. Insert at beginning
+2. Insert at end
+3. Insert at location
+Enter your choice: 1
+
+Enter the node data: 20
+Inserted!
+Want to insert more nodes? (y/n): y
+
+1. Insert at beginning
+2. Insert at end
+3. Insert at location
+Enter your choice: 1
+
+Enter the node data: 20
+Inserted!
+Want to insert more nodes? (y/n): n
+
+        20 --> 20
+
+Want to operate more? (y/n) y
+
+1. Insert node
+2. Delete node
+3. Count the nodes
+4. Search
+5. Reverse the list
+6. Display
+7. Concatenate with another list
+8. Exit
+Enter your choice : 7
+
+Creating (new) list to be concatenated...
+
+Enter the node data: 23
+Inserted!
+
+Want to enter more nodes? (y/n) y
+
+Enter the node data: 56
+Inserted!
+Want to enter more nodes? (y/n) n
+        23 --> 56
+
+Concatenated list:
+
+        23 --> 56
+
+Want to operate more? (y/n) n
+PS C:\Users\Anshul Verma\Documents\GitHub\du-cs-undergrad-course\Semester 3\data-structures\practicals\linked_lists\10. Singly Linked List> g++ singly_linked_list.cpp -o singly_linked_list
+PS C:\Users\Anshul Verma\Documents\GitHub\du-cs-undergrad-course\Semester 3\data-structures\practicals\linked_lists\10. Singly Linked List> .\singly_linked_list.exe
+
+Singly Linked list demonstration: 
+
+1. Insert node
+2. Delete node
+3. Count the nodes
+4. Search
+5. Reverse the list
+6. Display
+7. Concatenate with another list
+8. Exit
+Enter your choice : 1
+
+1. Insert at beginning
+2. Insert at end
+3. Insert at location
+Enter your choice: 1
+
+Enter the node data: 20
+Inserted!
+Want to insert more nodes? (y/n): y
+
+1. Insert at beginning
+2. Insert at end
+3. Insert at location
+Enter your choice: 2
+
+Enter the node data: 24
+Inserted!
+Want to insert more nodes? (y/n): y
+
+1. Insert at beginning
+2. Insert at end
+3. Insert at location
+Enter your choice: 1
+
+Enter the node data: 25
+Inserted!
+Want to insert more nodes? (y/n): y
+
+1. Insert at beginning
+2. Insert at end
+3. Insert at location
+Enter your choice: 3
+
+Enter the location for new node : 2
+Enter the node data : 49
+Inserted!
+Want to insert more nodes? (y/n): n
+
+        25 --> 49 --> 20 --> 24
+
+Want to operate more? (y/n) y
+
+1. Insert node
+2. Delete node
+3. Count the nodes
+4. Search
+5. Reverse the list
+6. Display
+7. Concatenate with another list
+8. Exit
+Enter your choice : 4
+
+Enter the node data to be searched : 20
+Data found at location 3 in the list.
+
+Want to operate more? (y/n) y
+
+1. Insert node
+2. Delete node
+3. Count the nodes
+4. Search
+5. Reverse the list
+6. Display
+7. Concatenate with another list
+8. Exit
+Enter your choice : 2
+
+1. Delete at beginning
+2. Delete at end
+3. Delete at location
+4. Delete by node data
+Enter your choice: 1
+Deleted!
+Want to delete more nodes? (y/n): y
+
+1. Delete at beginning
+2. Delete at end
+3. Delete at location
+4. Delete by node data
+Enter your choice: 2
+Deleted!
+Want to delete more nodes? (y/n): y
+
+1. Delete at beginning
+2. Delete at end
+3. Delete at location
+4. Delete by node data
+Enter your choice: 4
+Enter the node data to be deleted: 20
+Deleted!
+Want to delete more nodes? (y/n): n
+
+        49
+
+Want to operate more? (y/n) y
+
+1. Insert node
+2. Delete node
+3. Count the nodes
+4. Search
+5. Reverse the list
+6. Display
+7. Concatenate with another list
+8. Exit
+Enter your choice : 7
+
+Creating (new) list to be concatenated...
+
+Enter the node data: 28
+Inserted!
+
+Want to enter more nodes? (y/n) y
+
+Enter the node data: 37
+Inserted!
+
+Want to enter more nodes? (y/n) n
+
+        28 --> 37
+
+Concatenated list:
+
+        49 --> 28 --> 37
+
+Want to operate more? (y/n) n
