@@ -89,14 +89,14 @@ class Stack
 			cout << "\nStack is empty!" << endl;
 		else
 		{
-			cout << "\nStack<" << count << "> : top--» ";
+			cout << "\nStack<" << count << "> : top--> ";
 			temp = top;
 			while (temp != NULL)
 			{
 				if (temp == top)
 					cout << temp->data;
 				else
-					cout << "-» " << temp->data;
+					cout << "-> " << temp->data;
 				temp = temp->next;
 			}
 			cout << endl;

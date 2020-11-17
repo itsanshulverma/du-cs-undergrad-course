@@ -1,0 +1,50 @@
+
+Stack<int> demonstration (w/array): 
+
+Pushing elements to stack:
+
+42 pushed into stack.
+Element at top: 42
+468 pushed into stack.
+Element at top: 468
+335 pushed into stack.
+Element at top: 335
+501 pushed into stack.
+Element at top: 501
+170 pushed into stack.
+Element at top: 170
+Stack is full!
+
+Stack<5> : 42 468 335 501 170 <--top
+
+Popping elements from stack:
+
+Element at top: 170
+170 popped out of stack.
+Element at top: 501
+501 popped out of stack.
+Element at top: 335
+335 popped out of stack.
+Element at top: 468
+468 popped out of stack.
+Element at top: 42
+42 popped out of stack.
+Stack is empty!
+
+Pushing elements to stack again...
+
+479 pushed into stack.
+Element at top: 479
+359 pushed into stack.
+Element at top: 359
+963 pushed into stack.
+Element at top: 963
+465 pushed into stack.
+Element at top: 465
+706 pushed into stack.
+Element at top: 706
+Stack is full!
+
+Stack<5> : 479 359 963 465 706 <--top
+
+Clearing the stack... Done

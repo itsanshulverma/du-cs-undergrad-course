@@ -76,7 +76,7 @@ class Stack
 			{
 				cout << arr[i] << " ";
 			}
-			cout << "«--top" << endl;
+			cout << "<--top" << endl;
 		}
 	}
 };

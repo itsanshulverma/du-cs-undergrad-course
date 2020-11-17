@@ -1,0 +1,46 @@
+
+Stack<float> demonstration (w/Linked list): 
+
+Pushing elements to stack:
+
+5.91549 pushed to the stack.
+Element at top: 5.91549
+3350 pushed to the stack.
+Element at top: 3350
+41.4634 pushed to the stack.
+Element at top: 41.4634
+59.1358 pushed to the stack.
+Element at top: 59.1358
+234.878 pushed to the stack.
+Element at top: 234.878
+Stack<5> : top--> 234.878-> 59.1358-> 41.4634-> 3350-> 5.91549
+
+Popping elements from stack:
+
+Element at top: 234.878
+234.878 popped out of stack.
+Element at top: 59.1358
+59.1358 popped out of stack.
+Element at top: 41.4634
+41.4634 popped out of stack.
+Element at top: 3350
+3350 popped out of stack.
+Element at top: 5.91549
+5.91549 popped out of stack.
+Stack is empty!
+
+Pushing elements to stack again...
+
+138.431 pushed to the stack.
+Element at top: 138.431
+39.7183 pushed to the stack.
+Element at top: 39.7183
+874.545 pushed to the stack.
+Element at top: 874.545
+474.286 pushed to the stack.
+Element at top: 474.286
+135.738 pushed to the stack.
+Element at top: 135.738
+Stack<5> : top--> 135.738-> 474.286-> 874.545-> 39.7183-> 138.431
+
+Clearing the stack... Done
