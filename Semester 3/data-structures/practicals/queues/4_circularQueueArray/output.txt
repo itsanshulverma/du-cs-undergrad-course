@@ -1,0 +1,154 @@
+
+< Circular Queue with Array Demonstration >
+-------------------------
+1. Enqueue
+2. Dequeue
+3. Clear the queue
+4. Count
+5. Peek
+6. Display the queue
+0. Exit
+-------------------------
+Enter your choice: 1
+Enter the element: 50
+-------------------------
+1. Enqueue
+2. Dequeue
+3. Clear the queue
+4. Count
+5. Peek
+6. Display the queue
+0. Exit
+-------------------------
+Enter your choice: 1
+Enter the element: 60
+-------------------------
+1. Enqueue
+2. Dequeue
+3. Clear the queue
+4. Count
+5. Peek
+6. Display the queue
+0. Exit
+-------------------------
+Enter your choice: 1
+Enter the element: 70
+-------------------------
+1. Enqueue
+2. Dequeue
+3. Clear the queue
+4. Count
+5. Peek
+6. Display the queue
+0. Exit
+-------------------------
+Enter your choice: 1
+Enter the element: 80
+-------------------------
+1. Enqueue
+2. Dequeue
+3. Clear the queue
+4. Count
+5. Peek
+6. Display the queue
+0. Exit
+-------------------------
+Enter your choice: 1
+Enter the element: 90
+-------------------------
+1. Enqueue
+2. Dequeue
+3. Clear the queue
+4. Count
+5. Peek
+6. Display the queue
+0. Exit
+-------------------------
+Enter your choice: 1 
+Enter the element: 10
+Queue overflow!
+-------------------------
+1. Enqueue
+2. Dequeue
+3. Clear the queue
+4. Count
+5. Peek
+6. Display the queue
+0. Exit
+-------------------------
+Enter your choice: 2
+-------------------------
+1. Enqueue
+2. Dequeue
+3. Clear the queue
+4. Count
+5. Peek
+6. Display the queue
+0. Exit
+-------------------------
+Enter your choice: 6
+        60 70 80 90 
+-------------------------
+1. Enqueue
+2. Dequeue
+3. Clear the queue
+4. Count
+5. Peek
+6. Display the queue
+0. Exit
+-------------------------
+Enter your choice: 2
+-------------------------
+1. Enqueue
+2. Dequeue
+3. Clear the queue
+4. Count
+5. Peek
+6. Display the queue
+0. Exit
+-------------------------
+Enter your choice: 4
+No of element in the queue : 3
+-------------------------
+1. Enqueue
+2. Dequeue
+3. Clear the queue
+4. Count
+5. Peek
+6. Display the queue
+0. Exit
+-------------------------
+Enter your choice: 5
+Element at front is: 70
+-------------------------
+1. Enqueue
+2. Dequeue
+3. Clear the queue
+4. Count
+5. Peek
+6. Display the queue
+0. Exit
+-------------------------
+Enter your choice: 3
+Queue Cleared!
+-------------------------
+1. Enqueue
+2. Dequeue
+3. Clear the queue
+4. Count
+5. Peek
+6. Display the queue
+0. Exit
+-------------------------
+Enter your choice: 6
+Queue is empty!
+-------------------------
+1. Enqueue
+2. Dequeue
+3. Clear the queue
+4. Count
+5. Peek
+6. Display the queue
+0. Exit
+-------------------------
+Enter your choice: 0

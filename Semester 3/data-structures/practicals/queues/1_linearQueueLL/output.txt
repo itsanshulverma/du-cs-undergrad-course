@@ -1,0 +1,110 @@
+
+< Linear Queue with Linked List Demonstration >
+-------------------------
+1. Enqueue
+2. Dequeue
+3. Clear the queue
+4. Count
+5. Peek
+6. Display the queue
+0. Exit
+-------------------------
+Enter your choice: 1
+Enter the element: 50
+-------------------------
+1. Enqueue
+2. Dequeue
+3. Clear the queue
+4. Count
+5. Peek
+6. Display the queue
+0. Exit
+-------------------------
+Enter your choice: 1
+Enter the element: 40
+-------------------------
+1. Enqueue
+2. Dequeue
+3. Clear the queue
+4. Count
+5. Peek
+6. Display the queue
+0. Exit
+-------------------------
+Enter your choice: 1
+Enter the element: 60
+-------------------------
+1. Enqueue
+2. Dequeue
+3. Clear the queue
+4. Count
+5. Peek
+6. Display the queue
+0. Exit
+-------------------------
+Enter your choice: 5
+Element at front is: 50
+-------------------------
+1. Enqueue
+2. Dequeue
+3. Clear the queue
+4. Count
+5. Peek
+6. Display the queue
+0. Exit
+-------------------------
+Enter your choice: 4
+No of element in the queue : 3
+-------------------------
+1. Enqueue
+2. Dequeue
+3. Clear the queue
+4. Count
+5. Peek
+6. Display the queue
+0. Exit
+-------------------------
+Enter your choice: 2
+-------------------------
+1. Enqueue
+2. Dequeue
+3. Clear the queue
+4. Count
+5. Peek
+6. Display the queue
+0. Exit
+-------------------------
+Enter your choice: 6
+        40 60 
+-------------------------
+1. Enqueue
+2. Dequeue
+3. Clear the queue
+4. Count
+5. Peek
+6. Display the queue
+0. Exit
+-------------------------
+Enter your choice: 3
+Queue cleared!
+-------------------------
+1. Enqueue
+2. Dequeue
+3. Clear the queue
+4. Count
+5. Peek
+6. Display the queue
+0. Exit
+-------------------------
+Enter your choice: 6
+Queue is empty!
+-------------------------
+1. Enqueue
+2. Dequeue
+3. Clear the queue
+4. Count
+5. Peek
+6. Display the queue
+0. Exit
+-------------------------
+Enter your choice: 0

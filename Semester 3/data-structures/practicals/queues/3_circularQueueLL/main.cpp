@@ -70,7 +70,6 @@ class Queue
 		}
 		else
 		{
-			cout << "Hi";
 			temp1->next = rear->next;
 			rear->next = temp1;
 			rear = temp1;
