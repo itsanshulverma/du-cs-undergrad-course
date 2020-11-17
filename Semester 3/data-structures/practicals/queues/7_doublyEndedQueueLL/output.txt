@@ -1,0 +1,9 @@
+
+Insert element '5' at rear end
+Insert element '10' at rear end
+Rear end element: 40
+After deleting rear element new rear is: 50
+Inserting element '15' at front end
+Front end element: 19
+Number of elements in Deque: 2
+After deleting front element new front is: 50
