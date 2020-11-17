@@ -1,0 +1,257 @@
+
+Binary Search Tree Implementation
+
+---------- Menu ----------
+1. Insert
+2. Seach a node
+3. Recursive Depth-First Traversals
+4. Iterative Depth-First Traversals
+5. Breadth First Traversal
+6. Mirror Image (BFS)
+7. Count nodes
+8. Search a node, change its value, update the BST
+9. Height of the tree
+10. Delete by merging
+11. Delete by copying
+
+Enter your choice: 1
+Enter a node: 50
+Node<50> Inserted!
+
+Want to continue? (Y/N): y
+
+---------- Menu ----------
+1. Insert
+2. Seach a node
+3. Recursive Depth-First Traversals
+4. Iterative Depth-First Traversals
+5. Breadth First Traversal
+6. Mirror Image (BFS)
+7. Count nodes
+8. Search a node, change its value, update the BST
+9. Height of the tree
+10. Delete by merging
+11. Delete by copying
+
+Enter your choice: 1
+Enter a node: 40
+Node<40> Inserted!
+
+Want to continue? (Y/N): y
+
+---------- Menu ----------
+1. Insert
+2. Seach a node
+3. Recursive Depth-First Traversals
+4. Iterative Depth-First Traversals
+5. Breadth First Traversal
+6. Mirror Image (BFS)
+7. Count nodes
+8. Search a node, change its value, update the BST
+9. Height of the tree
+10. Delete by merging
+11. Delete by copying
+
+Enter your choice: 1
+Enter a node: 20
+Node<20> Inserted!
+
+Want to continue? (Y/N): y
+
+---------- Menu ----------
+1. Insert
+2. Seach a node
+3. Recursive Depth-First Traversals
+4. Iterative Depth-First Traversals
+5. Breadth First Traversal
+6. Mirror Image (BFS)
+7. Count nodes
+8. Search a node, change its value, update the BST
+9. Height of the tree
+10. Delete by merging
+11. Delete by copying
+
+Enter your choice: 1
+Enter a node: 10
+Node<10> Inserted!
+
+Want to continue? (Y/N): y
+
+---------- Menu ----------
+1. Insert
+2. Seach a node
+3. Recursive Depth-First Traversals
+4. Iterative Depth-First Traversals
+5. Breadth First Traversal
+6. Mirror Image (BFS)
+7. Count nodes
+8. Search a node, change its value, update the BST
+9. Height of the tree
+10. Delete by merging
+11. Delete by copying
+
+Enter your choice: 1 
+Enter a node: 55
+Node<55> Inserted!
+
+Want to continue? (Y/N): y
+
+---------- Menu ----------
+1. Insert
+2. Seach a node
+3. Recursive Depth-First Traversals
+4. Iterative Depth-First Traversals
+5. Breadth First Traversal
+6. Mirror Image (BFS)
+7. Count nodes
+8. Search a node, change its value, update the BST
+9. Height of the tree
+10. Delete by merging
+11. Delete by copying
+
+Enter your choice: 1 
+Enter a node: 90
+Node<90> Inserted!
+
+Want to continue? (Y/N): y
+
+---------- Menu ----------
+1. Insert
+2. Seach a node
+3. Recursive Depth-First Traversals
+4. Iterative Depth-First Traversals
+5. Breadth First Traversal
+6. Mirror Image (BFS)
+7. Count nodes
+8. Search a node, change its value, update the BST
+9. Height of the tree
+10. Delete by merging
+11. Delete by copying
+
+Enter your choice: 10
+
+Enter the node value you want to delete: 90
+
+
+Want to continue? (Y/N): y
+
+---------- Menu ----------
+1. Insert
+2. Seach a node
+3. Recursive Depth-First Traversals
+4. Iterative Depth-First Traversals
+5. Breadth First Traversal
+6. Mirror Image (BFS)
+7. Count nodes
+8. Search a node, change its value, update the BST
+9. Height of the tree
+10. Delete by merging
+11. Delete by copying
+
+Enter your choice: 11
+
+Enter the node value you want to delete: 50
+
+
+Want to continue? (Y/N): y
+
+---------- Menu ----------
+1. Insert
+2. Seach a node
+3. Recursive Depth-First Traversals
+4. Iterative Depth-First Traversals
+5. Breadth First Traversal
+6. Mirror Image (BFS)
+7. Count nodes
+8. Search a node, change its value, update the BST
+9. Height of the tree
+10. Delete by merging
+11. Delete by copying
+
+Enter your choice: 4
+
+Iterative Inorder: 10 20 40 55
+Iterative Preorder: 40 20 10 55
+Iterative Postorder: 10 20 55 40 
+
+Want to continue? (Y/N): y
+
+---------- Menu ----------
+1. Insert
+2. Seach a node
+3. Recursive Depth-First Traversals
+4. Iterative Depth-First Traversals
+5. Breadth First Traversal
+6. Mirror Image (BFS)
+7. Count nodes
+8. Search a node, change its value, update the BST
+9. Height of the tree
+10. Delete by merging
+11. Delete by copying
+
+Enter your choice: 5
+
+Breadth First Traversal: 40 20 55 10
+
+Want to continue? (Y/N): y
+
+---------- Menu ----------
+1. Insert
+2. Seach a node
+3. Recursive Depth-First Traversals
+4. Iterative Depth-First Traversals
+5. Breadth First Traversal
+6. Mirror Image (BFS)
+7. Count nodes
+8. Search a node, change its value, update the BST
+9. Height of the tree
+10. Delete by merging
+11. Delete by copying
+
+Enter your choice: 8
+
+Enter the key to be searched: 20
+Enter the new key: 60
+Node<60> Inserted!
+
+Want to continue? (Y/N): y
+
+---------- Menu ----------
+1. Insert
+2. Seach a node
+3. Recursive Depth-First Traversals
+4. Iterative Depth-First Traversals
+5. Breadth First Traversal
+6. Mirror Image (BFS)
+7. Count nodes
+8. Search a node, change its value, update the BST
+9. Height of the tree
+10. Delete by merging
+11. Delete by copying
+
+Enter your choice: 4
+
+Iterative Inorder: 10 40 55 60
+Iterative Preorder: 40 10 55 60
+Iterative Postorder: 10 60 55 40
+
+Want to continue? (Y/N): y
+
+---------- Menu ----------
+1. Insert
+2. Seach a node
+3. Recursive Depth-First Traversals
+4. Iterative Depth-First Traversals
+5. Breadth First Traversal
+6. Mirror Image (BFS)
+7. Count nodes
+8. Search a node, change its value, update the BST
+9. Height of the tree
+10. Delete by merging
+11. Delete by copying
+
+Enter your choice: 9
+
+Height of tree: 2
+
+Want to continue? (Y/N): n
