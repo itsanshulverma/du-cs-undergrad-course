@@ -1,0 +1,33 @@
+
+Node(33) Inserted!
+Node(13) Inserted!
+Node(53) Inserted!
+Node(9) Inserted!
+Node(21) Inserted!
+Node(61) Inserted!
+Node(8) Inserted!
+Node(11) Inserted!
+
+Resultant AVL Tree:
+
+R----33
+   L----13
+   |  L----9
+   |  |  L----8
+   |  |  R----11
+   |  R----21
+   R----53
+      R----61
+
+Node(13) Deleted!
+After deleting
+
+Resultant AVL Tree:
+
+R----33
+   L----9
+   |  L----8
+   |  R----21
+   |     L----11
+   R----53
+      R----61
