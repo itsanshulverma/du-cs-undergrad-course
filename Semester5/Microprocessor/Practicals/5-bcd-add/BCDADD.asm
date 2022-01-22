@@ -1,0 +1,34 @@
+;5) 32 bit BCD addition
+
+.MODEL TINY
+.486
+.CODE
+.STARTUP
+	MOV		EBX,  0FA045321H
+	MOV		EDX,  12345678H
+
+	ADD 	DL,  BL
+	MOV		AL,  DL
+	DAA	
+	MOV		CL,  AL
+	ADC 	DH,  BH
+	MOV		AL,  DH
+	DAA
+	MOV		CH,  AL
+
+	BSWAP 	EBX
+	BSWAP 	EDX
+	BSWAP 	ECX
+
+	ADC 	DH,  BH
+	MOV		AL,  DH
+	DAA
+	MOV		CH,  AL
+	ADC 	DL,  BL
+	MOV		AL,  DL
+	DAA	
+	MOV		CL,  AL
+
+	BSWAP 	ECX
+.EXIT
+END
