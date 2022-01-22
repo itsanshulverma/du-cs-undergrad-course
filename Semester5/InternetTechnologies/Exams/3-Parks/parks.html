@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Parks</title>
+	<style>
+	table, th, td {
+		border: 1px solid black;
+		border-collapse: collapse;
+	}
+	form {
+		padding: 10px;
+	}
+	</style>
+</head>
+<body>
+	<h1>Parks</h1>
+	<table>
+		<tr>
+			<th>Index</th>
+			<th>Value</th>
+		</tr>
+		<tr>
+			<td>0</td>
+			<td>{name: Jim Corbett National Park, state: Uttarakhand, speciality: Tigers}</td>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>{name: Kaziranga National Park, state: Assam, speciality: Rhinos}</td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td>{name: Asola Bhatti Wildlife Sanctuary, state: Delhi, speciality: Birds}</td>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td>{name: Gir National Park, state: Gujarat, speciality: Lion}</td>
+		</tr>
+	</table>
+
+	<form>
+		<label for="index">Index: </label>
+		<input id="index" type="number" name="index" />
+		<label for="name">Name: </label>
+		<input id="name" type="text" name="name" />
+		<input id="submit" type="submit" name="Submit" />
+	</form>
+
+	<h2 id="value"></h2>
+
+	<script src="parks.js"></script>
+</body>
+</html>

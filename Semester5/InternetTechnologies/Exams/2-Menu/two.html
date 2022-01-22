@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<title>2 - Menus</title>
+	<style>
+		body {
+			display: grid;
+			place-items: center;
+			font-family: 'Trebuchet MS', sans-serif;
+      background-color: rgb(41, 41, 41);
+		}
+		.container {
+			display: grid;
+			width: fit-content;
+			width: 60%;
+			margin: 20px;
+			padding: 20px 50px;
+			border-radius: 10px;
+      background-color: white;
+			box-shadow: 0px 0px 6px black;
+		}
+		ul {
+			list-style: none;
+		}
+		li { margin: 5px; }
+		.switchBtn {
+			border: none;
+			color: white;
+			background-color: rgb(10, 136, 42);
+			padding: 10px;
+			cursor: pointer;
+			margin: 10px 30px;
+			font-size: 0.9rem;
+			border-radius: 5px;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h1 class="title">Veg Menu</h1>
+		<div class="menu">
+			<ul>
+				<li>
+					<h2>Breakfast</h2>
+					<ul class="breakfast">
+						<li>Poha</li>
+						<li>Samosa</li>
+						<li>Kachori</li>
+						<li>Dhokla</li>
+						<li>Aloo Paratha</li>
+					</ul>
+				</li>
+				<li>
+					<h2>Lunch</h2>
+					<ul class="lunch">
+						<li>Naan</li>
+						<li>Matar Paneer</li>
+						<li>Malai Kofta</li>
+						<li>Dal Tadka</li>
+						<li>Mushroom Sabzi</li>
+					</ul>
+				</li>
+				<li>
+					<h2>Dinner</h2>
+					<ul class="dinner">
+						<li>Tawa Roti</li>
+						<li>Kadhai Paneer</li>
+						<li>Masala Dosa</li>
+						<li>Mix Veg</li>
+						<li>Veg Pulao</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<button class="switchBtn">Switch</button>
+	</div>
+	<script>
+		let toggle = true
+		let temp1, temp2, temp3, temp4, temp5, temp6
+		let eggs
+		$('.switchBtn').click(() => {
+			if(toggle) {
+				temp1 = $('.breakfast li').last().detach()
+				temp2 = $('.lunch li').last().detach()
+				temp3 = $('.dinner li').last().detach()
+				if(temp4 && temp5 && temp6){
+					temp4.appendTo('.breakfast')
+					temp5.appendTo('.lunch')
+					temp6.appendTo('.dinner')
+				}
+				$('.breakfast').prepend($('<li class="egg"></li>').text('Egg'))
+				$('.dinner').prepend($('<li class="egg"></li>').text('Egg'))
+
+				$('.breakfast').append($('<li></li>').text('Chicken Soup'))
+				$('.lunch').append($('<li></li>').text('Chicken Curry'))
+				$('.dinner').append($('<li></li>').text('Biryani'))
+				$('h1').text('Non-Veg Menu')
+				toggle = false
+			}
+			else {
+				let temp4 = $('.breakfast li').last().detach()
+				let temp5 = $('.lunch li').last().detach()
+				let temp6 = $('.dinner li').last().detach()
+				temp1.appendTo('.breakfast')
+				temp2.appendTo('.lunch')
+				temp3.appendTo('.dinner')
+				if($('.breakfast .egg')) $('.breakfast .egg').remove()
+				if($('.dinner .egg')) $('.dinner .egg').remove()
+				$('h1').text('Veg Menu')
+				toggle = true
+			}
+		})
+	</script>
+</body>
+</html>

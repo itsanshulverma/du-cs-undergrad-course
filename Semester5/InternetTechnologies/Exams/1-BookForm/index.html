@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>01 - Books</title>
+	<style>
+		body {
+			display: grid;
+			place-items: center;
+			width: 100vw;
+			height: 100vh;
+			overflow: hidden;
+			background-color: rgb(41, 41, 41);
+			font-family: 'Trebuchet MS', sans-serif;
+		}
+		.form {
+			display: grid;
+			width: fit-content;
+			background-color: rgb(241, 241, 241);
+			margin: 20px;
+			padding: 20px 50px;
+			border-radius: 10px;
+			box-shadow: 0px 0px 6px black;
+		}
+		label {
+			font-size: 1.2rem;
+			margin-top: 20px;
+			margin-bottom: 8px;
+			width: 250px;
+		}
+		input, select {
+			padding: 7px 10px;
+			border-radius: 5px;
+			border: 2px solid rgb(192, 192, 192);
+		}
+		input:focus, select:focus {
+			border: 2px solid rgb(75, 75, 75);
+		}
+		.btn {
+			border: none;
+			color: white;
+			background-color: rgb(8, 93, 204);
+			padding: 10px;
+			cursor: pointer;
+			margin: 10px 30px;
+			font-size: 0.9rem;
+		}
+	</style>
+</head>
+<body>
+	<form class="form">
+		<label for="name">Book's name: </label>
+		<input type="text" name="name" id="name">
+		<label for="author">Author: </label>
+		<input type="text" name="author" id="author">
+		<label for="price">Price: ₹ </label>
+		<input type="number" step="0.01" name="price" id="price">
+		<label for="publisher">Publisher: </label>
+		<input type="text" name="publisher" id="publisher">
+		<label for="category">Category: </label>
+		<select name="category" id="category">
+			<option value="fiction">Fiction</option>
+			<option value="nfiction">Non-fiction</option>
+		</select>
+		<br>
+		<input class="btn" type="submit" value="Submit">
+	</form>
+	<script>
+		let counter = 0
+		let books = {}
+		let form = document.querySelector("form")
+		let nameEl = document.getElementById("name")
+		let authorEl = document.getElementById("author")
+		let priceEl = document.getElementById("price")
+		let publisherEl = document.getElementById("publisher")
+		let categoryEL = document.getElementById("category")
+		form.addEventListener('submit', (e) => {
+			e.preventDefault();
+			counter++
+			let bookID = "book"+counter
+			let name = nameEl.value
+			let author = authorEl.value
+			let price = priceEl.value
+			let publisher = publisherEl.value
+			let category = categoryEL.options[categoryEL.selectedIndex].value
+			let book = {
+				"name": name,
+				"author": author,
+				"price": price,
+				"publisher": publisher,
+				"category": category
+			}
+			books[bookID] = book
+			console.log("Book: " + JSON.stringify(book, '\t', 2))
+			console.log("Books: " + JSON.stringify(books, '\t', 2))
+		})
+	</script>
+</body>
+</html>
