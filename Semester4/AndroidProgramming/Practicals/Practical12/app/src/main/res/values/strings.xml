@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Practical12</string>
+    <string-array name="courses">
+        <item>B.Sc. (Hons) CS</item>
+        <item>B.Sc. (Hons) Chemistry</item>
+        <item>B.Sc. (Hons) Maths</item>
+        <item>B.Sc. (Hons) Physics</item>
+        <item>B.Com. (Hons)</item>
+        <item>B.A. (Hons) English</item>
+        <item>B.A. (Hons) Economics</item>
+    </string-array>
+</resources>
