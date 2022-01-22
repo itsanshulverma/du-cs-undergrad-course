@@ -1,0 +1,5 @@
+PS C:\Users\Anshul Verma\Documents\GitHub\python-lab\_05> python .\ques_5.py
+Enter n: 2
+Enter x: 1
+
+Sum of 2 terms of series for x=1: 0.5

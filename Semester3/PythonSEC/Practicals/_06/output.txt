@@ -1,0 +1,6 @@
+PS C:\Users\Anshul Verma\Documents\GitHub\python-lab\_06> python .\ques_6.py
+Given tuple:  (1, 2, 5, 7, 9, 2, 4, 6, 8, 10)
+New tuple with even values:  (2, 2, 4, 6, 8, 10)
+Concatented tuple:  (1, 2, 5, 7, 9, 2, 4, 6, 8, 10, 11, 13, 15)
+Maximum:  15
+Minimum:  1

@@ -1,0 +1,34 @@
+PS C:\Users\Anshul Verma\Documents\GitHub\python-lab\_09> python .\ques_9.py 
+Enter the no. of students: 5
+
+Enter the name of Student 1: John
+Marks in Subject 1(out of 100): 91
+Marks in Subject 2(out of 100): 95
+Marks in Subject 3(out of 100): 92
+Marks in Subject 4(out of 100): 87
+
+Enter the name of Student 2: Ram
+Marks in Subject 1(out of 100): 75
+Marks in Subject 2(out of 100): 86
+Marks in Subject 3(out of 100): 95
+Marks in Subject 4(out of 100): 90
+
+Enter the name of Student 3: Shyaam
+Marks in Subject 1(out of 100): 84
+Marks in Subject 2(out of 100): 89
+Marks in Subject 3(out of 100): 80
+Marks in Subject 4(out of 100): 94
+
+Enter the name of Student 4: Marques
+Marks in Subject 1(out of 100): 80
+Marks in Subject 2(out of 100): 85
+Marks in Subject 3(out of 100): 87
+Marks in Subject 4(out of 100): 82
+
+Enter the name of Student 5: Michael
+Marks in Subject 1(out of 100): 95
+Marks in Subject 2(out of 100): 94
+Marks in Subject 3(out of 100): 97
+Marks in Subject 4(out of 100): 93
+
+Michael secured the highest percentage.

@@ -1,0 +1,63 @@
+PS C:\Users\Anshul Verma\Documents\GitHub\python-lab\_11> python .\ques11.py
+
+Enter the number of students: 5
+Enter the names of students:
+1: Shyaam 
+2: Ram    
+3: John
+4: Anshul
+5: Manan   
+
+-------- Menu --------
+1. Search a name
+2. Sort the list of names
+Your Choice: 1
+
+Enter a name to search: John
+Choose a searching algorithm:
+1. Linear, 2. Binary: 2
+Name found in the list.
+
+Would you like to continue? (y/n): y
+
+-------- Menu --------
+1. Search a name
+2. Sort the list of names
+Your Choice: 1
+
+Enter a name to search: Anshul
+Choose a searching algorithm:
+1. Linear, 2. Binary: 1
+Name found in the list.
+
+Would you like to continue? (y/n): y
+
+-------- Menu --------
+1. Search a name
+2. Sort the list of names
+Your Choice: 2
+Choose a sorting algorithm:
+1. Bubble, 2. Insertion, 3. Selection: 1
+Sorted list: 'Anshul' 'John' 'Manan' 'Ram' 'Shyaam' 
+
+Would you like to continue? (y/n): y
+
+-------- Menu --------
+1. Search a name
+2. Sort the list of names
+Your Choice: 2
+Choose a sorting algorithm:
+1. Bubble, 2. Insertion, 3. Selection: 2
+Sorted list: 'Anshul' 'John' 'Manan' 'Ram' 'Shyaam' 
+
+Would you like to continue? (y/n): y
+
+-------- Menu --------
+1. Search a name
+2. Sort the list of names
+Your Choice: 2
+Choose a sorting algorithm:
+1. Bubble, 2. Insertion, 3. Selection: 3
+Sorted list: 'Anshul' 'John' 'Manan' 'Ram' 'Shyaam'
+
+Would you like to continue? (y/n): n

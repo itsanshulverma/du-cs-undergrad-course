@@ -1,0 +1,12 @@
+PS C:\Users\Anshul Verma\Documents\GitHub\python-lab\_12> python .\ques12.py
+Enter the length of list: 10
+Enter element 1:20
+Enter element 2:20
+Enter element 3:30
+Enter element 4:40
+Enter element 5:10
+Enter element 6:10
+Enter element 7:30
+Enter element 8:50
+Enter element 9:20
+Enter element 10:10

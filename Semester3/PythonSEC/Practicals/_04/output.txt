@@ -1,0 +1,7 @@
+PS C:\Users\Anshul Verma\Documents\GitHub\python-lab\_04> python .\ques_4.py
+Enter a number greater than or equal to 10: 4
+Oops! Number is less than 10
+
+PS C:\Users\Anshul Verma\Documents\GitHub\python-lab\_04> python .\ques_4.py
+Enter a number greater than or equal to 10: 1634843
+Set:  {1, 3, 4, 6, 8}

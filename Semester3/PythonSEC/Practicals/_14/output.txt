@@ -1,0 +1,5 @@
+
+Error: 'file.txt' not found.
+
+Copying alternate lines from 'file1.txt' to 'file2.txt'...
+Done!

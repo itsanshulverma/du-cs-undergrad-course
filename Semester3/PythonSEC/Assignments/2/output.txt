@@ -1,0 +1,29 @@
+
+Write: Michael
+
+Write: John Cena
+
+Write: Anshul Verma
+
+Read:
+Michael
+John Cena
+Anshul Verma
+
+Delete: John Cena
+
+Read:
+Michael
+Anshul Verma
+
+
+Adding account 'Ram'...
+Adding account 'Shyam'...
+Adding account 'Anubhav'...
+Adding account 'Aman'...
+Searching account 'Ram'...
+Account found!
+Modifying account 'Ram' to 'Ramanujan'...
+Searching account 'Ram'...
+Account not found!
+Deleting account 'Shyam'...

@@ -1,0 +1,8 @@
+PS C:\Users\Anshul Verma\Documents\GitHub\python-lab\_02> python .\ques_2.py
+Enter the sales for week 1: 25000
+Enter the sales for week 2: 7600
+Enter the sales for week 3: 2500
+Enter the sales for week 4: 26800
+Total Sales: Rs.61900.00
+Commission: Rs.3095.00
+Remarks: Good

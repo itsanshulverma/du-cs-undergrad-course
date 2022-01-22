@@ -1,0 +1,65 @@
+PS C:\Users\Anshul Verma\Documents\GitHub\python-lab\_15> python .\ques15.py
+
+Enter the no. of students: 5
+
+Enter the name of Student 1: John 
+Marks in Subject 1: 91
+Marks in Subject 2: 95
+Marks in Subject 3: 73
+
+Enter the name of Student 2: Ram
+Marks in Subject 1: 75
+Marks in Subject 2: 67
+Marks in Subject 3: 85
+
+Enter the name of Student 3: Shyaam
+Marks in Subject 1: 85
+Marks in Subject 2: 90
+Marks in Subject 3: 86
+
+Enter the name of Student 4: Marques
+Marks in Subject 1: 70
+Marks in Subject 2: 99
+Marks in Subject 3: 85
+
+Enter the name of Student 5: Michael
+Marks in Subject 1: 80
+Marks in Subject 2: 85
+Marks in Subject 3: 94
+
+Marks: John
+------------------
+Subject 1: 91.0
+Subject 2: 95.0
+Subject 3: 73.0
+Average: 86.33
+
+Marks: Ram
+------------------
+Subject 1: 75.0
+Subject 2: 67.0
+Subject 3: 85.0
+Average: 75.67
+
+Marks: Shyaam
+------------------
+Subject 1: 85.0
+Subject 2: 90.0
+Subject 3: 86.0
+Average: 87.00
+
+Marks: Marques
+------------------
+Subject 1: 70.0
+Subject 2: 99.0
+Subject 3: 85.0
+Average: 84.67
+
+Marks: Michael
+------------------
+Subject 1: 80.0
+Subject 2: 85.0
+Subject 3: 94.0
+Average: 86.33
+
+Maximum average marks of class: 87.00

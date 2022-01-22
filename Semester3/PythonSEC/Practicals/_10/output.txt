@@ -1,0 +1,28 @@
+PS C:\Users\Anshul Verma\Documents\GitHub\python-lab\_10> python .\ques_10.py
+
+Enter a sentence:
+This is ten percent luck, twenty percent skill; Fifteen percent concentrated power of will; Five percent pleasure, fifty percent pain; And 
+a hundred percent reason to remember the name.
+
+Frequencies of each letter in the given sentence:
+'t' --> 16
+'h' --> 3
+'i' --> 8
+'s' --> 5
+'e' --> 29
+'n' --> 16
+'p' --> 9
+'r' --> 13
+'c' --> 9
+'l' --> 6
+'u' --> 3
+'k' --> 2
+'w' --> 3
+'y' --> 2
+'f' --> 6
+'o' --> 5
+'a' --> 7
+'d' --> 4
+'v' --> 1
+'m' --> 3
+'b' --> 1

@@ -1,0 +1,3 @@
+Enter a number: 15
+15th term of fibonacci series:  610
+Factorial of 15:  1307674368000

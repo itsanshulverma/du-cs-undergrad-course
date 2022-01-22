@@ -1,0 +1,103 @@
+PS C:\Users\Anshul Verma\Documents\GitHub\python-lab\_07> python .\ques_7.py
+
+Menu
+--------------------
+1. Length of string
+2. Maximum of three strings
+3. Replace vowels with '#'
+4. No. of words
+5. Check Palindrome
+6. Exit
+--------------------
+Your choice: 1
+Enter the string: I am Anshul Verma
+Length of string:  17
+
+Want to continue? [y/n]: y
+
+Menu
+--------------------
+1. Length of string
+2. Maximum of three strings
+3. Replace vowels with '#'
+4. No. of words
+5. Check Palindrome
+6. Exit
+--------------------
+Your choice: 2
+Enter string 1: Anshul
+Enter string 2: Verma
+Enter string 3: ARSD
+Maximum of above three:  Verma
+
+Want to continue? [y/n]: y
+
+Menu
+--------------------
+1. Length of string
+2. Maximum of three strings
+3. Replace vowels with '#'
+4. No. of words
+5. Check Palindrome
+6. Exit
+--------------------
+Your choice: 3
+Enter the string: aviation
+Replaced string:  #v##t##n
+
+Want to continue? [y/n]: y
+
+Menu
+--------------------
+1. Length of string
+2. Maximum of three strings
+3. Replace vowels with '#'
+4. No. of words
+5. Check Palindrome
+6. Exit
+--------------------
+Your choice: 4
+Enter the string: I study Computer Science
+No of words:  4
+
+Want to continue? [y/n]: y
+
+Menu
+--------------------
+1. Length of string
+2. Maximum of three strings
+3. Replace vowels with '#'
+4. No. of words
+5. Check Palindrome
+6. Exit
+--------------------
+Your choice: 5
+Enter the string: malayalam
+malayalam is a palindrome.
+
+Want to continue? [y/n]: y
+
+Menu
+--------------------
+1. Length of string
+2. Maximum of three strings
+3. Replace vowels with '#'
+4. No. of words
+5. Check Palindrome
+6. Exit
+--------------------
+Your choice: y
+Invalid Choice!
+
+Want to continue? [y/n]: y
+
+Menu
+--------------------
+1. Length of string
+2. Maximum of three strings
+3. Replace vowels with '#'
+4. No. of words
+5. Check Palindrome
+6. Exit
+--------------------
+Your choice: 6

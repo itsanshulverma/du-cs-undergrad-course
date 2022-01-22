@@ -1,0 +1,183 @@
+PS C:\Users\Anshul Verma\Documents\GitHub\python-lab\_08> python .\ques_8.py
+Enter the size of list: 3
+Enter element: 13
+Enter element: 142
+Enter element: 234
+
+Menu
+--------------------
+1. Check if all elements are numbers
+2. Count odd numbers if list is numeric
+3. Display largest string in list
+4. Reverse the list
+5. Find item in list
+6. Remove item from list
+7. Sort in Descending order
+8. Find common elements from another list
+9. Exit
+--------------------
+Your choice: 1
+All elements are numbers
+
+Want to continue? [y/n]: y
+
+Menu
+--------------------
+1. Check if all elements are numbers
+2. Count odd numbers if list is numeric
+3. Display largest string in list
+4. Reverse the list
+5. Find item in list
+6. Remove item from list
+7. Sort in Descending order
+8. Find common elements from another list
+9. Exit
+--------------------
+Your choice: 2
+Count of odd numbers:  1
+
+Want to continue? [y/n]: n
+
+PS C:\Users\Anshul Verma\Documents\GitHub\python-lab\_08> python .\ques_8.py
+Enter the size of list: 3
+Enter element: Python
+Enter element: Java
+Enter element: C++
+
+Menu
+--------------------
+1. Check if all elements are numbers
+2. Count odd numbers if list is numeric
+3. Display largest string in list
+4. Reverse the list
+5. Find item in list
+6. Remove item from list
+7. Sort in Descending order
+8. Find common elements from another list
+9. Exit
+--------------------
+Your choice: 1
+All elements are not numbers
+
+Want to continue? [y/n]: y
+
+Menu
+--------------------
+1. Check if all elements are numbers
+2. Count odd numbers if list is numeric
+3. Display largest string in list
+4. Reverse the list
+5. Find item in list
+6. Remove item from list
+7. Sort in Descending order
+8. Find common elements from another list
+9. Exit
+--------------------
+Your choice: 2
+
+Want to continue? [y/n]: y
+
+Menu
+--------------------
+1. Check if all elements are numbers
+2. Count odd numbers if list is numeric
+3. Display largest string in list
+4. Reverse the list
+5. Find item in list
+6. Remove item from list
+7. Sort in Descending order
+8. Find common elements from another list
+9. Exit
+--------------------
+Your choice: 3
+Largest string:  Python
+
+Want to continue? [y/n]: y
+
+Menu
+--------------------
+1. Check if all elements are numbers
+2. Count odd numbers if list is numeric
+3. Display largest string in list
+4. Reverse the list
+5. Find item in list
+6. Remove item from list
+7. Sort in Descending order
+8. Find common elements from another list
+9. Exit
+--------------------
+Your choice: 4
+C++ Java Python 
+Want to continue? [y/n]: y
+
+Menu
+--------------------
+1. Check if all elements are numbers
+2. Count odd numbers if list is numeric
+3. Display largest string in list
+4. Reverse the list
+5. Find item in list
+6. Remove item from list
+7. Sort in Descending order
+8. Find common elements from another list
+9. Exit
+--------------------
+Your choice: 6
+
+Enter an element: C++
+Item removed
+
+Want to continue? [y/n]: y
+
+Menu
+--------------------
+1. Check if all elements are numbers
+2. Count odd numbers if list is numeric
+3. Display largest string in list
+4. Reverse the list
+5. Find item in list
+6. Remove item from list
+7. Sort in Descending order
+8. Find common elements from another list
+9. Exit
+--------------------
+Your choice: 7
+['Python', 'Java']
+
+Want to continue? [y/n]: y
+
+Menu
+--------------------
+1. Check if all elements are numbers
+2. Count odd numbers if list is numeric
+3. Display largest string in list
+4. Reverse the list
+5. Find item in list
+6. Remove item from list
+7. Sort in Descending order
+8. Find common elements from another list
+9. Exit
+--------------------
+Your choice: 8
+Enter the size of new list: 3
+Enter element: Go
+Enter element: C++
+Enter element: Java
+Common elements:  ['Java']
+
+Want to continue? [y/n]: y
+
+Menu
+--------------------
+1. Check if all elements are numbers
+2. Count odd numbers if list is numeric
+3. Display largest string in list
+4. Reverse the list
+5. Find item in list
+6. Remove item from list
+7. Sort in Descending order
+8. Find common elements from another list
+9. Exit
+--------------------
+Your choice: 9
+['Python', 'Java']

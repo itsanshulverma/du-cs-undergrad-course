@@ -1,0 +1,500 @@
+
+------------------------------------
+Array 1:
+No. of elements: 355
+No. of comparisons: 2909
+
+------------------------------------
+Array 2:
+No. of elements: 461
+No. of comparisons: 3911
+
+------------------------------------
+Array 3:
+No. of elements: 52
+No. of comparisons: 276
+
+------------------------------------
+Array 4:
+No. of elements: 407
+No. of comparisons: 3400
+
+------------------------------------
+Array 5:
+No. of elements: 164
+No. of comparisons: 1135
+
+------------------------------------
+Array 6:
+No. of elements: 626
+No. of comparisons: 5584
+
+------------------------------------
+Array 7:
+No. of elements: 622
+No. of comparisons: 5561
+
+------------------------------------
+Array 8:
+No. of elements: 536
+No. of comparisons: 4667
+
+------------------------------------
+Array 9:
+No. of elements: 531
+No. of comparisons: 4625
+
+------------------------------------
+Array 10:
+No. of elements: 445
+No. of comparisons: 3748
+
+------------------------------------
+Array 11:
+No. of elements: 847
+No. of comparisons: 7912
+
+------------------------------------
+Array 12:
+No. of elements: 465
+No. of comparisons: 3968
+
+------------------------------------
+Array 13:
+No. of elements: 150
+No. of comparisons: 1027
+
+------------------------------------
+Array 14:
+No. of elements: 725
+No. of comparisons: 6643
+
+------------------------------------
+Array 15:
+No. of elements: 456
+No. of comparisons: 3856
+
+------------------------------------
+Array 16:
+No. of elements: 851
+No. of comparisons: 8007
+
+------------------------------------
+Array 17:
+No. of elements: 335
+No. of comparisons: 2685
+
+------------------------------------
+Array 18:
+No. of elements: 915
+No. of comparisons: 8694
+
+------------------------------------
+Array 19:
+No. of elements: 462
+No. of comparisons: 3945
+
+------------------------------------
+Array 20:
+No. of elements: 108
+No. of comparisons: 702
+
+------------------------------------
+Array 21:
+No. of elements: 520
+No. of comparisons: 4489
+
+------------------------------------
+Array 22:
+No. of elements: 572
+No. of comparisons: 5027
+
+------------------------------------
+Array 23:
+No. of elements: 891
+No. of comparisons: 8419
+
+------------------------------------
+Array 24: 
+No. of elements: 819
+No. of comparisons: 7633
+
+------------------------------------
+Array 25:
+No. of elements: 434
+No. of comparisons: 3637
+
+------------------------------------
+Array 26:
+No. of elements: 401
+No. of comparisons: 3303
+
+------------------------------------
+Array 27:
+No. of elements: 781
+No. of comparisons: 7196
+
+------------------------------------
+Array 28:
+No. of elements: 66
+No. of comparisons: 373
+
+------------------------------------
+Array 29:
+No. of elements: 590
+No. of comparisons: 5225
+
+------------------------------------
+Array 30:
+No. of elements: 736
+No. of comparisons: 6777
+
+------------------------------------
+Array 31:
+No. of elements: 511
+No. of comparisons: 4426
+
+------------------------------------
+Array 32:
+No. of elements: 114
+No. of comparisons: 736
+
+------------------------------------
+Array 33:
+No. of elements: 546
+No. of comparisons: 4765
+
+------------------------------------
+Array 34:
+No. of elements: 651
+No. of comparisons: 5831
+
+------------------------------------
+Array 35:
+No. of elements: 695
+No. of comparisons: 6357
+
+------------------------------------
+Array 36:
+No. of elements: 866
+No. of comparisons: 8141
+
+------------------------------------
+Array 37:
+No. of elements: 211
+No. of comparisons: 1568
+
+------------------------------------
+Array 38:
+No. of elements: 318
+No. of comparisons: 2552
+
+------------------------------------
+Array 39:
+No. of elements: 744
+No. of comparisons: 6833
+
+------------------------------------
+Array 40:
+No. of elements: 999
+No. of comparisons: 9575
+
+------------------------------------
+Array 41:
+No. of elements: 704
+No. of comparisons: 6380
+
+------------------------------------
+Array 42:
+No. of elements: 496
+No. of comparisons: 4285
+
+------------------------------------
+Array 43:
+No. of elements: 341
+No. of comparisons: 2725
+
+------------------------------------
+Array 44:
+No. of elements: 143
+No. of comparisons: 980
+
+------------------------------------
+Array 45:
+No. of elements: 765
+No. of comparisons: 7078
+
+------------------------------------
+Array 46:
+No. of elements: 657
+No. of comparisons: 5918
+
+------------------------------------
+Array 47:
+No. of elements: 35
+No. of comparisons: 170
+
+------------------------------------
+Array 48:
+No. of elements: 790
+No. of comparisons: 7329
+
+------------------------------------
+Array 49:
+No. of elements: 577
+No. of comparisons: 5059
+
+------------------------------------
+Array 50:
+No. of elements: 741
+No. of comparisons: 6791
+
+------------------------------------
+Array 51:
+No. of elements: 424
+No. of comparisons: 3542
+
+------------------------------------
+Array 52:
+No. of elements: 558
+No. of comparisons: 4912
+
+------------------------------------
+Array 53:
+No. of elements: 688
+No. of comparisons: 6243
+
+------------------------------------
+Array 54:
+No. of elements: 719
+No. of comparisons: 6572
+
+------------------------------------
+Array 55:
+No. of elements: 69
+No. of comparisons: 412
+
+------------------------------------
+Array 56:
+No. of elements: 589
+No. of comparisons: 5211
+
+------------------------------------
+Array 57:
+No. of elements: 327
+No. of comparisons: 2608
+
+------------------------------------
+Array 58:
+No. of elements: 632
+No. of comparisons: 5650
+
+------------------------------------
+Array 59:
+No. of elements: 171
+No. of comparisons: 1198
+
+------------------------------------
+Array 60:
+No. of elements: 316
+No. of comparisons: 2528
+
+------------------------------------
+Array 61:
+No. of elements: 537
+No. of comparisons: 4664
+
+------------------------------------
+Array 62:
+No. of elements: 87
+No. of comparisons: 530
+
+------------------------------------
+Array 63:
+No. of elements: 810
+No. of comparisons: 7523
+
+------------------------------------
+Array 64:
+No. of elements: 232
+No. of comparisons: 1740
+
+------------------------------------
+Array 65:
+No. of elements: 471
+No. of comparisons: 3979
+
+------------------------------------
+Array 66:
+No. of elements: 709
+No. of comparisons: 6466
+
+------------------------------------
+Array 67:
+No. of elements: 732
+No. of comparisons: 6715
+
+------------------------------------
+Array 68:
+No. of elements: 541
+No. of comparisons: 4727
+
+------------------------------------
+Array 69:
+No. of elements: 720
+No. of comparisons: 6610
+
+------------------------------------
+Array 70:
+No. of elements: 173
+No. of comparisons: 1220
+
+------------------------------------
+Array 71:
+No. of elements: 929
+No. of comparisons: 8829
+
+------------------------------------
+Array 72:
+No. of elements: 266
+No. of comparisons: 2032
+
+------------------------------------
+Array 73:
+No. of elements: 910
+No. of comparisons: 8594
+
+------------------------------------
+Array 74:
+No. of elements: 407
+No. of comparisons: 3356
+
+------------------------------------
+Array 75:
+No. of elements: 44
+No. of comparisons: 233
+
+------------------------------------
+Array 76:
+No. of elements: 725
+No. of comparisons: 6623
+
+------------------------------------
+Array 77:
+No. of elements: 303
+No. of comparisons: 2391
+
+------------------------------------
+Array 78:
+No. of elements: 607
+No. of comparisons: 5387
+
+------------------------------------
+Array 79:
+No. of elements: 785
+No. of comparisons: 7302
+
+------------------------------------
+Array 80:
+No. of elements: 951
+No. of comparisons: 8998
+
+------------------------------------
+Array 81: 
+No. of elements: 749
+No. of comparisons: 6920
+
+------------------------------------
+Array 82:
+No. of elements: 969
+No. of comparisons: 9199
+
+------------------------------------
+Array 83:
+No. of elements: 456
+No. of comparisons: 3871
+
+------------------------------------
+Array 84:
+No. of elements: 187
+No. of comparisons: 1348
+
+------------------------------------
+Array 85:
+No. of elements: 63
+No. of comparisons: 355
+
+------------------------------------
+Array 86:
+No. of elements: 150
+No. of comparisons: 1024
+
+------------------------------------
+Array 87:
+No. of elements: 112
+No. of comparisons: 715
+
+------------------------------------
+Array 88:
+No. of elements: 814
+No. of comparisons: 7576
+
+------------------------------------
+Array 89:
+No. of elements: 880
+No. of comparisons: 8271
+
+------------------------------------
+Array 90:
+No. of elements: 828
+No. of comparisons: 7746
+
+------------------------------------
+Array 91:
+No. of elements: 384
+No. of comparisons: 3157
+
+------------------------------------
+Array 92:
+No. of elements: 110
+No. of comparisons: 713
+
+------------------------------------
+Array 93:
+No. of elements: 200
+No. of comparisons: 1466
+
+------------------------------------
+Array 94:
+No. of elements: 283
+No. of comparisons: 2199
+
+------------------------------------
+Array 95:
+No. of elements: 559
+No. of comparisons: 4930
+
+------------------------------------
+Array 96:
+No. of elements: 149
+No. of comparisons: 1020
+
+------------------------------------
+Array 97:
+No. of elements: 42
+No. of comparisons: 214
+
+------------------------------------
+Array 98:
+No. of elements: 385
+No. of comparisons: 3176
+
+------------------------------------
+Array 99:
+No. of elements: 377
+No. of comparisons: 3125
+
+------------------------------------
+Array 100:
+No. of elements: 942
+No. of comparisons: 8940

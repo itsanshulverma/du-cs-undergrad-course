@@ -1,0 +1,14 @@
+PS C:\Users\Anshul Verma\Documents\GitHub\python-lab\_01> python .\ques_1.py
+Enter the length of side 1: 12
+Enter the length of side 2: 1
+Enter the length of side 3: 112
+ERR: Given sides does not form a triangle.
+[Sum of two sides of a triangle should be greater than the third]
+
+PS C:\Users\Anshul Verma\Documents\GitHub\python-lab\_01> python .\ques_1.py
+Enter the length of side 1: 12
+Enter the length of side 2: 14
+Enter the length of side 3: 15
+Given sides form a triangle.
+Perimeter: 41.0 units
+Area: 78.927 sq. units
