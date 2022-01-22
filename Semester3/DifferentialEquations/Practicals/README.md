@@ -3,7 +3,8 @@
 ***Written By Anshul Verma for University of Delhi***
 
 > These programs are written in [Maxima Computer Algebra System](https://maxima.sourceforge.io/)
-> To run on your machine, [install wxMaxima](https://wxmaxima-developers.github.io/wxmaxima/download.html) on your machine.
+
+> To run on your machine, [install wxMaxima](https://wxmaxima-developers.github.io/wxmaxima/download.html).
 
 <br>
 
