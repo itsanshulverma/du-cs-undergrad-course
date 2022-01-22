@@ -1,0 +1,7 @@
+SELECT Ename,
+(YEAR(CURDATE())-YEAR(Hire_date))*12+
+(MONTH(CURDATE())-MONTH(Hire_date))
+AS 'No of months after hire' 
+FROM EMPLOYEE, DEPARTMENT
+WHERE EMPLOYEE.Dno=DEPARTMENT.Dno 
+AND DEPARTMENT.Dname='Purchase';

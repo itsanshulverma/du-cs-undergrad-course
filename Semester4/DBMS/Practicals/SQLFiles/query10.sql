@@ -1,0 +1,4 @@
+
+SELECT Ename, Job_type
+FROM EMPLOYEE
+WHERE SupervisonENO IS NULL;

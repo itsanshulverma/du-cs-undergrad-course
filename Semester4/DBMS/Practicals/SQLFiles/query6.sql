@@ -1,0 +1,4 @@
+# Query 6
+
+SELECT Ename, Dno FROM EMPLOYEE
+WHERE Eno='790';

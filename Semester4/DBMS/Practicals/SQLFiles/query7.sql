@@ -1,0 +1,4 @@
+# Query 7
+
+SELECT Ename, Salary FROM EMPLOYEE
+WHERE Salary NOT BETWEEN 1500 AND 2850;
