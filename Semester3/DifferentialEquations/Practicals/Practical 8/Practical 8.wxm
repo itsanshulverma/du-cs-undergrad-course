@@ -1,0 +1,760 @@
+/* [wxMaxima batch file version 1] [ DO NOT EDIT BY HAND! ]*/
+/* [ Created with wxMaxima version 20.06.6 ] */
+/* [wxMaxima: title   start ]
+Practical 8: Plot the integralsurfaces of first order partialdifferential equations with initialdata.
+   [wxMaxima: title   end   ] */
+
+
+/* [wxMaxima: comment start ]
+Q.1) Find the Integral Surface of the eqn u*u_x+u_y=1, so that the surface passes through an initial curve
+represented parametrically by x(s,0)=2*s^2, y(s,0)=2*s & u(s,0)=0 where is s>0 is a parameter.
+   [wxMaxima: comment end   ] */
+
+
+/* [wxMaxima: comment start ]
+Soln: The Char eqns are: dx/u = dy/1 = du/1 =dt ; where t is another parameter.
+So they reduce parametrically to: 
+dx/dt=u ; x(0)= 2*s^2
+dy/dt=1 ; y(0)=2*s
+du/dt=1 ; u(0)=0.
+   [wxMaxima: comment end   ] */
+
+
+/* [wxMaxima: input   start ] */
+kill(all);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+a:'diff(u,t)=1;
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+ode2(a,u,t);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+a1:solve(u=t+c1,u);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+b:'diff(y,t)=1;
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+ode2(b,y,t);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+b1:solve(y=t+c2,y);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+d:'diff(x,t)=t+c1;
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+ode2(d,x,t);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+d1:solve(x=t^2/2+c1*t+c3,x);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+subst([t=0,x=2*s^2],d1);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+subst([t=0,y=2*s],b1);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+subst([t=0,u=0],a1);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+'x=t^2/2+2*s^2;
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+'y=t+2*s;
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+'u=t;
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+load(draw)$
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+wxdraw3d(color=red,parametric(2*s^2,2^s,0,s,2,10),title="Initial curve");
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+wxdraw3d(color=cyan,parametric_surface(t^2/2+2*s^2,t+2*s,t,s,-100,100,t,-300,300),title="Integral Surface");
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+wxdraw3d([color=cyan,parametric_surface(t^2+2*s,t+2*s,t,s,-100,100,t,-300,300),
+color=red,parametric(2*s^2,2*s,0,s,-100,100)],title="Integral surface with Initial curve");
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: page break    ] */
+
+/* [wxMaxima: comment start ]
+Q.2) Repeat the above question with the following conditions:
+x(s,0)=s^2/2, y(s,0)=s, u(s,0)=s.
+   [wxMaxima: comment end   ] */
+
+
+/* [wxMaxima: input   start ] */
+kill(all);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+a:'u=t+c1;
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+subst([t=0,u=s],a);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+b:'y=t+c2;
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+subst([t=0,y=s],b);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+d:'x=t^2/2+c1*t+c3;
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+subst([t=0,x=s^2/2],d);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+'x=t^2/2+s*t+s^2/2;
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+'y=t+s;
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+'u=t+s;
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+wxdraw3d(color=blue,parametric(s^2/2,s,s,s,-20,20),title="Initial Curve");
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+wxdraw3d(color=yellow,parametric_surface(t^2/2+s*t+s^2/2,t+s,t+s,s,-200,200,t,-300,300),title="Integral surface");
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+wxdraw3d([color=yellow,parametric_surface(t^2/2+s*t+s^2/2,t+s,t+s,s,-200,200,t,-300,300),
+color=blue,parametric(s^2/2,s,s,s,-200,200)],title="Integral surface with Initial curve");
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: page break    ] */
+
+/* [wxMaxima: comment start ]
+Q.3) Solve the Cauchy problem u_x-u_y=2 with cauchy data: x(0)=s, y(0)=s,u(0)=2s. Also plot the integral surface
+passing through initial curve.
+   [wxMaxima: comment end   ] */
+
+
+/* [wxMaxima: input   start ] */
+kill(all);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: comment start ]
+The char eqns are: dx/1 = dy/(-1) = du/2 =dt which transform in parametric form as:
+dx/dt=1; x(0)=s
+dy/dt=(-1); y(0)=s
+du/dt=2; u(0)=2s
+   [wxMaxima: comment end   ] */
+
+
+/* [wxMaxima: input   start ] */
+a:'diff(x,t)=1;
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+ode2(a,x,t);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+a1:x=t+c1;
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+subst([x=s,t=0],a1);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+b:'diff(y,t)=-1;
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+ode2(b,y,t);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+b1:y=c2-t;
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+subst([y=s,t=0],b1);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+d:'diff(u,t)=2;
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+ode2(d,u,t);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+d2:u=2*t+c3;
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+subst([u=2*s,t=0],d2);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+'x=t+s;
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+'y=s-t;
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+'u=2*t+2*s;
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+wxdraw3d(color=magenta,parametric(s,s,2*s,s,-10,10));
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+wxdraw3d(color=green,parametric_surface(t+s,s-t,2*t+2*s,s,-10,10,t,-20,20));
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+wxdraw3d([color=green,parametric_surface(t+s,s-t,2*t+2*s,s,-10,10,t,-20,20),color=magenta,parametric(s,s,2*s,s,-10,10)]);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: page break    ] */
+
+/* [wxMaxima: comment start ]
+Q.4) Solve x*ux+y*uy=x*exp(-u) ; u(x,x^2)=0.
+   [wxMaxima: comment end   ] */
+
+
+/* [wxMaxima: comment start ]
+SOLN: The Characteristic eqns are: dx/x = dy/y = du/(x*exp(-u)). Solving the following:
+dy/dx=y/x and du/dx=exp(-u), we get: 
+   [wxMaxima: comment end   ] */
+
+
+/* [wxMaxima: input   start ] */
+kill(all);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+a:'diff(y,x)=y/x;
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+ode2(a,y,x);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+solve(y=c1*x,c1);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+b:'diff(u,x)=exp(-u);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+ode2(b,u,x);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+solve(exp(u)=x+c2,c2);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: comment start ]
+The general soln is given by c2=g(c1) where g is an arbitrary function. 
+   [wxMaxima: comment end   ] */
+
+
+/* [wxMaxima: input   start ] */
+exp(u)-x=g(y/x);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+u(x,y):=log(x+g(y/x));
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+d:u(x,x^2)=0;
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+solve(d,g(x));
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+g(x):=1-x;
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+'u(x,y)=u(x,y);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+wxplot3d(u(x,y),[x,-2,3],[y,-6,4]);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+wxdraw3d(color=red,parametric(s,s^2,0,s,-10,10),title="Initial Curve");
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+wxdraw3d(color=cyan,explicit(log(-y/x+x+1),x,-10,10,y,-20,20),title="Integral surface");
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+wxdraw3d([color=cyan,explicit(log(-y/x+x+1),x,-10,10,y,-20,20),
+color=red,parametric(s,s^2,0,s,-5,5)],title="Integral surface with initial curve");
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: section start ]
+Questions
+   [wxMaxima: section end   ] */
+
+
+/* [wxMaxima: subsect start ]
+Find the Integral Surface of the eqn, 
+(1/2y)u_x + u_y = 2u^2,
+so that the surface passes through an initial curve represented parametrically by x(s,0)=4*s, y(s,0)=s & u(s,0)=s^2, where s>0 is a parameter.
+   [wxMaxima: subsect end   ] */
+
+
+/* [wxMaxima: comment start ]
+Sol: Characterstic equations are: dx/(1/2y) = dy/1 = du/2u^2 = dt, where t is another parameter.
+    So they reduce parametrically to:
+    a: dx/dt = 1/2y; x(0)=4*s
+    b: dy/dt = 1; y(0)=s
+    d: du/dt = 2u^2; u(0)=s^2
+   [wxMaxima: comment end   ] */
+
+
+/* [wxMaxima: input   start ] */
+kill(all);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: comment start ]
+For b: dy/dt = 1; y(0)=s
+   [wxMaxima: comment end   ] */
+
+
+/* [wxMaxima: input   start ] */
+b:'diff(y,t)= 1;
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+ode2(b,y,t);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+b1:solve(y=t+c2,y);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+subst([t=0,y=s],b1);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+'y = t+s;
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: comment start ]
+For a: dx/dt = 1/2y; x(0)=4*s
+   [wxMaxima: comment end   ] */
+
+
+/* [wxMaxima: input   start ] */
+a:'diff(x,t)=1/(2*(t+c2));
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+ode2(a,x,t);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+a1:solve(x=log(2*t+2*c2)/2+c1,c1);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+subst([t=0,x=4*s,c2=s],a1);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+'x=log(2*t+2*s)/2 + (8*s-log(2*s))/2;
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: comment start ]
+For d: du/dt = 2u^2; u(0)=s^2
+   [wxMaxima: comment end   ] */
+
+
+/* [wxMaxima: input   start ] */
+d:'diff(u,t)=2*u^2;
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+ode2(d,u,t);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+d1: solve(-(1/(2*u))=t+c3, c3);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+subst([t=0,u=s^2],d1);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+solve(-(1/(2*u))=t-1/(2*s^2),u);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+'u = -(s^2)/(2*s^2*t-1);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: comment start ]
+Therefore,
+    x=log(2*t+2*s)/2+(8*s-log(2*s))/2
+    y=t+s
+    u=-s^2/(2*s^2*t-1)
+   [wxMaxima: comment end   ] */
+
+
+/* [wxMaxima: input   start ] */
+load(draw)$
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+wxdraw3d(
+    color=magenta,
+    parametric(4*s,s,s^2,s,2,5),
+    title="Initial curve");
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+wxdraw3d(
+    color=blue,
+    parametric_surface(log(2*t+2*s)/2+(8*s-log(2*s))/2,
+        t+s,
+        -s^2/(2*s^2*t-1),
+        s,-50,50,
+        t,-100,100),title="Integral Surface");
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+wxdraw3d(
+    [parametric_surface(
+            log(2*t+2*s)/2+(8*s-log(2*s))/2,
+            t+s,
+            -s^2/(2*s^2*t-1),
+            s,-50,50,t,-100,100),
+        color=magenta,
+        parametric(4*s,s,s^2,s,-50,50)],
+    title="Integral surface with Initial curve");
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: subsect start ]
+Solve the Cauchy problem,
+y^2u_x + uu_y = 2u with Cauchy data: x(0)= 2s/3,
+y(0)=s^2,u(0)=3s. Also plot the integral surface
+passing through initial curve.
+   [wxMaxima: subsect end   ] */
+
+
+/* [wxMaxima: comment start ]
+Sol: Characterstic equations are: dx/y^2 = dy/u = du/2u = dt, where t
+is another parameter.
+    So they reduce parametrically to:
+    a: dx/dt = y^2; x(0)=2*s/3
+    b: dy/dt = u; y(0)=s^2
+    d: du/dt = 2u; u(0)=3*s
+   [wxMaxima: comment end   ] */
+
+
+/* [wxMaxima: input   start ] */
+kill(all);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: comment start ]
+For d: du/dt = 2u; u(0)=3*s,
+   [wxMaxima: comment end   ] */
+
+
+/* [wxMaxima: input   start ] */
+d:'diff(u,t)=2*u;
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+ode2(d,u,t);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+d1: solve(u=c3*(e^(2*t)), c3);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+subst([t=0,u=3*s],d1);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+solve(u=(3*s)*(e^(2*t)),u);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+'u=3*e^(2*t)*s;
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: comment start ]
+For b: dy/dt = u; y(0)=s^2,
+   [wxMaxima: comment end   ] */
+
+
+/* [wxMaxima: input   start ] */
+b:'diff(y,t)= c3*(e^(2*t));
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+ode2(b,y,t);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+b1: solve(y=(c3*e^(2*t))/(2*log(e))+c2, c2);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+subst([t=0,y=s^2,c3=3*s],b1);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+solve(y=(3*s*e^(2*t))/(2*log(e))+(2*log(e)*s^2-3*s)/(2*log(e)),y);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+'y=(2*log(e)*s^2+(3*e^(2*t)-3)*s)/(2*log(e));
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: comment start ]
+For a: dx/dt = y^2; x(0)=2*s/3,
+   [wxMaxima: comment end   ] */
+
+
+/* [wxMaxima: input   start ] */
+a:'diff(x,t)=y^2;
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+ode2(d,u,t);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+d1: solve(u=c3*(e^(2*t)), c3);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+subst([t=0,x=2*s/3],a1);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+solve(x=t*y^2+(2*s)/3,x);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+'x=(3*t*y^2+2*s)/3;
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: comment start ]
+Therefore,
+    x=(3*t*y^2+2*s)/3,
+    y=(2*log(e)*s^2+(3*e^(2*t)-3)*s)/(2*log(e)),
+    u=3*e^(2*t)*s
+   [wxMaxima: comment end   ] */
+
+
+/* [wxMaxima: input   start ] */
+load(draw)$
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+wxdraw3d(
+    color=magenta,
+    parametric((2*s)/3,s^2,3*s,s,2,4),
+    title="Initial curve");
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+:h;
+/* [wxMaxima: input   end   ] */
+/* [wxMaxima: question  start ] */
+(dbm:1)
+/* [wxMaxima: question  end   ] */
+/* [wxMaxima: answer  start ] */
+:h;
+/* [wxMaxima: answer  end   ] */
+/* [wxMaxima: question  start ] */
+Question #1
+/* [wxMaxima: question  end   ] */
+/* [wxMaxima: answer  start ] */
+
+/* [wxMaxima: answer  end   ] */
+
+
+/* [wxMaxima: input   start ] */
+wxdraw3d(
+    [parametric_surface(
+            log(2*t+2*s)/2+(8*s-log(2*s))/2,
+            t+s,
+            -s^2/(2*s^2*t-1),
+            s,-50,50,t,-100,100),
+        color=magenta,
+        parametric(4*s,s,s^2,s,-50,50)],
+    title="Integral surface with Initial curve");
+/* [wxMaxima: input   end   ] */
+
+
+
+/* Old versions of Maxima abort on loading files that end in a comment. */
+"Created with wxMaxima 20.06.6"$

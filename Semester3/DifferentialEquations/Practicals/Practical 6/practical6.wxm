@@ -1,0 +1,163 @@
+/* [wxMaxima batch file version 1] [ DO NOT EDIT BY HAND! ]*/
+/* [ Created with wxMaxima version 20.06.6 ] */
+/* [wxMaxima: title   start ]
+Practical-6: Solution of Cauchy Problem of First Order PDE 
+   [wxMaxima: title   end   ] */
+
+
+/* [wxMaxima: comment start ]
+Q.1) Solve ux-uy=1; u(x,0)=x^2.
+
+SOLN: The Characteristic eqn is: dx/1 = dy/(-1) = du/1. Solving two of these for two constants, we consider:
+
+dy/dx=(-1) and du/dx=1
+   [wxMaxima: comment end   ] */
+
+
+/* [wxMaxima: input   start ] */
+eq1:'diff(y,x)=-1;
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+ode2(eq1,y,x);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+solve(y=c1-x,c1);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+eq2:'diff(u,x)=1;
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+ode2(eq2,u,x);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+solve(u=x+c2,c2);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: comment start ]
+The general soln of the given PDE is given by c1=f(c2) or c2=f(c1) where f is an arbitrary function.
+   [wxMaxima: comment end   ] */
+
+
+/* [wxMaxima: input   start ] */
+u-x=f(y+x);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+u(x,y):=x+f(y+x);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+u(x,0)=x^2;
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+f(x):=x^2-x;
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+'u(x,y)=u(x,y);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+wxplot3d(u(x,y),[x,-10,10],[y,-7,7]);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: comment start ]
+Q.2) Solve x*ux+y*uy=x*exp(-u) ; u(x,x^2)=0.
+
+SOLN: The Characteristic eqns are: dx/x = dy/y = du/(x*exp(-u)). Solving the following:
+
+dy/dx=y/x and du/dx=exp(-u), we get: 
+   [wxMaxima: comment end   ] */
+
+
+/* [wxMaxima: input   start ] */
+eq3:'diff(y,x)=y/x;
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+ode2(eq3,y,x);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+solve(y=c3*x,c3);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+eq4:'diff(u,x)=exp(-u);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+ode2(eq4,u,x);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+solve(exp(u)=x+c4,c4);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: comment start ]
+The general soln is given by c4=g(c3) where g is an arbitrary function. 
+   [wxMaxima: comment end   ] */
+
+
+/* [wxMaxima: input   start ] */
+exp(u)-x=g(y/x);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+u(x,y):=log(x+g(y/x));
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+u(x,x^2)=0;
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+solve(%o21,g(x));
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+g(x):=1-x;
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+'u(x,y)=u(x,y);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+wxplot3d(u(x,y),[x,-2,3],[y,-6,4]);
+/* [wxMaxima: input   end   ] */
+
+
+
+/* Old versions of Maxima abort on loading files that end in a comment. */
+"Created with wxMaxima 20.06.6"$
