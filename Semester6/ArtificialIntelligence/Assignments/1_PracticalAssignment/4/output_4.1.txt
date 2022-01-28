@@ -1,0 +1,628 @@
+
+1 ?- schedule( Ta, A1, A2, Tb, B1, B2, Tc, D1, D2). 
+
+Ta = morning,
+A1 = D2, D2 = adam,
+A2 = B1, B1 = barbara,
+Tb = Tc, Tc = afternoon,
+B2 = ben,
+D1 = danny ;
+
+Ta = morning,
+A1 = D1, D1 = adam,
+A2 = B1, B1 = barbara,
+Tb = Tc, Tc = afternoon,
+B2 = ben,
+D2 = danny ;
+
+Ta = morning,
+A1 = D2, D2 = adam,
+A2 = B2, B2 = barbara,
+Tb = Tc, Tc = afternoon,
+B1 = ben,
+D1 = danny ;
+
+Ta = morning,
+A1 = D1, D1 = adam,
+A2 = B2, B2 = barbara,
+Tb = Tc, Tc = afternoon,
+B1 = ben,
+D2 = danny ;
+
+Ta = Tb, Tb = morning,
+A1 = D2, D2 = adam,
+A2 = ann,
+B1 = barbara,
+B2 = ben,
+Tc = afternoon,
+D1 = danny ;
+
+Ta = Tb, Tb = morning,
+A1 = D1, D1 = adam,
+A2 = ann,
+B1 = barbara,
+B2 = ben,
+Tc = afternoon,
+D2 = danny ;
+
+Ta = Tb, Tb = morning,
+A1 = D2, D2 = adam,
+A2 = ann,
+B1 = ben,
+B2 = barbara,
+Tc = afternoon,
+D1 = danny ;
+
+Ta = Tb, Tb = morning,
+A1 = D1, D1 = adam,
+A2 = ann,
+B1 = ben,
+B2 = barbara,
+Tc = afternoon,
+D2 = danny ;
+
+Ta = morning,
+A1 = D2, D2 = adam,
+A2 = ann,
+Tb = Tc, Tc = afternoon,
+B1 = barbara,
+B2 = ben,
+D1 = danny ;
+
+Ta = morning,
+A1 = D1, D1 = adam,
+A2 = ann,
+Tb = Tc, Tc = afternoon,
+B1 = barbara,
+B2 = ben,
+D2 = danny ;
+
+Ta = morning,
+A1 = D2, D2 = adam,
+A2 = ann,
+Tb = Tc, Tc = afternoon,
+B1 = ben,
+B2 = barbara,
+D1 = danny ;
+
+Ta = morning,
+A1 = D1, D1 = adam,
+A2 = ann,
+Tb = Tc, Tc = afternoon,
+B1 = ben,
+B2 = barbara,
+D2 = danny ;
+
+Ta = morning,
+A1 = B1, B1 = barbara,
+A2 = D2, D2 = adam,
+Tb = Tc, Tc = afternoon,
+B2 = ben,
+D1 = danny ;
+
+Ta = morning,
+A1 = B1, B1 = barbara,
+A2 = D1, D1 = adam,
+Tb = Tc, Tc = afternoon,
+B2 = ben,
+D2 = danny ;
+
+Ta = morning,
+A1 = B2, B2 = barbara,
+A2 = D2, D2 = adam,
+Tb = Tc, Tc = afternoon,
+B1 = ben,
+D1 = danny ;
+
+Ta = morning,
+A1 = B2, B2 = barbara,
+A2 = D1, D1 = adam,
+Tb = Tc, Tc = afternoon,
+B1 = ben,
+D2 = danny ;
+
+Ta = Tc, Tc = morning,
+A1 = B1, B1 = barbara,
+A2 = ann,
+Tb = afternoon,
+B2 = ben,
+D1 = danny,
+D2 = adam ;
+
+Ta = Tc, Tc = morning,
+A1 = B1, B1 = barbara,
+A2 = ann,
+Tb = afternoon,
+B2 = ben,
+D1 = adam,
+D2 = danny ;
+
+Ta = morning,
+A1 = B1, B1 = barbara,
+A2 = ann,
+Tb = Tc, Tc = afternoon,
+B2 = ben,
+D1 = danny,
+D2 = adam ;
+
+Ta = morning,
+A1 = B1, B1 = barbara,
+A2 = ann,
+Tb = Tc, Tc = afternoon,
+B2 = ben,
+D1 = adam,
+D2 = danny ;
+
+Ta = Tc, Tc = morning,
+A1 = B2, B2 = barbara,
+A2 = ann,
+Tb = afternoon,
+B1 = ben,
+D1 = danny,
+D2 = adam ;
+
+Ta = Tc, Tc = morning,
+A1 = B2, B2 = barbara,
+A2 = ann,
+Tb = afternoon,
+B1 = ben,
+D1 = adam,
+D2 = danny ;
+
+Ta = morning,
+A1 = B2, B2 = barbara,
+A2 = ann,
+Tb = Tc, Tc = afternoon,
+B1 = ben,
+D1 = danny,
+D2 = adam ;
+
+Ta = morning,
+A1 = B2, B2 = barbara,
+A2 = ann,
+Tb = Tc, Tc = afternoon,
+B1 = ben,
+D1 = adam,
+D2 = danny ;
+
+Ta = Tb, Tb = morning,
+A1 = ann,
+A2 = D2, D2 = adam,
+B1 = barbara,
+B2 = ben,
+Tc = afternoon,
+D1 = danny ;
+
+Ta = Tb, Tb = morning,
+A1 = ann,
+A2 = D1, D1 = adam,
+B1 = barbara,
+B2 = ben,
+Tc = afternoon,
+D2 = danny ;
+
+Ta = Tb, Tb = morning,
+A1 = ann,
+A2 = D2, D2 = adam,
+B1 = ben,
+B2 = barbara,
+Tc = afternoon,
+D1 = danny ;
+
+Ta = Tb, Tb = morning,
+A1 = ann,
+A2 = D1, D1 = adam,
+B1 = ben,
+B2 = barbara,
+Tc = afternoon,
+D2 = danny ;
+
+Ta = morning,
+A1 = ann,
+A2 = D2, D2 = adam,
+Tb = Tc, Tc = afternoon,
+B1 = barbara,
+B2 = ben,
+D1 = danny ;
+
+Ta = morning,
+A1 = ann,
+A2 = D1, D1 = adam,
+Tb = Tc, Tc = afternoon,
+B1 = barbara,
+B2 = ben,
+D2 = danny ;
+
+Ta = morning,
+A1 = ann,
+A2 = D2, D2 = adam,
+Tb = Tc, Tc = afternoon,
+B1 = ben,
+B2 = barbara,
+D1 = danny ;
+
+Ta = morning,
+A1 = ann,
+A2 = D1, D1 = adam,
+Tb = Tc, Tc = afternoon,
+B1 = ben,
+B2 = barbara,
+D2 = danny ;
+
+Ta = Tc, Tc = morning,
+A1 = ann,
+A2 = B1, B1 = barbara,
+Tb = afternoon,
+B2 = ben,
+D1 = danny,
+D2 = adam ;
+
+Ta = Tc, Tc = morning,
+A1 = ann,
+A2 = B1, B1 = barbara,
+Tb = afternoon,
+B2 = ben,
+D1 = adam,
+D2 = danny ;
+
+Ta = morning,
+A1 = ann,
+A2 = B1, B1 = barbara,
+Tb = Tc, Tc = afternoon,
+B2 = ben,
+D1 = danny,
+D2 = adam ;
+
+Ta = morning,
+A1 = ann,
+A2 = B1, B1 = barbara,
+Tb = Tc, Tc = afternoon,
+B2 = ben,
+D1 = adam,
+D2 = danny ;
+
+Ta = Tc, Tc = morning,
+A1 = ann,
+A2 = B2, B2 = barbara,
+Tb = afternoon,
+B1 = ben,
+D1 = danny,
+D2 = adam ;
+
+Ta = Tc, Tc = morning,
+A1 = ann,
+A2 = B2, B2 = barbara,
+Tb = afternoon,
+B1 = ben,
+D1 = adam,
+D2 = danny ;
+
+Ta = morning,
+A1 = ann,
+A2 = B2, B2 = barbara,
+Tb = Tc, Tc = afternoon,
+B1 = ben,
+D1 = danny,
+D2 = adam ;
+
+Ta = morning,
+A1 = ann,
+A2 = B2, B2 = barbara,
+Tb = Tc, Tc = afternoon,
+B1 = ben,
+D1 = adam,
+D2 = danny ;
+
+Ta = afternoon,
+A1 = D2, D2 = adam,
+A2 = B1, B1 = barbara,
+Tb = Tc, Tc = morning,
+B2 = ben,
+D1 = danny ;
+
+Ta = afternoon,
+A1 = D1, D1 = adam,
+A2 = B1, B1 = barbara,
+Tb = Tc, Tc = morning,
+B2 = ben,
+D2 = danny ;
+
+Ta = afternoon,
+A1 = D2, D2 = adam,
+A2 = B2, B2 = barbara,
+Tb = Tc, Tc = morning,
+B1 = ben,
+D1 = danny ;
+
+Ta = afternoon,
+A1 = D1, D1 = adam,
+A2 = B2, B2 = barbara,
+Tb = Tc, Tc = morning,
+B1 = ben,
+D2 = danny ;
+
+Ta = afternoon,
+A1 = D2, D2 = adam,
+A2 = ann,
+Tb = Tc, Tc = morning,
+B1 = barbara,
+B2 = ben,
+D1 = danny ;
+
+Ta = afternoon,
+A1 = D1, D1 = adam,
+A2 = ann,
+Tb = Tc, Tc = morning,
+B1 = barbara,
+B2 = ben,
+D2 = danny ;
+
+Ta = afternoon,
+A1 = D2, D2 = adam,
+A2 = ann,
+Tb = Tc, Tc = morning,
+B1 = ben,
+B2 = barbara,
+D1 = danny ;
+
+Ta = afternoon,
+A1 = D1, D1 = adam,
+A2 = ann,
+Tb = Tc, Tc = morning,
+B1 = ben,
+B2 = barbara,
+D2 = danny ;
+
+Ta = Tb, Tb = afternoon,
+A1 = D2, D2 = adam,
+A2 = ann,
+B1 = barbara,
+B2 = ben,
+Tc = morning,
+D1 = danny ;
+
+Ta = Tb, Tb = afternoon,
+A1 = D1, D1 = adam,
+A2 = ann,
+B1 = barbara,
+B2 = ben,
+Tc = morning,
+D2 = danny ;
+
+Ta = Tb, Tb = afternoon,
+A1 = D2, D2 = adam,
+A2 = ann,
+B1 = ben,
+B2 = barbara,
+Tc = morning,
+D1 = danny ;
+
+Ta = Tb, Tb = afternoon,
+A1 = D1, D1 = adam,
+A2 = ann,
+B1 = ben,
+B2 = barbara,
+Tc = morning,
+D2 = danny ;
+
+Ta = afternoon,
+A1 = B1, B1 = barbara,
+A2 = D2, D2 = adam,
+Tb = Tc, Tc = morning,
+B2 = ben,
+D1 = danny ;
+
+Ta = afternoon,
+A1 = B1, B1 = barbara,
+A2 = D1, D1 = adam,
+Tb = Tc, Tc = morning,
+B2 = ben,
+D2 = danny ;
+
+Ta = afternoon,
+A1 = B2, B2 = barbara,
+A2 = D2, D2 = adam,
+Tb = Tc, Tc = morning,
+B1 = ben,
+D1 = danny ;
+
+Ta = afternoon,
+A1 = B2, B2 = barbara,
+A2 = D1, D1 = adam,
+Tb = Tc, Tc = morning,
+B1 = ben,
+D2 = danny ;
+
+Ta = afternoon,
+A1 = B1, B1 = barbara,
+A2 = ann,
+Tb = Tc, Tc = morning,
+B2 = ben,
+D1 = danny,
+D2 = adam ;
+
+Ta = afternoon,
+A1 = B1, B1 = barbara,
+A2 = ann,
+Tb = Tc, Tc = morning,
+B2 = ben,
+D1 = adam,
+D2 = danny ;
+
+Ta = Tc, Tc = afternoon,
+A1 = B1, B1 = barbara,
+A2 = ann,
+Tb = morning,
+B2 = ben,
+D1 = danny,
+D2 = adam ;
+
+Ta = Tc, Tc = afternoon,
+A1 = B1, B1 = barbara,
+A2 = ann,
+Tb = morning,
+B2 = ben,
+D1 = adam,
+D2 = danny ;
+
+Ta = afternoon,
+A1 = B2, B2 = barbara,
+A2 = ann,
+Tb = Tc, Tc = morning,
+B1 = ben,
+D1 = danny,
+D2 = adam ;
+
+Ta = afternoon,
+A1 = B2, B2 = barbara,
+A2 = ann,
+Tb = Tc, Tc = morning,
+B1 = ben,
+D1 = adam,
+D2 = danny ;
+
+Ta = Tc, Tc = afternoon,
+A1 = B2, B2 = barbara,
+A2 = ann,
+Tb = morning,
+B1 = ben,
+D1 = danny,
+D2 = adam ;
+
+Ta = Tc, Tc = afternoon,
+A1 = B2, B2 = barbara,
+A2 = ann,
+Tb = morning,
+B1 = ben,
+D1 = adam,
+D2 = danny ;
+
+Ta = afternoon,
+A1 = ann,
+A2 = D2, D2 = adam,
+Tb = Tc, Tc = morning,
+B1 = barbara,
+B2 = ben,
+D1 = danny ;
+
+Ta = afternoon,
+A1 = ann,
+A2 = D1, D1 = adam,
+Tb = Tc, Tc = morning,
+B1 = barbara,
+B2 = ben,
+D2 = danny ;
+
+Ta = afternoon,
+A1 = ann,
+A2 = D2, D2 = adam,
+Tb = Tc, Tc = morning,
+B1 = ben,
+B2 = barbara,
+D1 = danny ;
+
+Ta = afternoon,
+A1 = ann,
+A2 = D1, D1 = adam,
+Tb = Tc, Tc = morning,
+B1 = ben,
+B2 = barbara,
+D2 = danny ;
+
+Ta = Tb, Tb = afternoon,
+A1 = ann,
+A2 = D2, D2 = adam,
+B1 = barbara,
+B2 = ben,
+Tc = morning,
+D1 = danny ;
+
+Ta = Tb, Tb = afternoon,
+A1 = ann,
+A2 = D1, D1 = adam,
+B1 = barbara,
+B2 = ben,
+Tc = morning,
+D2 = danny ;
+
+Ta = Tb, Tb = afternoon,
+A1 = ann,
+A2 = D2, D2 = adam,
+B1 = ben,
+B2 = barbara,
+Tc = morning,
+D1 = danny ;
+
+Ta = Tb, Tb = afternoon,
+A1 = ann,
+A2 = D1, D1 = adam,
+B1 = ben,
+B2 = barbara,
+Tc = morning,
+D2 = danny ;
+
+Ta = afternoon,
+A1 = ann,
+A2 = B1, B1 = barbara,
+Tb = Tc, Tc = morning,
+B2 = ben,
+D1 = danny,
+D2 = adam ;
+
+Ta = afternoon,
+A1 = ann,
+A2 = B1, B1 = barbara,
+Tb = Tc, Tc = morning,
+B2 = ben,
+D1 = adam,
+D2 = danny ;
+
+Ta = Tc, Tc = afternoon,
+A1 = ann,
+A2 = B1, B1 = barbara,
+Tb = morning,
+B2 = ben,
+D1 = danny,
+D2 = adam ;
+
+Ta = Tc, Tc = afternoon,
+A1 = ann,
+A2 = B1, B1 = barbara,
+Tb = morning,
+B2 = ben,
+D1 = adam,
+D2 = danny ;
+
+Ta = afternoon,
+A1 = ann,
+A2 = B2, B2 = barbara,
+Tb = Tc, Tc = morning,
+B1 = ben,
+D1 = danny,
+D2 = adam ;
+
+Ta = afternoon,
+A1 = ann,
+A2 = B2, B2 = barbara,
+Tb = Tc, Tc = morning,
+B1 = ben,
+D1 = adam,
+D2 = danny ;
+
+Ta = Tc, Tc = afternoon,
+A1 = ann,
+A2 = B2, B2 = barbara,
+Tb = morning,
+B1 = ben,
+D1 = danny,
+D2 = adam ;
+
+Ta = Tc, Tc = afternoon,
+A1 = ann,
+A2 = B2, B2 = barbara,
+Tb = morning,
+B1 = ben,
+D1 = adam,
+D2 = danny ;
+
+false.

@@ -1,0 +1,132 @@
+
+3 ?- schedule( Ta, A1, A2, Ta, B1, B2, Tb, D1, D2). 
+
+Ta = morning,
+A1 = D2, D2 = adam,
+A2 = ann,
+B1 = barbara,
+B2 = ben,
+Tb = afternoon,
+D1 = danny ;
+
+Ta = morning,
+A1 = D1, D1 = adam,
+A2 = ann,
+B1 = barbara,
+B2 = ben,
+Tb = afternoon,
+D2 = danny ;
+
+Ta = morning,
+A1 = D2, D2 = adam,
+A2 = ann,
+B1 = ben,
+B2 = barbara,
+Tb = afternoon,
+D1 = danny ;
+
+Ta = morning,
+A1 = D1, D1 = adam,
+A2 = ann,
+B1 = ben,
+B2 = barbara,
+Tb = afternoon,
+D2 = danny ;
+
+Ta = morning,
+A1 = ann,
+A2 = D2, D2 = adam,
+B1 = barbara,
+B2 = ben,
+Tb = afternoon,
+D1 = danny ;
+
+Ta = morning,
+A1 = ann,
+A2 = D1, D1 = adam,
+B1 = barbara,
+B2 = ben,
+Tb = afternoon,
+D2 = danny ;
+
+Ta = morning,
+A1 = ann,
+A2 = D2, D2 = adam,
+B1 = ben,
+B2 = barbara,
+Tb = afternoon,
+D1 = danny ;
+
+Ta = morning,
+A1 = ann,
+A2 = D1, D1 = adam,
+B1 = ben,
+B2 = barbara,
+Tb = afternoon,
+D2 = danny ;
+
+Ta = afternoon,
+A1 = D2, D2 = adam,
+A2 = ann,
+B1 = barbara,
+B2 = ben,
+Tb = morning,
+D1 = danny ;
+
+Ta = afternoon,
+A1 = D1, D1 = adam,
+A2 = ann,
+B1 = barbara,
+B2 = ben,
+Tb = morning,
+D2 = danny ;
+
+Ta = afternoon,
+A1 = D2, D2 = adam,
+A2 = ann,
+B1 = ben,
+B2 = barbara,
+Tb = morning,
+D1 = danny ;
+
+Ta = afternoon,
+A1 = D1, D1 = adam,
+A2 = ann,
+B1 = ben,
+B2 = barbara,
+Tb = morning,
+D2 = danny ;
+
+Ta = afternoon,
+A1 = ann,
+A2 = D2, D2 = adam,
+B1 = barbara,
+B2 = ben,
+Tb = morning,
+D1 = danny ;
+
+Ta = afternoon,
+A1 = ann,
+A2 = D1, D1 = adam,
+B1 = barbara,
+B2 = ben,
+Tb = morning,
+D2 = danny ;
+
+Ta = afternoon,
+A1 = ann,
+A2 = D2, D2 = adam,
+B1 = ben,
+B2 = barbara,
+Tb = morning,
+D1 = danny ;
+
+Ta = afternoon,
+A1 = ann,
+A2 = D1, D1 = adam,
+B1 = ben,
+B2 = barbara,
+Tb = morning,
+D2 = danny ;
+
+false.

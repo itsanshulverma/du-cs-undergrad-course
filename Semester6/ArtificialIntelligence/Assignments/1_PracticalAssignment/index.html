@@ -1,0 +1,314 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Practical Assignment - AI</title>
+  <link rel="stylesheet" href="https://stackedit.io/style.css" />
+</head>
+
+<body class="stackedit">
+  <div class="stackedit__html"><h1 id="practical-assignment---artificial-intelligence">Practical Assignment - Artificial Intelligence</h1>
+<blockquote>
+<p>Written by <strong>Anshul Verma (19/78065)</strong> for University of Delhi<br>
+B. Sc. (Hons) Computer Science<br>
+Semester - 6, Part - III</p>
+</blockquote>
+<h2 id="q1.">Q1.</h2>
+<p>2.6 Consider the following program:</p>
+<pre class=" language-prolog"><code class="prism  language-prolog"><span class="token function">f</span><span class="token punctuation">(</span> <span class="token number">1</span><span class="token punctuation">,</span> one<span class="token punctuation">)</span><span class="token operator">.</span> 
+<span class="token function">f</span><span class="token punctuation">(</span> <span class="token function">s</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">,</span> two<span class="token punctuation">)</span><span class="token operator">.</span>
+<span class="token function">f</span><span class="token punctuation">(</span> <span class="token function">s</span><span class="token punctuation">(</span><span class="token function">s</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span> three<span class="token punctuation">)</span><span class="token operator">.</span> 
+<span class="token function">f</span><span class="token punctuation">(</span> <span class="token function">s</span><span class="token punctuation">(</span><span class="token function">s</span><span class="token punctuation">(</span><span class="token function">s</span><span class="token punctuation">(</span><span class="token variable">X</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token variable">N</span><span class="token punctuation">)</span> <span class="token operator">:-</span> 
+   <span class="token function">f</span><span class="token punctuation">(</span> <span class="token variable">X</span><span class="token punctuation">,</span> <span class="token variable">N</span><span class="token punctuation">)</span><span class="token operator">.</span> 
+</code></pre>
+<p>How will Prolog answer the following questions? Whenever several<br>
+answers are possible, give at least two.<br>
+a) <code>?- f( s(1), A).</code><br>
+b) <code>?- f( s(s(1)), two).</code><br>
+c) <code>?- f( s(s(s(s(s(s(1)))))), C).</code><br>
+d) <code>?- f( D, three).</code></p>
+<h3 id="ans">Ans:</h3>
+<p>a)</p>
+<pre><code>?- f( s(1), A).
+A = two.
+</code></pre>
+<p>b)</p>
+<pre><code>?- f( s(s(1)), two).
+false.
+</code></pre>
+<p>c)</p>
+<pre><code>?- f( s(s(s(s(s(s(1)))))), C).
+C = one.
+</code></pre>
+<p>d)</p>
+<pre><code>?- f( D, three).
+D = s(s(1)) ;
+D = s(s(s(s(s(1))))) ;
+</code></pre>
+<h2 id="q2.">Q2.</h2>
+<p>2.7 The following program says that two people are relatives if</p>
+<ul>
+<li>one is a predecessor of the other, or</li>
+<li>they have a common predecessor, or</li>
+<li>they have a common successor:</li>
+</ul>
+<pre class=" language-prolog"><code class="prism  language-prolog"><span class="token function">relatives</span><span class="token punctuation">(</span> <span class="token variable">X</span><span class="token punctuation">,</span> <span class="token variable">Y</span><span class="token punctuation">)</span> <span class="token operator">:-</span> 
+  <span class="token function">predecesso</span><span class="token punctuation">(</span> <span class="token variable">X</span><span class="token punctuation">,</span> <span class="token variable">Y</span><span class="token punctuation">)</span><span class="token operator">.</span> 
+  
+<span class="token function">relatives</span><span class="token punctuation">(</span> <span class="token variable">X</span><span class="token punctuation">,</span> <span class="token variable">Y</span><span class="token punctuation">)</span> <span class="token operator">:-</span> 
+  <span class="token function">predecessor</span><span class="token punctuation">(</span> <span class="token variable">Y</span><span class="token punctuation">,</span> <span class="token variable">X</span><span class="token punctuation">)</span><span class="token operator">.</span> 
+  
+<span class="token function">relatives</span><span class="token punctuation">(</span> <span class="token variable">X</span><span class="token punctuation">,</span> <span class="token variable">Y</span><span class="token punctuation">)</span> <span class="token operator">:-</span>  <span class="token comment">% X and Y have a common predecessor</span>
+  <span class="token function">predecessor</span><span class="token punctuation">(</span> <span class="token variable">Z</span><span class="token punctuation">,</span> <span class="token variable">X</span><span class="token punctuation">)</span><span class="token punctuation">,</span> 
+  <span class="token function">predecessor</span><span class="token punctuation">(</span><span class="token variable">Z</span><span class="token punctuation">,</span> <span class="token variable">Y</span><span class="token punctuation">)</span><span class="token operator">.</span> 
+  
+<span class="token function">relatives</span><span class="token punctuation">(</span> <span class="token variable">X</span><span class="token punctuation">,</span> <span class="token variable">Y</span><span class="token punctuation">)</span> <span class="token operator">:-</span>  <span class="token comment">% X and Y have a common successor</span>
+  <span class="token function">predecessor</span><span class="token punctuation">(</span> <span class="token variable">X</span><span class="token punctuation">,</span> <span class="token variable">Z</span><span class="token punctuation">)</span><span class="token punctuation">,</span> 
+  <span class="token function">predecessor</span><span class="token punctuation">(</span><span class="token variable">Y</span><span class="token punctuation">,</span> <span class="token variable">Z</span><span class="token punctuation">)</span><span class="token operator">.</span> 
+</code></pre>
+<p>Can you shorten this program by using the semicolon notation?</p>
+<h3 id="ans.">Ans.</h3>
+<p>The above given code can be shorten and rewritten using the semicolon notation as follows,</p>
+<pre class=" language-prolog"><code class="prism  language-prolog"><span class="token function">relatives</span><span class="token punctuation">(</span> <span class="token variable">X</span><span class="token punctuation">,</span> <span class="token variable">Y</span><span class="token punctuation">)</span> <span class="token operator">:-</span> 
+  <span class="token function">predecesso</span><span class="token punctuation">(</span> <span class="token variable">X</span><span class="token punctuation">,</span> <span class="token variable">Y</span><span class="token punctuation">)</span><span class="token operator">;</span> <span class="token function">predecessor</span><span class="token punctuation">(</span> <span class="token variable">Y</span><span class="token punctuation">,</span> <span class="token variable">X</span><span class="token punctuation">)</span><span class="token operator">;</span>
+  <span class="token function">predecessor</span><span class="token punctuation">(</span> <span class="token variable">Z</span><span class="token punctuation">,</span> <span class="token variable">X</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">predecessor</span><span class="token punctuation">(</span><span class="token variable">Z</span><span class="token punctuation">,</span> <span class="token variable">Y</span><span class="token punctuation">)</span><span class="token operator">;</span>
+  <span class="token function">predecessor</span><span class="token punctuation">(</span> <span class="token variable">X</span><span class="token punctuation">,</span> <span class="token variable">Z</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">predecessor</span><span class="token punctuation">(</span><span class="token variable">Y</span><span class="token punctuation">,</span> <span class="token variable">Z</span><span class="token punctuation">)</span><span class="token operator">.</span>
+</code></pre>
+<h2 id="q3.">Q3.</h2>
+<p>2.8 Rewrite the following program without using the semicolon notation.</p>
+<pre class=" language-prolog"><code class="prism  language-prolog"><span class="token function">translate</span><span class="token punctuation">(</span> <span class="token number">1</span><span class="token punctuation">,</span> one<span class="token punctuation">)</span><span class="token operator">.</span>
+<span class="token function">translate</span><span class="token punctuation">(</span> <span class="token number">2</span><span class="token punctuation">,</span> two<span class="token punctuation">)</span><span class="token operator">.</span>
+<span class="token function">translate</span><span class="token punctuation">(</span> <span class="token number">3</span><span class="token punctuation">,</span> three<span class="token punctuation">)</span><span class="token operator">.</span>
+</code></pre>
+<h3 id="ans-1">Ans:</h3>
+<p>The above given code can be rewritten without using the semicolon notation as follows,</p>
+<pre class=" language-prolog"><code class="prism  language-prolog"><span class="token function">translate</span><span class="token punctuation">(</span> <span class="token variable">Number</span><span class="token punctuation">,</span> <span class="token variable">Word</span><span class="token punctuation">)</span> <span class="token operator">:-</span> 
+  <span class="token variable">Number</span> <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">,</span> 
+  <span class="token variable">Word</span> <span class="token operator">=</span> one<span class="token operator">.</span> 
+<span class="token function">translate</span><span class="token punctuation">(</span> <span class="token variable">Number</span><span class="token punctuation">,</span> <span class="token variable">Word</span><span class="token punctuation">)</span> <span class="token operator">:-</span> 
+  <span class="token variable">Number</span> <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">,</span> 
+  <span class="token variable">Word</span> <span class="token operator">=</span> two<span class="token operator">.</span> 
+<span class="token function">translate</span><span class="token punctuation">(</span> <span class="token variable">Number</span><span class="token punctuation">,</span> <span class="token variable">Word</span><span class="token punctuation">)</span> <span class="token operator">:-</span> 
+  <span class="token variable">Number</span> <span class="token operator">=</span> <span class="token number">3</span><span class="token punctuation">,</span> 
+  <span class="token variable">Word</span> <span class="token operator">=</span> three<span class="token operator">.</span>
+</code></pre>
+<h2 id="q4.">Q4.</h2>
+<p>Write five possible queries with output and explanation.</p>
+<pre class=" language-prolog"><code class="prism  language-prolog"><span class="token comment">% Scheduling a meeting</span>
+
+<span class="token comment">% schedule(TimeA, A1, A2, TimeB, B1, B2, TimeD, D1, D2):</span>
+<span class="token comment">%   TimeA and experts A1, A2 assigned </span>
+<span class="token comment">%     to session on Artificial Intelligence,</span>
+<span class="token comment">%   TimeB, B1, B2 assigned to session on </span>
+<span class="token comment">%     bioinformatics, and similar for databases</span>
+
+<span class="token function">schedule</span><span class="token punctuation">(</span> <span class="token variable">Ta</span><span class="token punctuation">,</span> <span class="token variable">A1</span><span class="token punctuation">,</span> <span class="token variable">A2</span><span class="token punctuation">,</span> <span class="token variable">Tb</span><span class="token punctuation">,</span> <span class="token variable">B1</span><span class="token punctuation">,</span> <span class="token variable">B2</span><span class="token punctuation">,</span> <span class="token variable">Td</span><span class="token punctuation">,</span> <span class="token variable">D1</span><span class="token punctuation">,</span> <span class="token variable">D2</span><span class="token punctuation">)</span> <span class="token operator">:-</span>
+  <span class="token comment">% Session AI at time Ta, with experts A1 and A2</span>
+  <span class="token function">session</span><span class="token punctuation">(</span> <span class="token variable">Ta</span><span class="token punctuation">,</span> artificial intelligence<span class="token punctuation">,</span> <span class="token variable">A1</span><span class="token punctuation">,</span> <span class="token variable">A2</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token comment">% Bioinformatics at Tb, with experts B1, B2</span>
+  <span class="token function">session</span><span class="token punctuation">(</span> <span class="token variable">Tb</span><span class="token punctuation">,</span> bioinformatics<span class="token punctuation">,</span> <span class="token variable">B1</span><span class="token punctuation">,</span> <span class="token variable">B2</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token comment">% Databases at Td, with experts DI and D2</span>
+  <span class="token function">session</span><span class="token punctuation">(</span> <span class="token variable">Td</span><span class="token punctuation">,</span> databases<span class="token punctuation">,</span> <span class="token variable">D1</span><span class="token punctuation">,</span> <span class="token variable">D2</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token comment">% No conflict between AI and Bioinfo</span>
+  <span class="token function">no_conflict</span><span class="token punctuation">(</span> <span class="token variable">Ta</span><span class="token operator">.</span><span class="token punctuation">,</span> <span class="token variable">A1</span><span class="token punctuation">,</span> <span class="token variable">A2</span><span class="token punctuation">,</span> <span class="token variable">Tb</span><span class="token punctuation">,</span> <span class="token variable">B1</span><span class="token punctuation">,</span> <span class="token variable">B2</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token comment">% No conflict between Databases and AI</span>
+  <span class="token function">no_conflict</span><span class="token punctuation">(</span> <span class="token variable">Ta</span><span class="token punctuation">,</span> <span class="token variable">A1</span><span class="token punctuation">,</span> <span class="token variable">A2</span><span class="token punctuation">,</span> <span class="token variable">Td</span><span class="token punctuation">,</span> <span class="token variable">D1</span><span class="token punctuation">,</span> <span class="token variable">D2</span><span class="token punctuation">)</span><span class="token punctuation">,</span> 
+  <span class="token comment">% No conflict between Bioinfo and Databases</span>
+  <span class="token function">no_conflict</span><span class="token punctuation">(</span><span class="token variable">Tb</span><span class="token punctuation">,</span> <span class="token variable">B1</span><span class="token punctuation">,</span> <span class="token variable">B2</span><span class="token punctuation">,</span> <span class="token variable">Td</span><span class="token punctuation">,</span> <span class="token variable">D1</span><span class="token punctuation">,</span> <span class="token variable">D2</span><span class="token punctuation">)</span><span class="token operator">.</span>
+
+<span class="token comment">% session( Time, Topic, P1, P2): </span>
+<span class="token comment">%   session at Time on Topic attended </span>
+<span class="token comment">%     by responsible experts P1, P2</span>
+
+<span class="token function">session</span><span class="token punctuation">(</span> <span class="token variable">Time</span><span class="token punctuation">,</span> <span class="token variable">Topic</span><span class="token punctuation">,</span> <span class="token variable">P1</span><span class="token punctuation">,</span> <span class="token variable">P2</span><span class="token punctuation">)</span><span class="token operator">:-</span>
+  <span class="token function">time</span><span class="token punctuation">(</span> <span class="token variable">Time</span><span class="token punctuation">)</span><span class="token punctuation">,</span>         <span class="token comment">% Time is morning or afternoon</span>
+  <span class="token function">expert</span><span class="token punctuation">(</span> <span class="token variable">Topic</span><span class="token punctuation">,</span> <span class="token variable">P1</span><span class="token punctuation">)</span><span class="token punctuation">,</span>  <span class="token comment">% Person P1 is expert on Topic</span>
+  <span class="token function">expert</span><span class="token punctuation">(</span> <span class="token variable">Topic</span><span class="token punctuation">,</span> <span class="token variable">P2</span><span class="token punctuation">)</span><span class="token punctuation">,</span>  <span class="token comment">% P2 is also expert on Topic</span>
+  <span class="token variable">P1</span> <span class="token operator">\=</span> <span class="token variable">P2</span><span class="token operator">.</span>            <span class="token comment">% P1, P2 different persons</span>
+
+<span class="token comment">% no_conflict( Time1, P1, P2, Time2, Q1, Q2):</span>
+<span class="token comment">%   There is no time conflict between two sessions </span>
+<span class="token comment">%     at Time1 and Time2 </span>
+<span class="token comment">%   and experts P1, P2, and Q1, Q2, respectively</span>
+
+<span class="token function">no_conflict</span><span class="token punctuation">(</span> <span class="token variable">Time1</span><span class="token punctuation">,</span> <span class="token variable">_</span><span class="token punctuation">,</span> <span class="token variable">_</span><span class="token punctuation">,</span> <span class="token variable">Time2</span><span class="token punctuation">,</span> <span class="token variable">_</span><span class="token punctuation">,</span><span class="token variable">_</span><span class="token punctuation">)</span><span class="token operator">:-</span>
+  <span class="token comment">% Two sessions at different times- not conflict</span>
+  <span class="token variable">Time1</span> <span class="token operator">\=</span> <span class="token variable">Time2</span><span class="token operator">.</span> 
+
+<span class="token comment">% Two sessions at the same time</span>
+<span class="token function">no_conflict</span><span class="token punctuation">(</span> <span class="token variable">Time</span><span class="token punctuation">,</span> <span class="token variable">P1</span><span class="token punctuation">,</span><span class="token variable">P2</span><span class="token punctuation">,</span> <span class="token variable">Time</span><span class="token punctuation">,</span> <span class="token variable">Q1</span><span class="token punctuation">,</span><span class="token variable">Q2</span><span class="token punctuation">)</span><span class="token operator">:-</span>
+  <span class="token variable">P1</span> <span class="token operator">\=</span> <span class="token variable">Q1</span> <span class="token punctuation">,</span> <span class="token variable">P1</span> <span class="token operator">\=</span> <span class="token variable">Q2</span><span class="token punctuation">,</span> <span class="token comment">% No overlap between experts</span>
+  <span class="token variable">P2</span> <span class="token operator">\=</span> <span class="token variable">Q1</span> <span class="token punctuation">,</span> <span class="token variable">P2</span> <span class="token operator">\=</span> <span class="token variable">Q2</span><span class="token operator">.</span>
+
+<span class="token comment">% Possible times of sessions</span>
+<span class="token function">time</span><span class="token punctuation">(</span> morning<span class="token punctuation">)</span><span class="token operator">.</span>
+<span class="token function">time</span><span class="token punctuation">(</span> afternoon<span class="token punctuation">)</span><span class="token operator">.</span>
+
+<span class="token comment">% Experts for topics</span>
+<span class="token function">expert</span><span class="token punctuation">(</span> bioinformatics<span class="token punctuation">,</span> barbara<span class="token punctuation">)</span><span class="token operator">.</span> 
+<span class="token function">expert</span><span class="token punctuation">(</span> artificial intelligence<span class="token punctuation">,</span> adam<span class="token punctuation">)</span><span class="token operator">.</span>
+<span class="token function">expert</span><span class="token punctuation">(</span> artificial intelligence<span class="token punctuation">,</span> barbara<span class="token punctuation">)</span><span class="token operator">.</span>
+<span class="token function">expert</span><span class="token punctuation">(</span> databases<span class="token punctuation">,</span> danny<span class="token punctuation">)</span><span class="token operator">.</span>
+<span class="token function">expert</span><span class="token punctuation">(</span> bioinformatics<span class="token punctuation">,</span> ben<span class="token punctuation">)</span><span class="token operator">.</span> 
+<span class="token function">expert</span><span class="token punctuation">(</span> artificial intelligence<span class="token punctuation">,</span> ann<span class="token punctuation">)</span><span class="token operator">.</span>
+<span class="token function">expert</span><span class="token punctuation">(</span> databases<span class="token punctuation">,</span> adam<span class="token punctuation">)</span><span class="token operator">.</span>
+</code></pre>
+<p>Prolog program for Scheduling a project meeting and assigning experts to sessions.</p>
+<h3 id="ans-2">Ans:</h3>
+<p><strong>Query 1.</strong></p>
+<p>A query to produce  <strong>schedule</strong> according to the given program.<br>
+<code>?- schedule( Ta, A1, A2, Tb, B1, B2, Tc, D1, D2).</code></p>
+<p><em>Output:</em><br>
+<em>There will be 80 such schedules that can be obtained from above query, few of which are:</em></p>
+<pre><code>1 ?- schedule( Ta, A1, A2, Tb, B1, B2, Tc, D1, D2).
+
+Ta = morning,
+A1 = D2, D2 = adam,
+A2 = B1, B1 = barbara,
+Tb = Tc, Tc = afternoon,
+B2 = ben,
+D1 = danny ;
+
+Ta = morning,
+A1 = D1, D1 = adam,
+A2 = B1, B1 = barbara,
+Tb = Tc, Tc = afternoon,
+B2 = ben,
+D2 = danny ;
+...
+...
+...
+Ta = Tc, Tc = afternoon,
+A1 = ann,
+A2 = B2, B2 = barbara,
+Tb = morning,
+B1 = ben,
+D1 = danny,
+D2 = adam ;
+
+Ta = Tc, Tc = afternoon,
+A1 = ann,
+A2 = B2, B2 = barbara,
+Tb = morning,
+B1 = ben,
+D1 = adam,
+D2 = danny ;
+
+false.
+</code></pre>
+<p><strong>Query 2.</strong></p>
+<p>A query to produce a schedule (if possible), such that all the sessions can be completed in half day, i.e. all the three sessions have to be scheduled at the same time.<br>
+<code>?- schedule( T, A1, A2, T, B1, B2, T, D1, D2).</code></p>
+<p><em>Output:</em></p>
+<pre><code>2 ?- schedule( T, A1, A2, T, B1, B2, T, D1, D2).
+false.
+</code></pre>
+<p><strong>Query 3.</strong></p>
+<p>A query to produce a schedule, such that the <em>Artificial Intelligence</em> session and the <em>Bioinformatics</em> session can be completed in half day, i.e. both sessions have to be scheduled at the same time.<br>
+<code>?- schedule( Ta, A1, A2, Ta, B1, B2, Tb, D1, D2).</code></p>
+<p><em>Output:</em><br>
+<em>There will be 16 such schedules that can be obtained from above query, few of which are:</em></p>
+<pre><code>3 ?- schedule( Ta, A1, A2, Ta, B1, B2, Tb, D1, D2).
+
+Ta = morning,
+A1 = D2, D2 = adam,
+A2 = ann,
+B1 = barbara,
+B2 = ben,
+Tb = afternoon,
+D1 = danny ; 
+
+Ta = morning,
+A1 = D1, D1 = adam,
+A2 = ann,
+B1 = barbara,
+B2 = ben,
+Tb = afternoon,
+D2 = danny ; 
+...
+...
+...
+Ta = afternoon,
+A1 = ann,
+A2 = D1, D1 = adam,
+B1 = ben,
+B2 = barbara,
+Tb = morning,
+D2 = danny ;
+
+false.
+</code></pre>
+<p><strong>Query 4.</strong></p>
+<p>A query to produce a schedule, such that the <em>Artificial Intelligence</em> session and the <em>Databases</em> session can be completed in half day, i.e. both sessions have to be scheduled at the same time.<br>
+<code>?- schedule( Ta, A1, A2, Tb, B1, B2, Ta, D1, D2).</code></p>
+<p><em>Output:</em><br>
+<em>There will be 16 such schedules that can be obtained from above query, few of which are:</em></p>
+<pre><code>4 ?- schedule( Ta, A1, A2, Tb, B1, B2, Ta, D1, D2). 
+
+Ta = morning,
+A1 = B1, B1 = barbara,
+A2 = ann,
+Tb = afternoon,
+B2 = ben,
+D1 = danny,
+D2 = adam ;
+
+Ta = morning,
+A1 = B1, B1 = barbara,
+A2 = ann,
+Tb = afternoon,
+B2 = ben,
+D1 = adam,
+D2 = danny ;
+...
+...
+...
+Ta = afternoon,
+A1 = ann,
+A2 = B2, B2 = barbara,
+Tb = morning,
+B1 = ben,
+D1 = adam,
+D2 = danny ;
+
+false.
+</code></pre>
+<p><strong>Query 5.</strong></p>
+<p>A query to produce a schedule, such that the <em>Bioinformatics</em> session and the <em>Databases</em> session can be completed in half day, i.e. both sessions have to be scheduled at the same time.<br>
+<code>?- schedule( Ta, A1, A2, Tb, B1, B2, Tb, D1, D2).</code></p>
+<p><em>Output:</em><br>
+<em>There will be 48 such schedules that can be obtained from above query, few of which are:</em></p>
+<pre><code>5 ?- schedule( Ta, A1, A2, Tb, B1, B2, Tb, D1, D2).
+
+Ta = morning,
+A1 = D2, D2 = adam,
+A2 = B1, B1 = barbara,
+Tb = afternoon,
+B2 = ben,
+D1 = danny ;
+
+Ta = morning,
+A1 = D1, D1 = adam,
+A2 = B1, B1 = barbara,
+Tb = afternoon,
+B2 = ben,
+D2 = danny ;
+...
+...
+...
+Ta = afternoon,
+A1 = ann,
+A2 = B2, B2 = barbara,
+Tb = morning,
+B1 = ben,
+D1 = adam,
+D2 = danny ;
+
+false.
+</code></pre>
+</div>
+</body>
+
+</html>

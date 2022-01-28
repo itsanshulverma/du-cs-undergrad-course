@@ -1,0 +1,23 @@
+
+1 ?- consult('4.pl').
+true.
+
+2 ?- findall( X, schedule( Ta, A1, A2, Tb, B1, B2, Tc, D1, D2), L),
+      length(L,N).
+L = [_, _, _, _, _, _, _, _, _|...],
+N = 80.
+
+3 ?- findall( X, schedule( Ta, A1, A2, Ta, B1, B2, Tb, D1, D2), L),
+      length(L,N).
+L = [_, _, _, _, _, _, _, _, _|...],
+N = 16.
+
+4 ?- findall( X, schedule( Ta, A1, A2, Tb, B1, B2, Ta, D1, D2), L),
+      length(L,N).
+L = [_, _, _, _, _, _, _, _, _|...],
+N = 16.
+
+5 ?- findall( X, schedule( Ta, A1, A2, Tb, B1, B2, Tb, D1, D2), L),
+      length(L,N).
+L = [_, _, _, _, _, _, _, _, _|...],
+N = 48.

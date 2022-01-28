@@ -1,0 +1,3 @@
+
+2 ?- schedule( T, A1, A2, T, B1, B2, T, D1, D2).    
+false.
