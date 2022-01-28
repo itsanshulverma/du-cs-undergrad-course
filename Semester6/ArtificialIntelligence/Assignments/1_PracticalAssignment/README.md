@@ -5,6 +5,9 @@
 > B. Sc. (Hons) Computer Science  
 > Semester - 6, Part - III
 
+
+[Webpage](https://itsanshulverma.github.io/du-cs-undergrad-course/Semester6/ArtificialIntelligence/Assignments/1_PracticalAssignment/index.html)
+
 ## Q1.
 
 2.6 Consider the following program:
