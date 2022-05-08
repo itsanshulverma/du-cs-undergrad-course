@@ -6,9 +6,9 @@ Structure of Repository :
 
  - Semester
    - Subject/Paper Name
-    - Practicals
-    - Assignments
-    - Others
+     - Practicals
+     - Assignments
+     - Others
    
 ## Author
 
