@@ -1,0 +1,5 @@
+Enter 2 hermite points:
+400 300
+200 400
+Enter tangents at p1 and p4:
+50 300

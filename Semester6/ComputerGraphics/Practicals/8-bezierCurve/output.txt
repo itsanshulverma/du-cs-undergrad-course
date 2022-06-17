@@ -1,0 +1,6 @@
+****** Bezier Curve ***********
+ Please enter x and y coordinates
+100 90
+200 150
+300 200
+100 300

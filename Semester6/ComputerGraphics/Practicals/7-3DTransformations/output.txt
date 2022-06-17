@@ -1,0 +1,94 @@
+\7-3DTransformations> .\main.exe
+1:==> Draw Cube
+2:==> Scaling
+3:==> Rotation
+4:==> Reflection
+5:==> Translation
+6:==> Perspective Projection
+7:==> Exit
+Enter Your Choice := 1
+
+\7-3DTransformations> .\main.exe
+1:==> Draw Cube
+2:==> Scaling
+3:==> Rotation
+4:==> Reflection
+5:==> Translation
+6:==> Perspective Projection
+7:==> Exit
+Enter Your Choice := 2
+Enter The Scaling Factors: 1 2 3
+
+\7-3DTransformations> .\main.exe
+1:==> Draw Cube
+2:==> Scaling
+3:==> Rotation
+4:==> Reflection
+5:==> Translation
+6:==> Perspective Projection
+7:==> Exit
+Enter Your Choice := 3
+-=[ Rotation About ]=-
+1:==> X-Axis
+2:==> Y-Axis
+3:==> Z-Axis
+Enter Your Choice: 1
+Enter The Angle: 45
+
+ls\7-3DTransformations> .\main.exe
+1:==> Draw Cube
+2:==> Scaling
+3:==> Rotation
+4:==> Reflection
+5:==> Translation
+6:==> Perspective Projection
+7:==> Exit
+Enter Your Choice := 3
+-=[ Rotation About ]=-
+1:==> X-Axis
+2:==> Y-Axis
+3:==> Z-Axis
+Enter Your Choice: 1
+Enter The Angle: 45
+
+\7-3DTransformations> .\main.exe
+1:==> Draw Cube
+2:==> Scaling
+3:==> Rotation
+4:==> Reflection
+5:==> Translation
+6:==> Perspective Projection
+7:==> Exit
+Enter Your Choice := 4
+-=[ Reflection About ]=-
+1:==> X-Axis
+2:==> Y-Axis
+3:==> Z-Axis
+Enter Your Choice: 2
+
+\7-3DTransformations> .\main.exe
+1:==> Draw Cube
+2:==> Scaling
+3:==> Rotation
+4:==> Reflection
+5:==> Translation
+6:==> Perspective Projection
+7:==> Exit
+Enter Your Choice := 5
+Enter The Translation Factors: 24 25 26
+
+\7-3DTransformations> .\main.exe
+1:==> Draw Cube
+2:==> Scaling
+3:==> Rotation
+4:==> Reflection
+5:==> Translation
+6:==> Perspective Projection
+7:==> Exit
+Enter Your Choice := 6
+-=[ Perspective Projection About ]=-
+1:==> X-Axis
+2:==> Y-Axis
+3:==> Z-Axis
+Enter Your Choice := 3
+ Enter R := 5

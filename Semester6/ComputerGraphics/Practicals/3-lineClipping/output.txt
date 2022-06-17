@@ -1,0 +1,146 @@
+Enter number of points in the figure: 3
+Enter the matrix for the 2-D shape (homogeneous):
+100 100 1
+0 100 1
+100 0 1
+
+Menu
+-------
+(1) Translation
+(2) Rotation
+(3) Scaling
+(4) Reflection
+(5) Shearing
+(6) View Figure
+(7) Exit
+
+Enter Choice: 1
+
+Enter translation in x-axis: 50
+Enter translation in y-axis: 50
+Drawing Original Figure...
+Drawing Transformed Figure...
+
+Finished...
+
+Press Enter to continue ...
+
+Menu
+-------
+(1) Translation
+(2) Rotation
+(3) Scaling
+(4) Reflection
+(5) Shearing
+(6) View Figure
+(7) Exit
+
+Enter Choice: 6
+
+Drawing Original Figure...
+
+Finished...
+
+Press Enter to continue ...
+
+Menu
+-------
+(1) Translation
+(2) Rotation
+(3) Scaling
+(4) Reflection
+(5) Shearing
+(6) View Figure
+(7) Exit
+
+Enter Choice: 2
+
+Enter rotation angle (degrees): 90
+Drawing Original Figure...
+Drawing Transformed Figure...
+
+Finished...
+
+Press Enter to continue ...
+
+Menu
+-------
+(1) Translation
+(2) Rotation
+(3) Scaling
+(4) Reflection
+(5) Shearing
+(6) View Figure
+(7) Exit
+
+Enter Choice: 3
+
+Enter scaling in x-axis: 3
+Enter scaling in y-axis: 3
+Drawing Original Figure...
+Drawing Transformed Figure...
+
+Finished...
+
+Press Enter to continue ...
+
+Menu
+-------
+(1) Translation
+(2) Rotation
+(3) Scaling
+(4) Reflection
+(5) Shearing
+(6) View Figure
+(7) Exit
+
+Enter Choice: 4
+
+Reflect along
+(1) x-axis
+(2) y-axis
+(3) y = x
+(4) y = -x
+
+Enter Choice: 1
+Drawing Original Figure...
+Drawing Transformed Figure...
+
+Finished...
+
+Press Enter to continue ...
+
+Menu
+-------
+(1) Translation
+(2) Rotation
+(3) Scaling
+(4) Reflection
+(5) Shearing
+(6) View Figure
+(7) Exit
+
+Enter Choice: 5
+
+Enter shearing in x-axis: 2
+Enter shearing in y-axis: 2
+Drawing Original Figure...
+Drawing Transformed Figure...
+
+Finished...
+
+Press Enter to continue ...
+
+Menu
+-------
+(1) Translation
+(2) Rotation
+(3) Scaling
+(4) Reflection
+(5) Shearing
+(6) View Figure
+(7) Exit
+
+Enter Choice: 7
+
+Finished...
